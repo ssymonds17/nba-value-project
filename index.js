@@ -1,11 +1,12 @@
 const express = require('express');
 const app = express();
+const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const Models = require('./models.js');
 const Players = Models.Player;
 
-app.use(bodyparser.json());
+app.use(bodyParser.json());
 
 // (WIP) setting sites that have access 
 let allowedOrigins = '*';
