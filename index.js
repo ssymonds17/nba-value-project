@@ -22,15 +22,15 @@ app.use(cors({
 }));
 
 // (WIP) Need to update Connection URI with Heroku
-// mongoose.connect(process.env.CONNECTION_URI, {
-//  useNewUrlParser: true,
-//  useUnifiedTopology: true
-// });
-
-mongoose.connect('mongodb+srv://ssymonds17:klrGPn2TwoQKpxi5@cluster0.bwlxj.mongodb.net/nbadata?retryWrites=true&w=majority', {
+mongoose.connect(process.env.CONNECTION_URI, {
  useNewUrlParser: true,
  useUnifiedTopology: true
 });
+
+// mongoose.connect('mongodb+srv://ssymonds17:klrGPn2TwoQKpxi5@cluster0.bwlxj.mongodb.net/nbadata?retryWrites=true&w=majority', {
+//  useNewUrlParser: true,
+//  useUnifiedTopology: true
+// });
 
 
 // app.get('/', (req, res) => {
@@ -41,7 +41,7 @@ mongoose.connect('mongodb+srv://ssymonds17:klrGPn2TwoQKpxi5@cluster0.bwlxj.mongo
 //   res.status(500).send('Error ' + e);
 //  });
 
-// (WIP) example of player search
+// GET player data by player ID
 app.get('/players/:playerID', (req, res) => {
  Players.find({ player_id: req.params.playerID })
   .then((player) => {
