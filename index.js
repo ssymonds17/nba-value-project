@@ -26,6 +26,14 @@ mongoose.connect(process.env.CONNECTION_URI, {
  useUnifiedTopology: true
 });
 
+app.get('/', (req, res) => {
+ res.status(200).send('App running');
+})
+ .catch((e) => {
+  console.error(e);
+  res.status(500).send('Error ' + e);
+ });
+
 // (WIP) example of player search
 app.get('/players/:playerID', (req, res) => {
  Players.find({ player_id: req.params.playerID })
@@ -34,7 +42,7 @@ app.get('/players/:playerID', (req, res) => {
   })
   .catch((e) => {
    console.error(e);
-   res.status(500).send('Error ' = e);
+   res.status(500).send('Error ' + e);
   });
 });
 
