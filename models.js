@@ -1,0 +1,37 @@
+const mongoose = require('mongoose');
+
+// define the player schema with the existing fields and data types
+let playerSchema = mongoose.Schema({
+ _id: String,
+ year: { type: Number, required: true },
+ league: String,
+ player_id: { type: String, required: true },
+ name: { type: String, required: true },
+ total_season_value: { type: Number, required: true },
+ position: String,
+ age: Number,
+ team_one: { type: String, required: true },
+ team_two: String,
+ team_three: String,
+ regularseason__score: { type: Number, required: true },
+ regularseason__win_shares: Number,
+ regularseason__win_shares_48: Number,
+ regularseason__vorp: Number,
+ regularseason__bpm: Number,
+ regularseason__games: Number,
+ regularseason__mpg: Number,
+ playoff__score: Number,
+ playoff__win_shares: Number,
+ playoff__win_shares_48: Number,
+ playoff__vorp: Number,
+ playoff__bpm: Number,
+ playoff__games: Number,
+ playoff__mpg: Number,
+ team_full_name: { type: String, required: true },
+ team_record: { type: String, required: true },
+ team_result: { type: String, required: true }
+});
+
+let Player = mongoose.model('Player', playerSchema);
+
+module.exports.Player = Player;
