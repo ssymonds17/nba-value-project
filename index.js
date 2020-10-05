@@ -22,18 +22,24 @@ app.use(cors({
 }));
 
 // (WIP) Need to update Connection URI with Heroku
-mongoose.connect(process.env.CONNECTION_URI, {
+// mongoose.connect(process.env.CONNECTION_URI, {
+//  useNewUrlParser: true,
+//  useUnifiedTopology: true
+// });
+
+mongoose.connect('mongodb+srv://ssymonds17:klrGPn2TwoQKpxi5@cluster0.bwlxj.mongodb.net/nbadata?retryWrites=true&w=majority', {
  useNewUrlParser: true,
  useUnifiedTopology: true
 });
 
-app.get('/', (req, res) => {
- res.status(200).send('App running');
-})
- .catch((e) => {
-  console.error(e);
-  res.status(500).send('Error ' + e);
- });
+
+// app.get('/', (req, res) => {
+//  res.status(200).send('App running');
+// })
+//  .catch((e) => {
+//   console.error(e);
+//   res.status(500).send('Error ' + e);
+//  });
 
 // (WIP) example of player search
 app.get('/players/:playerID', (req, res) => {
