@@ -3,6 +3,7 @@ const app = express();
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const cors = require('cors');
+const path = require('path');
 const Models = require('./models.js');
 const Players = Models.Player;
 
@@ -32,15 +33,6 @@ mongoose.connect(process.env.CONNECTION_URI, {
 //  useUnifiedTopology: true
 // });
 
-
-// app.get('/', (req, res) => {
-//  res.status(200).send('App running');
-// })
-//  .catch((e) => {
-//   console.error(e);
-//   res.status(500).send('Error ' + e);
-//  });
-
 // GET player data by player ID
 app.get('/players/:playerID', (req, res) => {
  Players.find({ player_id: req.params.playerID })
@@ -51,6 +43,11 @@ app.get('/players/:playerID', (req, res) => {
    console.error(e);
    res.status(500).send('Error ' + e);
   });
+});
+
+app.use(express.static('frontend/build'));
+app.get('/*', function (req, res) {
+ res.sendFile(path.join(__dirname, 'frontend', 'build', 'index.html'));
 });
 
 const port = process.env.PORT || 8080;
