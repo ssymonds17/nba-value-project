@@ -10,7 +10,8 @@ const Players = Models.Player;
 app.use(bodyParser.json());
 
 // (WIP) setting sites that have access 
-let allowedOrigins = ['https://nba-value-reference.herokuapp.com/', 'http://localhost:3000/', 'http://localhost:1234'];
+let allowedOrigins = '*';
+// ['https://nba-value-reference.herokuapp.com/', 'http://localhost:3000/', 'http://localhost:1234'];
 app.use(cors({
   origin: (origin, callback) => {
     if (!origin) return callback(null, true);
