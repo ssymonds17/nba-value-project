@@ -23,7 +23,7 @@ mongoose.connect('mongodb+srv://ssymonds17:klrGPn2TwoQKpxi5@cluster0.bwlxj.mongo
 // GET player data by player ID
 app.get('/players/:playerID', cors(corsOptions), (req, res) => {
   Players.find({ player_id: req.params.playerID })
-    // .sort({ year: 1 })
+    .sort({ year: 1 })
     .then((player) => {
       res.status(200).json(player);
     })
