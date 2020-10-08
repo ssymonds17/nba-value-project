@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import './App.css';
 
-class App extends React.Component {
+export default class App extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -22,6 +22,7 @@ class App extends React.Component {
           player: response.data
         });
       })
+      //need to error/fail properly
       .catch(() => {
         console.log('data has not been received');
       })
@@ -29,18 +30,24 @@ class App extends React.Component {
 
   getCareerValueTotal = (player) => {
     let seasonValueArray = [];
-    let i = 0;
-    for (i = 0; i < player.length; i++) {
-      seasonValueArray.push(player[i].total_season_value);
-    }
+    //let i = 0; Don't need this can assign in in the loop
+
+    //could also use a foreach loop which would be quicker for an array
+    // player.forEach(year => {
+    //   seasonValueArray.push(year.total_season_value)
+    //   console.log(seasonValueArray);
+    // });
+    // return seasonValueArray.reduce((a, b) => a + b, 0);
+    for(let i = 0; i < player.length; i++) {
+       seasonValueArray.push(player[i].total_season_value);
+      }
     return seasonValueArray.reduce((a, b) => a + b, 0);
   }
 
   render() {
     const { player } = this.state;
-    console.log(player);
-    this.getCareerValueTotal(player);
-
+    //let yearsOrdered; there is very shit commented code that orders the years but shows all every row
+    //this.getCareerValueTotal(player);
     return (
       <div>
         <h1>{player[0].name}</h1>
@@ -80,32 +87,36 @@ class App extends React.Component {
           </thead>
           <tbody>
             {
-              player.map(player => (
-                <tr className="player-name" key={player._id}>
-                  <td>{player.year}</td>
-                  <td>{player.league}</td>
-                  <td>{player.total_season_value}</td>
-                  <td>{player.position}</td>
-                  <td>{player.age}</td>
-                  <td>{player.team_one}</td>
-                  <td>{player.team_two}</td>
-                  <td>{player.team_three}</td>
-                  <td>{player.regularseason__score}</td>
-                  <td>{player.regularseason__win_shares}</td>
-                  <td>{player.regularseason__win_shares_48}</td>
-                  <td>{player.regularseason__vorp}</td>
-                  <td>{player.regularseason__bpm}</td>
-                  <td>{player.regularseason__games}</td>
-                  <td>{player.regularseason__mpg}</td>
-                  <td>{player.playoff__score}</td>
-                  <td>{player.playoff__win_shares}</td>
-                  <td>{player.playoff__win_shares_48}</td>
-                  <td>{player.playoff__vorp}</td>
-                  <td>{player.playoff__bpm}</td>
-                  <td>{player.playoff__games}</td>
-                  <td>{player.playoff__mpg}</td>
-                  <td>{player.team_record}</td>
-                  <td>{player.team_result}</td>
+              //thing year is a better name rather than player
+              
+              player.map(year => (
+                //yearsOrdered = player.map(year => ([year.year])),
+                //yearsOrdered.sort((a,b) => a-b),
+                <tr className="player-name" key={year._id}>
+                  <td>{yearsOrdered}</td>
+                  <td>{year.league}</td>
+                  <td>{year.total_season_value}</td>
+                  <td>{year.position}</td>
+                  <td>{year.age}</td>
+                  <td>{year.team_one}</td>
+                  <td>{year.team_two}</td>
+                  <td>{year.team_three}</td>
+                  <td>{year.regularseason__score}</td>
+                  <td>{year.regularseason__win_shares}</td>
+                  <td>{year.regularseason__win_shares_48}</td>
+                  <td>{year.regularseason__vorp}</td>
+                  <td>{year.regularseason__bpm}</td>
+                  <td>{year.regularseason__games}</td>
+                  <td>{year.regularseason__mpg}</td>
+                  <td>{year.playoff__score}</td>
+                  <td>{year.playoff__win_shares}</td>
+                  <td>{year.playoff__win_shares_48}</td>
+                  <td>{year.playoff__vorp}</td>
+                  <td>{year.playoff__bpm}</td>
+                  <td>{year.playoff__games}</td>
+                  <td>{year.playoff__mpg}</td>
+                  <td>{year.team_record}</td>
+                  <td>{year.team_result}</td>
                 </tr>
               ))}
           </tbody>
@@ -141,5 +152,3 @@ class App extends React.Component {
 //     </div>
 //   );
 // }
-
-export default App;
