@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import './App.css';
 
-class App extends React.Component {
+export default class App extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -18,6 +18,7 @@ class App extends React.Component {
   getPlayerData = (playerID) => {
     axios.get(`https://nba-value-reference.herokuapp.com${playerID}`)
       .then((response) => {
+        response.data.sort((a, b) => a.year - b.year);
         this.setState({
           player: response.data
         });
@@ -29,11 +30,10 @@ class App extends React.Component {
 
   getCareerValueTotal = (player) => {
     let seasonValueArray = [];
-    let i = 0;
-    for (i = 0; i < player.length; i++) {
-      seasonValueArray.push(player[i].total_season_value);
-    }
-    return seasonValueArray.reduce((a, b) => a + b, 0);
+    player.forEach(season => {
+      seasonValueArray.push(season.total_season_value);
+    })
+    return seasonValueArray.reduce((a, b) => a + b, 0).toFixed(2);
   }
 
   render() {
@@ -80,32 +80,32 @@ class App extends React.Component {
           </thead>
           <tbody>
             {
-              player.map(player => (
-                <tr className="player-name" key={player._id}>
-                  <td>{player.year}</td>
-                  <td>{player.league}</td>
-                  <td>{player.total_season_value}</td>
-                  <td>{player.position}</td>
-                  <td>{player.age}</td>
-                  <td>{player.team_one}</td>
-                  <td>{player.team_two}</td>
-                  <td>{player.team_three}</td>
-                  <td>{player.regularseason__score}</td>
-                  <td>{player.regularseason__win_shares}</td>
-                  <td>{player.regularseason__win_shares_48}</td>
-                  <td>{player.regularseason__vorp}</td>
-                  <td>{player.regularseason__bpm}</td>
-                  <td>{player.regularseason__games}</td>
-                  <td>{player.regularseason__mpg}</td>
-                  <td>{player.playoff__score}</td>
-                  <td>{player.playoff__win_shares}</td>
-                  <td>{player.playoff__win_shares_48}</td>
-                  <td>{player.playoff__vorp}</td>
-                  <td>{player.playoff__bpm}</td>
-                  <td>{player.playoff__games}</td>
-                  <td>{player.playoff__mpg}</td>
-                  <td>{player.team_record}</td>
-                  <td>{player.team_result}</td>
+              player.map(season => (
+                <tr className="player-name" key={season._id}>
+                  <td>{season.year}</td>
+                  <td>{season.league}</td>
+                  <td>{Number(season.total_season_value).toFixed(2)}</td>
+                  <td>{season.position}</td>
+                  <td>{season.age}</td>
+                  <td>{season.team_one}</td>
+                  <td>{season.team_two}</td>
+                  <td>{season.team_three}</td>
+                  <td>{Number(season.regularseason__score).toFixed(2)}</td>
+                  <td>{Number(season.regularseason__win_shares).toFixed(1)}</td>
+                  <td>{Number(season.regularseason__win_shares_48).toFixed(3)}</td>
+                  <td>{Number(season.regularseason__vorp).toFixed(1)}</td>
+                  <td>{Number(season.regularseason__bpm).toFixed(1)}</td>
+                  <td>{season.regularseason__games}</td>
+                  <td>{Number(season.regularseason__mpg).toFixed(1)}</td>
+                  <td>{season.playoff__score ? Number(season.playoff__score).toFixed(2) : ''}</td>
+                  <td>{season.playoff__win_shares ? Number(season.playoff__win_shares).toFixed(1) : ''}</td>
+                  <td>{season.playoff__win_shares_48 ? Number(season.playoff__win_shares_48).toFixed(3) : ''}</td>
+                  <td>{season.playoff__vorp ? Number(season.playoff__vorp).toFixed(1) : ''}</td>
+                  <td>{season.playoff__bpm ? Number(season.playoff__bpm).toFixed(1) : ''}</td>
+                  <td>{season.playoff__games ? player.playoff__games : ''}</td>
+                  <td>{season.playoff__mpg ? Number(season.playoff__mpg).toFixed(1) : ''}</td>
+                  <td>{season.team_record}</td>
+                  <td>{season.team_result}</td>
                 </tr>
               ))}
           </tbody>
@@ -142,4 +142,4 @@ class App extends React.Component {
 //   );
 // }
 
-export default App;
+// export default App;
