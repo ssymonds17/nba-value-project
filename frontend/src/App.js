@@ -23,6 +23,7 @@ export default class App extends React.Component {
           player: response.data
         });
       })
+      //need to error/fail properly
       .catch(() => {
         console.log('data has not been received');
       })
@@ -38,9 +39,8 @@ export default class App extends React.Component {
 
   render() {
     const { player } = this.state;
-    console.log(player);
-    this.getCareerValueTotal(player);
-
+    //let yearsOrdered; there is very shit commented code that orders the years but shows all every row
+    //this.getCareerValueTotal(player);
     return (
       <div>
         <h1>{player[0].name}</h1>
