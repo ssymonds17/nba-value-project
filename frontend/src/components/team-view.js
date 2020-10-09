@@ -12,6 +12,7 @@ export class TeamView extends React.Component {
 
  componentDidMount() {
   let teamID = window.location.pathname;
+  // console.log(teamID);
   this.getTeamData(teamID);
  }
 

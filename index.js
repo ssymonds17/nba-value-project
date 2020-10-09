@@ -9,7 +9,7 @@ const Players = Models.Player;
 const Teams = Models.Team;
 
 app.use(bodyParser.json());
-app.use(Cors());
+app.use(cors());
 
 const corsOptions = {
   origin: '*',
@@ -23,40 +23,46 @@ mongoose.connect('mongodb+srv://ssymonds17:klrGPn2TwoQKpxi5@cluster0.bwlxj.mongo
 });
 
 // GET player data by player ID
-app.get('/players/:playerID', cors(corsOptions), (req, res) => {
-  let yearSort = { year: 1 };
-  Players.find({ player_id: req.params.playerID })
-    .sort(yearSort)
-    .then((player) => {
-      res.status(200).json(player);
-    })
-    .catch((e) => {
-      console.error(e);
-      res.status(500).send('Error ' + e);
-    });
-});
+app.get('/players/:playerID',
+  cors(corsOptions),
+  (req, res) => {
+    let yearSort = { year: 1 };
+    Players.find({ player_id: req.params.playerID })
+      .sort(yearSort)
+      .then((player) => {
+        res.status(200).json(player);
+      })
+      .catch((e) => {
+        console.error(e);
+        res.status(500).send('Error ' + e);
+      });
+  });
 
 // GET team data by team abbreviation and year
-app.get('/teams/:teamAbb/:year', cors(corsOptions), (req, res) => {
-  let nameSort = { name: 1 };
-  Teams.find({
-    team_abbreviation: req.params.teamAbb,
-    year: req.params.year
-  })
-    .sort(nameSort)
-    .then((team) => {
-      res.status(200).json(team);
+app.get('/teams/:teamAbb/:year',
+  cors(corsOptions),
+  (req, res) => {
+    let nameSort = { name: 1 };
+    Teams.find({
+      team_abbreviation: req.params.teamAbb,
+      year: req.params.year
     })
-    .catch((e) => {
-      console.error(e);
-      res.status(500).send('Error ' + e);
-    });
-});
+      .sort(nameSort)
+      .then((team) => {
+        res.status(200).json(team);
+      })
+      .catch((e) => {
+        console.error(e);
+        res.status(500).send('Error ' + e);
+      });
+  });
 
 app.use(express.static('frontend/build'));
-app.get('/*', cors(corsOptions), function (req, res) {
-  res.sendFile(path.join(__dirname, 'frontend', 'build', 'index.html'));
-});
+app.get('/*',
+  cors(corsOptions),
+  function (req, res) {
+    res.sendFile(path.join(__dirname, 'frontend', 'build', 'index.html'));
+  });
 
 const port = process.env.PORT || 8080;
 app.listen(port, '0.0.0.0', () => {
