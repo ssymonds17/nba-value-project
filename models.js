@@ -32,6 +32,37 @@ let playerSchema = mongoose.Schema({
  team_result: { type: String, required: true }
 });
 
+// define the team schema with the existing fields and data types
+let teamSchema = mongoose.Schema({
+ _id: String,
+ year: { type: Number, required: true },
+ league: String,
+ player_id: { type: String, required: true },
+ name: { type: String, required: true },
+ position: String,
+ age: Number,
+ team_abbreviation: { type: String, required: true },
+ regularseason__score: Number,
+ regularseason__win_shares: Number,
+ regularseason__win_shares_48: Number,
+ regularseason__vorp: Number,
+ regularseason__bpm: Number,
+ regularseason__games: Number,
+ regularseason__mpg: Number,
+ playoff__score: Number,
+ playoff__win_shares: Number,
+ playoff__win_shares_48: Number,
+ playoff__vorp: Number,
+ playoff__bpm: Number,
+ playoff__games: Number,
+ playoff__mpg: Number,
+ team_full_name: { type: String, required: true },
+ team_record: { type: String, required: true },
+ team_result: { type: String, required: true }
+});
+
 let Player = mongoose.model('Player', playerSchema);
+let Team = mongoose.model('Team', teamSchema);
 
 module.exports.Player = Player;
+module.exports.Team = Team;

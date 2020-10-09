@@ -6,8 +6,10 @@ const cors = require('cors');
 const path = require('path');
 const Models = require('./models.js');
 const Players = Models.Player;
+const Teams = Models.Team;
 
 app.use(bodyParser.json());
+app.use(Cors());
 
 const corsOptions = {
   origin: '*',
@@ -27,6 +29,23 @@ app.get('/players/:playerID', cors(corsOptions), (req, res) => {
     .sort(yearSort)
     .then((player) => {
       res.status(200).json(player);
+    })
+    .catch((e) => {
+      console.error(e);
+      res.status(500).send('Error ' + e);
+    });
+});
+
+// GET team data by team abbreviation and year
+app.get('/teams/:teamAbb/:year', cors(corsOptions), (req, res) => {
+  let nameSort = { name: 1 };
+  Teams.find({
+    team_abbreviation: req.params.teamAbb,
+    year: req.params.year
+  })
+    .sort(nameSort)
+    .then((team) => {
+      res.status(200).json(team);
     })
     .catch((e) => {
       console.error(e);
