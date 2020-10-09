@@ -12,7 +12,6 @@ export class TeamView extends React.Component {
 
  componentDidMount() {
   let teamID = window.location.pathname;
-  // console.log(teamID);
   this.getTeamData(teamID);
  }
 
@@ -30,17 +29,36 @@ export class TeamView extends React.Component {
    })
  }
 
- // getCareerValueTotal = (team) => {
- //  let seasonValueArray = [];
- //  team.forEach(season => {
- //   seasonValueArray.push(season.regularSeason__score, season.playoff__score);
- //  })
- //  return seasonValueArray.reduce((a, b) => a + b, 0).toFixed(2);
- // }
+ getCareerValueTotal = (team) => {
+  let seasonValueArray = [];
+  team.forEach(season => {
+   seasonValueArray.push(season.regularSeason__score, season.playoff__score);
+  })
+  return seasonValueArray.reduce((a, b) => a + b, 0).toFixed(2);
+ }
+
+ getRegularSeasonTotal = (team) => {
+  let seasonValueArray2 = [];
+  team.forEach(season => {
+   seasonValueArray2.push(season.regularSeason__score);
+  })
+  return seasonValueArray2.reduce((a, b) => a + b, 0).toFixed(2);
+ }
+
+ getPlayoffTotal = (team) => {
+  let seasonValueArray3 = [];
+  team.forEach(season => {
+   seasonValueArray3.push(season.playoff__score);
+  })
+  return seasonValueArray3.reduce((a, b) => a + b, 0).toFixed(2);
+ }
 
  render() {
   const { team } = this.state;
-  // let totalCareerValue = this.getCareerValueTotal(team);
+  let totalCareerValue = this.getCareerValueTotal(team);
+  let totalRegularSeasonValue = this.getRegularSeasonTotal(team);
+  let totalPlayoffValue = this.getPlayoffTotal(team);
+
 
   return (
    <div>
@@ -48,20 +66,22 @@ export class TeamView extends React.Component {
     <h1>{team[0].year}</h1>
     <h3>{team[0].team_record}</h3>
     <h3>{team[0].team_result}</h3>
-    {/* <h3>Seasons Value Total: {totalCareerValue}</h3> */}
+    <h3>Season Score: {totalCareerValue}</h3>
+    <h3>RS Score: {totalRegularSeasonValue}</h3>
+    <h3>Playoffs Score: {totalPlayoffValue}</h3>
     <table>
      <thead>
       <tr>
-       <th colSpan="8"></th>
+       <th colSpan="5"></th>
        <th colSpan="7">Regular Season</th>
        <th colSpan="7">Playoffs</th>
       </tr>
       <tr>
+       <th>Name</th>
        <th>Lg</th>
-       <th>Season Value</th>
+       <th>Value</th>
        <th>Pos</th>
        <th>Age</th>
-       <th>Tm</th>
        <th>Score</th>
        <th>WS</th>
        <th>WS/48</th>
@@ -82,12 +102,11 @@ export class TeamView extends React.Component {
       {
        team.map(season => (
         <tr className="player-name" key={season._id}>
-         <td>{season.year}</td>
+         <td>{season.name}</td>
          <td>{season.league}</td>
-         {/* <td>{Number((season.regularSeason__score + season.playoff__score)).toFixed(2)}</td> */}
+         <td>{Number((season.regularSeason__score + season.playoff__score)).toFixed(2)}</td>
          <td>{season.position}</td>
          <td>{season.age}</td>
-         <td>{season.team_abbreviation}</td>
          <td>{Number(season.regularSeason__score).toFixed(2)}</td>
          <td>{Number(season.regularSeason__win_shares).toFixed(1)}</td>
          <td>{Number(season.regularSeason__win_shares_48).toFixed(3)}</td>
@@ -102,15 +121,17 @@ export class TeamView extends React.Component {
          <td>{season.playoff__bpm ? Number(season.playoff__bpm).toFixed(1) : Number(0).toFixed(1)}</td>
          <td>{season.playoff__games ? season.playoff__games : Number(0)}</td>
          <td>{season.playoff__mpg ? Number(season.playoff__mpg).toFixed(1) : Number(0).toFixed(1)}</td>
-         <td>{season.team_record}</td>
-         <td>{season.team_result}</td>
         </tr>
        ))}
      </tbody>
      <tfoot>
       <tr>
        <td colSpan="2">Total</td>
-       {/* <td>{totalCareerValue}</td> */}
+       <td>{totalCareerValue}</td>
+       <td colSpan="2">Regular Season: </td>
+       <td>{totalRegularSeasonValue}</td>
+       <td colSpan="2">Playoffs: </td>
+       <td>{totalPlayoffValue}</td>
       </tr>
      </tfoot>
     </table>
