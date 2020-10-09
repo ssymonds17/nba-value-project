@@ -1,0 +1,2472 @@
+[
+ {
+  "rank": 1,
+  "name": "Michael Jordan",
+  "player_id": "AFCAE57D",
+  "career_value": 6450.35,
+  "career_total": 1413.31,
+  "peak_avg": 151.64,
+  "year_from": 1985,
+  "year_to": "2002"
+ },
+ {
+  "rank": 2,
+  "name": "Lebron James",
+  "player_id": "2B2E9D3F",
+  "career_value": 6180.23,
+  "career_total": 1570.18,
+  "peak_avg": 134.96,
+  "year_from": 2004,
+  "year_to": "Present"
+ },
+ {
+  "rank": 3,
+  "name": "Wilt Chamberlain",
+  "player_id": "9BC7BCCE",
+  "career_value": 3820.23,
+  "career_total": 1141.39,
+  "peak_avg": 117.77,
+  "year_from": 1960,
+  "year_to": "1973"
+ },
+ {
+  "rank": 4,
+  "name": "Bill Russell",
+  "player_id": "587278FA",
+  "career_value": 3148.71,
+  "career_total": 1046.43,
+  "peak_avg": 107.03,
+  "year_from": 1957,
+  "year_to": "1969"
+ },
+ {
+  "rank": 5,
+  "name": "Kareem Abdul-Jabbar",
+  "player_id": "143A65D7",
+  "career_value": 2928.99,
+  "career_total": 1123.94,
+  "peak_avg": 93.14,
+  "year_from": 1970,
+  "year_to": "1989"
+ },
+ {
+  "rank": 6,
+  "name": "Magic Johnson",
+  "player_id": "C9AD6C8B",
+  "career_value": 2806.79,
+  "career_total": 1003.86,
+  "peak_avg": 99.85,
+  "year_from": 1980,
+  "year_to": "1996"
+ },
+ {
+  "rank": 7,
+  "name": "Larry Bird",
+  "player_id": "90049D4B",
+  "career_value": 2574.89,
+  "career_total": 887.28,
+  "peak_avg": 103.47,
+  "year_from": 1980,
+  "year_to": "1992"
+ },
+ {
+  "rank": 8,
+  "name": "Kobe Bryant",
+  "player_id": "24A2D81F",
+  "career_value": 2086.95,
+  "career_total": 859.18,
+  "peak_avg": 86.6,
+  "year_from": 1997,
+  "year_to": "2016"
+ },
+ {
+  "rank": 9,
+  "name": "Tim Duncan",
+  "player_id": "4E047637",
+  "career_value": 2058.8,
+  "career_total": 910.17,
+  "peak_avg": 80.06,
+  "year_from": 1998,
+  "year_to": "2016"
+ },
+ {
+  "rank": 10,
+  "name": "Julius Erving",
+  "player_id": "AF5BB2DC",
+  "career_value": 2031.2,
+  "career_total": 848.81,
+  "peak_avg": 85.21,
+  "year_from": 1972,
+  "year_to": "1987"
+ },
+ {
+  "rank": 11,
+  "name": "Shaquille O'Neal",
+  "player_id": "1D6D2217",
+  "career_value": 1825.16,
+  "career_total": 794.24,
+  "peak_avg": 81.51,
+  "year_from": 1993,
+  "year_to": "2011"
+ },
+ {
+  "rank": 12,
+  "name": "Hakeem Olajuwon",
+  "player_id": "6298BDD7",
+  "career_value": 1433.91,
+  "career_total": 692.71,
+  "peak_avg": 72.17,
+  "year_from": 1985,
+  "year_to": "2002"
+ },
+ {
+  "rank": 13,
+  "name": "Scottie Pippen",
+  "player_id": "292AC38D",
+  "career_value": 1414.41,
+  "career_total": 684.28,
+  "peak_avg": 72.02,
+  "year_from": 1988,
+  "year_to": "2004"
+ },
+ {
+  "rank": 14,
+  "name": "Kevin Durant",
+  "player_id": "A1B88BA2",
+  "career_value": 1405.86,
+  "career_total": 646.67,
+  "peak_avg": 76.52,
+  "year_from": 2008,
+  "year_to": "Present"
+ },
+ {
+  "rank": 15,
+  "name": "John Stockton",
+  "player_id": "70986F93",
+  "career_value": 1335.58,
+  "career_total": 737.48,
+  "peak_avg": 60.53,
+  "year_from": 1985,
+  "year_to": "2003"
+ },
+ {
+  "rank": 16,
+  "name": "Karl Malone",
+  "player_id": "F4255ED1",
+  "career_value": 1272.27,
+  "career_total": 704.08,
+  "peak_avg": 60.31,
+  "year_from": 1986,
+  "year_to": "2004"
+ },
+ {
+  "rank": 17,
+  "name": "Jerry West",
+  "player_id": "D29E8772",
+  "career_value": 1238.04,
+  "career_total": 641.14,
+  "peak_avg": 66.07,
+  "year_from": 1961,
+  "year_to": "1974"
+ },
+ {
+  "rank": 18,
+  "name": "David Robinson",
+  "player_id": "E5CAA6BC",
+  "career_value": 1223.86,
+  "career_total": 640.43,
+  "peak_avg": 65.18,
+  "year_from": 1990,
+  "year_to": "2003"
+ },
+ {
+  "rank": 19,
+  "name": "Oscar Robertson",
+  "player_id": "89619B2E",
+  "career_value": 1207.48,
+  "career_total": 623.7,
+  "peak_avg": 66.3,
+  "year_from": 1961,
+  "year_to": "1974"
+ },
+ {
+  "rank": 20,
+  "name": "Dirk Nowitzki",
+  "player_id": "5B39FF6A",
+  "career_value": 1196.71,
+  "career_total": 644.43,
+  "peak_avg": 62.66,
+  "year_from": 1999,
+  "year_to": "2019"
+ },
+ {
+  "rank": 21,
+  "name": "Dwyane Wade",
+  "player_id": "8DC79E11",
+  "career_value": 1189.23,
+  "career_total": 594.02,
+  "peak_avg": 69.21,
+  "year_from": 2004,
+  "year_to": "2019"
+ },
+ {
+  "rank": 22,
+  "name": "Stephen Curry",
+  "player_id": "894E2CE2",
+  "career_value": 1113.46,
+  "career_total": 531.74,
+  "peak_avg": 73.18,
+  "year_from": 2010,
+  "year_to": "Present"
+ },
+ {
+  "rank": 23,
+  "name": "Kevin Garnett",
+  "player_id": "540317F7",
+  "career_value": 1031.56,
+  "career_total": 617.7,
+  "peak_avg": 53.61,
+  "year_from": 1996,
+  "year_to": "2016"
+ },
+ {
+  "rank": 24,
+  "name": "Charles Barkley",
+  "player_id": "BDA1789F",
+  "career_value": 973.18,
+  "career_total": 576.53,
+  "peak_avg": 54.54,
+  "year_from": 1985,
+  "year_to": "2000"
+ },
+ {
+  "rank": 25,
+  "name": "Clyde Drexler",
+  "player_id": "479B8C76",
+  "career_value": 963.71,
+  "career_total": 543.55,
+  "peak_avg": 58.7,
+  "year_from": 1984,
+  "year_to": "1998"
+ },
+ {
+  "rank": 26,
+  "name": "Chris Paul",
+  "player_id": "B0F46690",
+  "career_value": 876.43,
+  "career_total": 538.02,
+  "peak_avg": 51.5,
+  "year_from": 2006,
+  "year_to": "Present"
+ },
+ {
+  "rank": 27,
+  "name": "Walt Frazier",
+  "player_id": "8CB40725",
+  "career_value": 829.5,
+  "career_total": 455.77,
+  "peak_avg": 60.93,
+  "year_from": 1968,
+  "year_to": "1980"
+ },
+ {
+  "rank": 28,
+  "name": "John Havlicek",
+  "player_id": "B9F36668",
+  "career_value": 813.75,
+  "career_total": 503.56,
+  "peak_avg": 50.82,
+  "year_from": 1963,
+  "year_to": "1978"
+ },
+ {
+  "rank": 29,
+  "name": "Jason Kidd",
+  "player_id": "999E7B3E",
+  "career_value": 795.46,
+  "career_total": 518.55,
+  "peak_avg": 46.48,
+  "year_from": 1995,
+  "year_to": "2013"
+ },
+ {
+  "rank": 30,
+  "name": "James Harden",
+  "player_id": "3C0207D4",
+  "career_value": 781.09,
+  "career_total": 453.07,
+  "peak_avg": 56.32,
+  "year_from": 2010,
+  "year_to": "Present"
+ },
+ {
+  "rank": 31,
+  "name": "Isiah Thomas",
+  "player_id": "BC0408AB",
+  "career_value": 740.21,
+  "career_total": 433.63,
+  "peak_avg": 55.45,
+  "year_from": 1982,
+  "year_to": "1994"
+ },
+ {
+  "rank": 32,
+  "name": "Elgin Baylor",
+  "player_id": "A334F405",
+  "career_value": 737.4,
+  "career_total": 449.91,
+  "peak_avg": 52.05,
+  "year_from": 1959,
+  "year_to": "1972"
+ },
+ {
+  "rank": 33,
+  "name": "George Mikan",
+  "player_id": "0CF99638",
+  "career_value": 721.73,
+  "career_total": 408.68,
+  "peak_avg": 58.38,
+  "year_from": 1949,
+  "year_to": "1956"
+ },
+ {
+  "rank": 34,
+  "name": "Bob Pettit",
+  "player_id": "90CBF9B2",
+  "career_value": 700.99,
+  "career_total": 432.98,
+  "peak_avg": 51.02,
+  "year_from": 1955,
+  "year_to": "1965"
+ },
+ {
+  "rank": 35,
+  "name": "Reggie Miller",
+  "player_id": "371DDC3F",
+  "career_value": 676.08,
+  "career_total": 464.34,
+  "peak_avg": 42.1,
+  "year_from": 1988,
+  "year_to": "2005"
+ },
+ {
+  "rank": 36,
+  "name": "Paul Pierce",
+  "player_id": "360729FE",
+  "career_value": 656.64,
+  "career_total": 448.83,
+  "peak_avg": 42.48,
+  "year_from": 1999,
+  "year_to": "2017"
+ },
+ {
+  "rank": 37,
+  "name": "Manu Ginóbili",
+  "player_id": "82ACD319",
+  "career_value": 645.56,
+  "career_total": 431.81,
+  "peak_avg": 44.31,
+  "year_from": 2003,
+  "year_to": "2018"
+ },
+ {
+  "rank": 38,
+  "name": "Dolph Schayes",
+  "player_id": "A133A04C",
+  "career_value": 640.86,
+  "career_total": 436.55,
+  "peak_avg": 42.77,
+  "year_from": 1950,
+  "year_to": "1964"
+ },
+ {
+  "rank": 39,
+  "name": "Pau Gasol",
+  "player_id": "7F35CDC0",
+  "career_value": 596.33,
+  "career_total": 403.47,
+  "peak_avg": 43.34,
+  "year_from": 2002,
+  "year_to": "2019"
+ },
+ {
+  "rank": 40,
+  "name": "Kawhi Leonard",
+  "player_id": "EDB0AAA9",
+  "career_value": 588.25,
+  "career_total": 361.78,
+  "peak_avg": 51.38,
+  "year_from": 2012,
+  "year_to": "Present"
+ },
+ {
+  "rank": 41,
+  "name": "Chauncey Billups",
+  "player_id": "06E727C5",
+  "career_value": 556.71,
+  "career_total": 366.98,
+  "peak_avg": 45.5,
+  "year_from": 1998,
+  "year_to": "2014"
+ },
+ {
+  "rank": 42,
+  "name": "Ray Allen",
+  "player_id": "3D9A1870",
+  "career_value": 548,
+  "career_total": 393.68,
+  "peak_avg": 38.36,
+  "year_from": 1997,
+  "year_to": "2014"
+ },
+ {
+  "rank": 43,
+  "name": "Artis Gilmore",
+  "player_id": "ED7034E9",
+  "career_value": 544.07,
+  "career_total": 385.59,
+  "peak_avg": 39.49,
+  "year_from": 1972,
+  "year_to": "1988"
+ },
+ {
+  "rank": 44,
+  "name": "Robert Horry",
+  "player_id": "A226CB34",
+  "career_value": 531.54,
+  "career_total": 370.15,
+  "peak_avg": 40.93,
+  "year_from": 1993,
+  "year_to": "2008"
+ },
+ {
+  "rank": 45,
+  "name": "Patrick Ewing",
+  "player_id": "1D53001F",
+  "career_value": 524.87,
+  "career_total": 368.85,
+  "peak_avg": 40.18,
+  "year_from": 1986,
+  "year_to": "2002"
+ },
+ {
+  "rank": 46,
+  "name": "Wes Unseld",
+  "player_id": "29425D30",
+  "career_value": 511.79,
+  "career_total": 367.93,
+  "peak_avg": 38.26,
+  "year_from": 1969,
+  "year_to": "1981"
+ },
+ {
+  "rank": 47,
+  "name": "Russell Westbrook",
+  "player_id": "D69CD796",
+  "career_value": 508.97,
+  "career_total": 350.77,
+  "peak_avg": 41.78,
+  "year_from": 2009,
+  "year_to": "Present"
+ },
+ {
+  "rank": 48,
+  "name": "Rick Barry",
+  "player_id": "9AD70BF2",
+  "career_value": 503.55,
+  "career_total": 356.37,
+  "peak_avg": 39.59,
+  "year_from": 1966,
+  "year_to": "1980"
+ },
+ {
+  "rank": 49,
+  "name": "Gary Payton",
+  "player_id": "D1A48299",
+  "career_value": 497.79,
+  "career_total": 369.01,
+  "peak_avg": 35.73,
+  "year_from": 1991,
+  "year_to": "2007"
+ },
+ {
+  "rank": 50,
+  "name": "Moses Malone",
+  "player_id": "03BD22B0",
+  "career_value": 478.14,
+  "career_total": 345.98,
+  "peak_avg": 37.74,
+  "year_from": 1975,
+  "year_to": "1995"
+ },
+ {
+  "rank": 51,
+  "name": "Maurice Cheeks",
+  "player_id": "06416AF8",
+  "career_value": 459.91,
+  "career_total": 335.21,
+  "peak_avg": 37.11,
+  "year_from": 1979,
+  "year_to": "1993"
+ },
+ {
+  "rank": 52,
+  "name": "Sam Jones",
+  "player_id": "602C7422",
+  "career_value": 449.05,
+  "career_total": 320.52,
+  "peak_avg": 38.86,
+  "year_from": 1958,
+  "year_to": "1969"
+ },
+ {
+  "rank": 53,
+  "name": "Cliff Hagan",
+  "player_id": "477B7C1C",
+  "career_value": 447.18,
+  "career_total": 312.71,
+  "peak_avg": 40.6,
+  "year_from": 1957,
+  "year_to": "1970"
+ },
+ {
+  "rank": 54,
+  "name": "Allen Iverson",
+  "player_id": "A6B55F28",
+  "career_value": 444.45,
+  "career_total": 323.71,
+  "peak_avg": 37.19,
+  "year_from": 1997,
+  "year_to": "2010"
+ },
+ {
+  "rank": 55,
+  "name": "Bobby Jones",
+  "player_id": "6FDF8DC3",
+  "career_value": 436.74,
+  "career_total": 326.17,
+  "peak_avg": 35.11,
+  "year_from": 1975,
+  "year_to": "1986"
+ },
+ {
+  "rank": 56,
+  "name": "Kevin McHale",
+  "player_id": "F3399976",
+  "career_value": 425.86,
+  "career_total": 315.22,
+  "peak_avg": 35.82,
+  "year_from": 1981,
+  "year_to": "1993"
+ },
+ {
+  "rank": 57,
+  "name": "James Worthy",
+  "player_id": "2DD8591E",
+  "career_value": 424.16,
+  "career_total": 305.15,
+  "peak_avg": 38.19,
+  "year_from": 1983,
+  "year_to": "1994"
+ },
+ {
+  "rank": 58,
+  "name": "Gus Williams",
+  "player_id": "D80E6C02",
+  "career_value": 420.59,
+  "career_total": 297.03,
+  "peak_avg": 39.79,
+  "year_from": 1976,
+  "year_to": "1987"
+ },
+ {
+  "rank": 59,
+  "name": "Draymond Green",
+  "player_id": "257D650B",
+  "career_value": 403.63,
+  "career_total": 282.85,
+  "peak_avg": 40.41,
+  "year_from": 2013,
+  "year_to": "Present"
+ },
+ {
+  "rank": 60,
+  "name": "Vince Carter",
+  "player_id": "A263193A",
+  "career_value": 399.71,
+  "career_total": 313.25,
+  "peak_avg": 31.07,
+  "year_from": 1999,
+  "year_to": "Present"
+ },
+ {
+  "rank": 61,
+  "name": "Horace Grant",
+  "player_id": "F9663D96",
+  "career_value": 392.14,
+  "career_total": 297.53,
+  "peak_avg": 33.75,
+  "year_from": 1988,
+  "year_to": "2004"
+ },
+ {
+  "rank": 62,
+  "name": "Steve Nash",
+  "player_id": "0597E6DA",
+  "career_value": 383.66,
+  "career_total": 297.87,
+  "peak_avg": 31.84,
+  "year_from": 1997,
+  "year_to": "2014"
+ },
+ {
+  "rank": 63,
+  "name": "Terry Porter",
+  "player_id": "87F8DDCD",
+  "career_value": 371.41,
+  "career_total": 286.8,
+  "peak_avg": 32.33,
+  "year_from": 1986,
+  "year_to": "2002"
+ },
+ {
+  "rank": 64,
+  "name": "Tracy McGrady",
+  "player_id": "8A991E67",
+  "career_value": 366.34,
+  "career_total": 279.65,
+  "peak_avg": 33.24,
+  "year_from": 1998,
+  "year_to": "2013"
+ },
+ {
+  "rank": 65,
+  "name": "Bob Cousy",
+  "player_id": "915F6D3E",
+  "career_value": 365.88,
+  "career_total": 287.87,
+  "peak_avg": 30.74,
+  "year_from": 1951,
+  "year_to": "1970"
+ },
+ {
+  "rank": 66,
+  "name": "Dave Cowens",
+  "player_id": "C6A86B41",
+  "career_value": 363.93,
+  "career_total": 272.2,
+  "peak_avg": 34.94,
+  "year_from": 1971,
+  "year_to": "1983"
+ },
+ {
+  "rank": 67,
+  "name": "Ben Wallace",
+  "player_id": "7ACEE08E",
+  "career_value": 360.07,
+  "career_total": 273.82,
+  "peak_avg": 33.61,
+  "year_from": 1997,
+  "year_to": "2012"
+ },
+ {
+  "rank": 68,
+  "name": "Bob Lanier",
+  "player_id": "F84807C0",
+  "career_value": 352.16,
+  "career_total": 284.92,
+  "peak_avg": 28.39,
+  "year_from": 1971,
+  "year_to": "1984"
+ },
+ {
+  "rank": 69,
+  "name": "Dan Issel",
+  "player_id": "5C5CD8CF",
+  "career_value": 348.45,
+  "career_total": 285.38,
+  "peak_avg": 27.37,
+  "year_from": 1971,
+  "year_to": "1985"
+ },
+ {
+  "rank": 70,
+  "name": "George Gervin",
+  "player_id": "9F6E0D05",
+  "career_value": 340.76,
+  "career_total": 268.74,
+  "peak_avg": 30.51,
+  "year_from": 1973,
+  "year_to": "1986"
+ },
+ {
+  "rank": 71,
+  "name": "Elvin Hayes",
+  "player_id": "B2CA3EDF",
+  "career_value": 337.26,
+  "career_total": 265.98,
+  "peak_avg": 30.54,
+  "year_from": 1969,
+  "year_to": "1984"
+ },
+ {
+  "rank": 72,
+  "name": "Jeff Hornacek",
+  "player_id": "28354F3F",
+  "career_value": 333.48,
+  "career_total": 272.45,
+  "peak_avg": 27.57,
+  "year_from": 1987,
+  "year_to": "2000"
+ },
+ {
+  "rank": 73,
+  "name": "Rasheed Wallace",
+  "player_id": "ADB3D032",
+  "career_value": 331.74,
+  "career_total": 272.59,
+  "peak_avg": 27.05,
+  "year_from": 1996,
+  "year_to": "2013"
+ },
+ {
+  "rank": 74,
+  "name": "Shawn Marion",
+  "player_id": "52CB00A7",
+  "career_value": 331.68,
+  "career_total": 264.71,
+  "peak_avg": 29.55,
+  "year_from": 2000,
+  "year_to": "2015"
+ },
+ {
+  "rank": 75,
+  "name": "Robert Parish",
+  "player_id": "F76EA3DA",
+  "career_value": 321.32,
+  "career_total": 269.11,
+  "peak_avg": 25.48,
+  "year_from": 1977,
+  "year_to": "1997"
+ },
+ {
+  "rank": 76,
+  "name": "Kevin Johnson",
+  "player_id": "0AA6D207",
+  "career_value": 316.22,
+  "career_total": 249.98,
+  "peak_avg": 30.32,
+  "year_from": 1988,
+  "year_to": "2000"
+ },
+ {
+  "rank": 77,
+  "name": "Dominique Wilkins",
+  "player_id": "C22D7D30",
+  "career_value": 314.81,
+  "career_total": 256.78,
+  "peak_avg": 27.67,
+  "year_from": 1983,
+  "year_to": "1999"
+ },
+ {
+  "rank": 78,
+  "name": "Andre Iguodala",
+  "player_id": "83298C83",
+  "career_value": 312.75,
+  "career_total": 266.17,
+  "peak_avg": 24.13,
+  "year_from": 2005,
+  "year_to": "Present"
+ },
+ {
+  "rank": 79,
+  "name": "Jerry Lucas",
+  "player_id": "967B0215",
+  "career_value": 311.84,
+  "career_total": 253.12,
+  "peak_avg": 28.11,
+  "year_from": 1964,
+  "year_to": "1974"
+ },
+ {
+  "rank": 80,
+  "name": "Dwight Howard",
+  "player_id": "359A79C4",
+  "career_value": 301.69,
+  "career_total": 245.08,
+  "peak_avg": 28.01,
+  "year_from": 2005,
+  "year_to": "Present"
+ },
+ {
+  "rank": 81,
+  "name": "Marc Gasol",
+  "player_id": "33C147DF",
+  "career_value": 300.37,
+  "career_total": 239.34,
+  "peak_avg": 29.68,
+  "year_from": 2009,
+  "year_to": "Present"
+ },
+ {
+  "rank": 82,
+  "name": "Zelmo Beaty",
+  "player_id": "EA373885",
+  "career_value": 295.34,
+  "career_total": 241.29,
+  "peak_avg": 27.54,
+  "year_from": 1963,
+  "year_to": "1975"
+ },
+ {
+  "rank": 83,
+  "name": "Eddie Jones",
+  "player_id": "74CFE972",
+  "career_value": 293.65,
+  "career_total": 246.14,
+  "peak_avg": 25.41,
+  "year_from": 1995,
+  "year_to": "2008"
+ },
+ {
+  "rank": 84,
+  "name": "Paul George",
+  "player_id": "112830DA",
+  "career_value": 291.51,
+  "career_total": 225.98,
+  "peak_avg": 31.95,
+  "year_from": 2011,
+  "year_to": "Present"
+ },
+ {
+  "rank": 85,
+  "name": "Al Horford",
+  "player_id": "42344DFC",
+  "career_value": 290.99,
+  "career_total": 235.43,
+  "peak_avg": 28.38,
+  "year_from": 2008,
+  "year_to": "Present"
+ },
+ {
+  "rank": 86,
+  "name": "Dennis Johnson",
+  "player_id": "C322A57D",
+  "career_value": 283.87,
+  "career_total": 238.35,
+  "peak_avg": 25.23,
+  "year_from": 1977,
+  "year_to": "1990"
+ },
+ {
+  "rank": 87,
+  "name": "Mark Jackson",
+  "player_id": "8F595CAD",
+  "career_value": 281.85,
+  "career_total": 239.06,
+  "peak_avg": 24.42,
+  "year_from": 1988,
+  "year_to": "2004"
+ },
+ {
+  "rank": 88,
+  "name": "Chris Webber",
+  "player_id": "A74E05AC",
+  "career_value": 279.52,
+  "career_total": 233.71,
+  "peak_avg": 25.57,
+  "year_from": 1994,
+  "year_to": "2008"
+ },
+ {
+  "rank": 89,
+  "name": "Jason Terry",
+  "player_id": "893362CF",
+  "career_value": 278.31,
+  "career_total": 235.86,
+  "peak_avg": 24.49,
+  "year_from": 2000,
+  "year_to": "2018"
+ },
+ {
+  "rank": 90,
+  "name": "Mookie Blaylock",
+  "player_id": "BAE9889B",
+  "career_value": 277.21,
+  "career_total": 223.2,
+  "peak_avg": 28.76,
+  "year_from": 1990,
+  "year_to": "2002"
+ },
+ {
+  "rank": 91,
+  "name": "Kyle Lowry",
+  "player_id": "6DC3EE62",
+  "career_value": 275.97,
+  "career_total": 224,
+  "peak_avg": 28.12,
+  "year_from": 2007,
+  "year_to": "Present"
+ },
+ {
+  "rank": 92,
+  "name": "Tim Hardaway",
+  "player_id": "1F8731EA",
+  "career_value": 275.57,
+  "career_total": 224.77,
+  "peak_avg": 27.73,
+  "year_from": 1990,
+  "year_to": "2003"
+ },
+ {
+  "rank": 93,
+  "name": "Bob Dandridge",
+  "player_id": "81E8FDE7",
+  "career_value": 274.06,
+  "career_total": 222.45,
+  "peak_avg": 28.09,
+  "year_from": 1970,
+  "year_to": "1982"
+ },
+ {
+  "rank": 94,
+  "name": "Alex English",
+  "player_id": "E8D4303C",
+  "career_value": 270.79,
+  "career_total": 227.94,
+  "peak_avg": 25.03,
+  "year_from": 1977,
+  "year_to": "1991"
+ },
+ {
+  "rank": 95,
+  "name": "Kyrie Irving",
+  "player_id": "AEB756C9",
+  "career_value": 270.23,
+  "career_total": 215.67,
+  "peak_avg": 29.53,
+  "year_from": 2012,
+  "year_to": "Present"
+ },
+ {
+  "rank": 96,
+  "name": "Adrian Dantley",
+  "player_id": "D820D84C",
+  "career_value": 270.14,
+  "career_total": 227.01,
+  "peak_avg": 25.18,
+  "year_from": 1977,
+  "year_to": "1991"
+ },
+ {
+  "rank": 97,
+  "name": "Marques Johnson",
+  "player_id": "753CD21D",
+  "career_value": 268.01,
+  "career_total": 215.27,
+  "peak_avg": 28.97,
+  "year_from": 1978,
+  "year_to": "1990"
+ },
+ {
+  "rank": 98,
+  "name": "Vlade Divac",
+  "player_id": "749E7788",
+  "career_value": 266.03,
+  "career_total": 232.75,
+  "peak_avg": 21.78,
+  "year_from": 1990,
+  "year_to": "2005"
+ },
+ {
+  "rank": 99,
+  "name": "Bailey Howell",
+  "player_id": "8EF66A5D",
+  "career_value": 258.23,
+  "career_total": 213.24,
+  "peak_avg": 26.67,
+  "year_from": 1960,
+  "year_to": "1971"
+ },
+ {
+  "rank": 100,
+  "name": "Tony Parker",
+  "player_id": "F699AD34",
+  "career_value": 257.41,
+  "career_total": 221.14,
+  "peak_avg": 23.29,
+  "year_from": 2002,
+  "year_to": "2019"
+ },
+ {
+  "rank": 101,
+  "name": "Hal Greer",
+  "player_id": "36B2DDC3",
+  "career_value": 256.85,
+  "career_total": 221.61,
+  "peak_avg": 22.93,
+  "year_from": 1959,
+  "year_to": "1973"
+ },
+ {
+  "rank": 102,
+  "name": "Anfernee Hardaway",
+  "player_id": "FE9FFC7B",
+  "career_value": 256.65,
+  "career_total": 206.64,
+  "peak_avg": 28.76,
+  "year_from": 1994,
+  "year_to": "2008"
+ },
+ {
+  "rank": 103,
+  "name": "Rajon Rondo",
+  "player_id": "0C011FCF",
+  "career_value": 256.23,
+  "career_total": 208.83,
+  "peak_avg": 27.76,
+  "year_from": 2007,
+  "year_to": "Present"
+ },
+ {
+  "rank": 104,
+  "name": "Sidney Moncrief",
+  "player_id": "1737BDEC",
+  "career_value": 256.02,
+  "career_total": 210.37,
+  "peak_avg": 27.07,
+  "year_from": 1980,
+  "year_to": "1991"
+ },
+ {
+  "rank": 105,
+  "name": "Michael Cooper",
+  "player_id": "D25DA9CC",
+  "career_value": 255.68,
+  "career_total": 214.86,
+  "peak_avg": 25.2,
+  "year_from": 1979,
+  "year_to": "1990"
+ },
+ {
+  "rank": 106,
+  "name": "Bill Laimbeer",
+  "player_id": "CF881437",
+  "career_value": 253.91,
+  "career_total": 212.12,
+  "peak_avg": 25.7,
+  "year_from": 1981,
+  "year_to": "1994"
+ },
+ {
+  "rank": 107,
+  "name": "Chris Mullin",
+  "player_id": "CE6E9909",
+  "career_value": 249.42,
+  "career_total": 211.73,
+  "peak_avg": 24.3,
+  "year_from": 1986,
+  "year_to": "2001"
+ },
+ {
+  "rank": 108,
+  "name": "Larry Nance",
+  "player_id": "32638B02",
+  "career_value": 248.99,
+  "career_total": 214.28,
+  "peak_avg": 23.15,
+  "year_from": 1982,
+  "year_to": "1994"
+ },
+ {
+  "rank": 109,
+  "name": "Baron Davis",
+  "player_id": "AE56F805",
+  "career_value": 248.46,
+  "career_total": 205.85,
+  "peak_avg": 26.41,
+  "year_from": 2000,
+  "year_to": "2012"
+ },
+ {
+  "rank": 110,
+  "name": "Derek Harper",
+  "player_id": "124B449B",
+  "career_value": 246.63,
+  "career_total": 212.43,
+  "peak_avg": 23.08,
+  "year_from": 1984,
+  "year_to": "1999"
+ },
+ {
+  "rank": 111,
+  "name": "Chet Walker",
+  "player_id": "D246D72D",
+  "career_value": 245.59,
+  "career_total": 213.56,
+  "peak_avg": 22.24,
+  "year_from": 1963,
+  "year_to": "1975"
+ },
+ {
+  "rank": 112,
+  "name": "Damian Lillard",
+  "player_id": "4EAE0AA2",
+  "career_value": 242.7,
+  "career_total": 197,
+  "peak_avg": 28.14,
+  "year_from": 2013,
+  "year_to": "Present"
+ },
+ {
+  "rank": 113,
+  "name": "Nate Thurmond",
+  "player_id": "3968BD33",
+  "career_value": 239.05,
+  "career_total": 205.55,
+  "peak_avg": 23.26,
+  "year_from": 1964,
+  "year_to": "1977"
+ },
+ {
+  "rank": 114,
+  "name": "Ron Harper",
+  "player_id": "08AF7DAA",
+  "career_value": 239,
+  "career_total": 205.5,
+  "peak_avg": 23.21,
+  "year_from": 1987,
+  "year_to": "2001"
+ },
+ {
+  "rank": 115,
+  "name": "Grant Hill",
+  "player_id": "6ED3B1BB",
+  "career_value": 238.82,
+  "career_total": 204.29,
+  "peak_avg": 23.63,
+  "year_from": 1995,
+  "year_to": "2013"
+ },
+ {
+  "rank": 116,
+  "name": "George McGinnis",
+  "player_id": "005263C0",
+  "career_value": 238.1,
+  "career_total": 197.1,
+  "peak_avg": 26.48,
+  "year_from": 1972,
+  "year_to": "1982"
+ },
+ {
+  "rank": 117,
+  "name": "Paul Arizin",
+  "player_id": "1ABA27CE",
+  "career_value": 237.71,
+  "career_total": 200.77,
+  "peak_avg": 24.77,
+  "year_from": 1951,
+  "year_to": "1962"
+ },
+ {
+  "rank": 118,
+  "name": "Dikembe Mutombo",
+  "player_id": "E299A44B",
+  "career_value": 236.87,
+  "career_total": 205.26,
+  "peak_avg": 22.54,
+  "year_from": 1992,
+  "year_to": "2009"
+ },
+ {
+  "rank": 119,
+  "name": "Willis Reed",
+  "player_id": "5A075D1A",
+  "career_value": 235.14,
+  "career_total": 192.74,
+  "peak_avg": 27.26,
+  "year_from": 1965,
+  "year_to": "1974"
+ },
+ {
+  "rank": 120,
+  "name": "Jack Sikma",
+  "player_id": "A73E9168",
+  "career_value": 233.92,
+  "career_total": 207.19,
+  "peak_avg": 20.72,
+  "year_from": 1978,
+  "year_to": "1991"
+ },
+ {
+  "rank": 121,
+  "name": "Roger Brown",
+  "player_id": "0BF3ADB0",
+  "career_value": 233.76,
+  "career_total": 192.24,
+  "peak_avg": 26.99,
+  "year_from": 1968,
+  "year_to": "1975"
+ },
+ {
+  "rank": 122,
+  "name": "Dan Majerle",
+  "player_id": "F8319AE2",
+  "career_value": 232.13,
+  "career_total": 201.85,
+  "peak_avg": 22.26,
+  "year_from": 1989,
+  "year_to": "2002"
+ },
+ {
+  "rank": 123,
+  "name": "Connie Hawkins",
+  "player_id": "724BC56A",
+  "career_value": 231.98,
+  "career_total": 191.56,
+  "peak_avg": 26.64,
+  "year_from": 1968,
+  "year_to": "1976"
+ },
+ {
+  "rank": 124,
+  "name": "Lenny Wilkens",
+  "player_id": "60D6E348",
+  "career_value": 231.15,
+  "career_total": 206.38,
+  "peak_avg": 20,
+  "year_from": 1961,
+  "year_to": "1975"
+ },
+ {
+  "rank": 125,
+  "name": "Walt Bellamy",
+  "player_id": "D60C7D95",
+  "career_value": 230.93,
+  "career_total": 206,
+  "peak_avg": 20.04,
+  "year_from": 1962,
+  "year_to": "1975"
+ },
+ {
+  "rank": 126,
+  "name": "Hersey Hawkins",
+  "player_id": "D4A2EEE4",
+  "career_value": 229.91,
+  "career_total": 196.84,
+  "peak_avg": 23.56,
+  "year_from": 1989,
+  "year_to": "2001"
+ },
+ {
+  "rank": 127,
+  "name": "Cedric Maxwell",
+  "player_id": "E5B714AC",
+  "career_value": 225.53,
+  "career_total": 189.68,
+  "peak_avg": 25.14,
+  "year_from": 1978,
+  "year_to": "1988"
+ },
+ {
+  "rank": 128,
+  "name": "Lamar Odom",
+  "player_id": "3AECD53E",
+  "career_value": 224.12,
+  "career_total": 191.88,
+  "peak_avg": 23.6,
+  "year_from": 2000,
+  "year_to": "2013"
+ },
+ {
+  "rank": 129,
+  "name": "Bill Bridges",
+  "player_id": "1303FA6D",
+  "career_value": 223.16,
+  "career_total": 191.39,
+  "peak_avg": 23.47,
+  "year_from": 1963,
+  "year_to": "1975"
+ },
+ {
+  "rank": 130,
+  "name": "Joe Dumars",
+  "player_id": "FECE619B",
+  "career_value": 219.13,
+  "career_total": 190.55,
+  "peak_avg": 22.24,
+  "year_from": 1986,
+  "year_to": "1999"
+ },
+ {
+  "rank": 131,
+  "name": "Alvan Adams",
+  "player_id": "EC72C213",
+  "career_value": 215.78,
+  "career_total": 187.15,
+  "peak_avg": 22.48,
+  "year_from": 1976,
+  "year_to": "1988"
+ },
+ {
+  "rank": 132,
+  "name": "Carmelo Anthony",
+  "player_id": "7B1BDA30",
+  "career_value": 212.02,
+  "career_total": 189.81,
+  "peak_avg": 19.8,
+  "year_from": 2004,
+  "year_to": "Present"
+ },
+ {
+  "rank": 133,
+  "name": "Toni Kukoč",
+  "player_id": "B2EA96B6",
+  "career_value": 209.84,
+  "career_total": 182.47,
+  "peak_avg": 22.25,
+  "year_from": 1994,
+  "year_to": "2006"
+ },
+ {
+  "rank": 134,
+  "name": "Andrei Kirilenko",
+  "player_id": "0D39E273",
+  "career_value": 209.48,
+  "career_total": 185.22,
+  "peak_avg": 20.86,
+  "year_from": 2002,
+  "year_to": "2015"
+ },
+ {
+  "rank": 135,
+  "name": "Rashard Lewis",
+  "player_id": "C4606266",
+  "career_value": 208.37,
+  "career_total": 182.78,
+  "peak_avg": 21.51,
+  "year_from": 1999,
+  "year_to": "2014"
+ },
+ {
+  "rank": 136,
+  "name": "Vern Mikkelsen",
+  "player_id": "58D4D10B",
+  "career_value": 204.75,
+  "career_total": 178.82,
+  "peak_avg": 21.91,
+  "year_from": 1950,
+  "year_to": "1959"
+ },
+ {
+  "rank": 137,
+  "name": "Bob McAdoo",
+  "player_id": "A392AD98",
+  "career_value": 204.36,
+  "career_total": 174.22,
+  "peak_avg": 23.99,
+  "year_from": 1973,
+  "year_to": "1986"
+ },
+ {
+  "rank": 138,
+  "name": "Doc Rivers",
+  "player_id": "4DC68375",
+  "career_value": 202.51,
+  "career_total": 178.9,
+  "peak_avg": 20.88,
+  "year_from": 1984,
+  "year_to": "1996"
+ },
+ {
+  "rank": 139,
+  "name": "Deron Williams",
+  "player_id": "3A9D0719",
+  "career_value": 202.42,
+  "career_total": 176.17,
+  "peak_avg": 22.2,
+  "year_from": 2006,
+  "year_to": "2017"
+ },
+ {
+  "rank": 140,
+  "name": "Bill Sharman",
+  "player_id": "F95F5790",
+  "career_value": 202.14,
+  "career_total": 175.93,
+  "peak_avg": 22.18,
+  "year_from": 1951,
+  "year_to": "1961"
+ },
+ {
+  "rank": 141,
+  "name": "Fat Lever",
+  "player_id": "A35907D0",
+  "career_value": 201.79,
+  "career_total": 174.26,
+  "peak_avg": 22.85,
+  "year_from": 1983,
+  "year_to": "1994"
+ },
+ {
+  "rank": 142,
+  "name": "Blake Griffin",
+  "player_id": "8FD23BA8",
+  "career_value": 200.96,
+  "career_total": 174.29,
+  "peak_avg": 22.51,
+  "year_from": 2011,
+  "year_to": "Present"
+ },
+ {
+  "rank": 143,
+  "name": "Alonzo Mourning",
+  "player_id": "6F15279A",
+  "career_value": 196.54,
+  "career_total": 174.39,
+  "peak_avg": 20.54,
+  "year_from": 1993,
+  "year_to": "2008"
+ },
+ {
+  "rank": 144,
+  "name": "Mike Conley",
+  "player_id": "97B51910",
+  "career_value": 196.08,
+  "career_total": 171.4,
+  "peak_avg": 21.79,
+  "year_from": 2008,
+  "year_to": "Present"
+ },
+ {
+  "rank": 145,
+  "name": "Tayshaun Prince",
+  "player_id": "E1C4804D",
+  "career_value": 195.56,
+  "career_total": 169.46,
+  "peak_avg": 22.55,
+  "year_from": 2003,
+  "year_to": "2016"
+ },
+ {
+  "rank": 146,
+  "name": "Paul Silas",
+  "player_id": "D92D7F78",
+  "career_value": 195,
+  "career_total": 172.26,
+  "peak_avg": 20.88,
+  "year_from": 1965,
+  "year_to": "1980"
+ },
+ {
+  "rank": 147,
+  "name": "Mark Aguirre",
+  "player_id": "0F786EE4",
+  "career_value": 194.1,
+  "career_total": 171.77,
+  "peak_avg": 20.76,
+  "year_from": 1982,
+  "year_to": "1994"
+ },
+ {
+  "rank": 148,
+  "name": "Elton Brand",
+  "player_id": "DF8A8F0B",
+  "career_value": 193.54,
+  "career_total": 170.82,
+  "peak_avg": 20.96,
+  "year_from": 2000,
+  "year_to": "2016"
+ },
+ {
+  "rank": 149,
+  "name": "David West",
+  "player_id": "976D1DDA",
+  "career_value": 190.38,
+  "career_total": 173.7,
+  "peak_avg": 18.16,
+  "year_from": 2004,
+  "year_to": "2018"
+ },
+ {
+  "rank": 150,
+  "name": "Tom Heinsohn",
+  "player_id": "27EE72A8",
+  "career_value": 190.03,
+  "career_total": 166.84,
+  "peak_avg": 21.41,
+  "year_from": 1957,
+  "year_to": "1965"
+ },
+ {
+  "rank": 151,
+  "name": "Chris Bosh",
+  "player_id": "4EE8F214",
+  "career_value": 188.61,
+  "career_total": 171.62,
+  "peak_avg": 18.37,
+  "year_from": 2004,
+  "year_to": "2016"
+ },
+ {
+  "rank": 152,
+  "name": "Frank Ramsey",
+  "player_id": "C20CFCC8",
+  "career_value": 187.21,
+  "career_total": 162.09,
+  "peak_avg": 22.63,
+  "year_from": 1955,
+  "year_to": "1964"
+ },
+ {
+  "rank": 153,
+  "name": "Byron Scott",
+  "player_id": "0A58E6A5",
+  "career_value": 186.38,
+  "career_total": 166.71,
+  "peak_avg": 19.85,
+  "year_from": 1984,
+  "year_to": "1997"
+ },
+ {
+  "rank": 154,
+  "name": "Jimmy Butler",
+  "player_id": "982F849C",
+  "career_value": 186.2,
+  "career_total": 160.66,
+  "peak_avg": 22.9,
+  "year_from": 2012,
+  "year_to": "Present"
+ },
+ {
+  "rank": 155,
+  "name": "Ed Macauley",
+  "player_id": "F9544F32",
+  "career_value": 185.97,
+  "career_total": 164.14,
+  "peak_avg": 20.96,
+  "year_from": 1950,
+  "year_to": "1959"
+ },
+ {
+  "rank": 156,
+  "name": "Giannis Antetokounmpo",
+  "player_id": "093D2217",
+  "career_value": 182.32,
+  "career_total": 157.99,
+  "peak_avg": 22.57,
+  "year_from": 2014,
+  "year_to": "Present"
+ },
+ {
+  "rank": 157,
+  "name": "Danny Ainge",
+  "player_id": "35652FFE",
+  "career_value": 179.49,
+  "career_total": 162.43,
+  "peak_avg": 18.8,
+  "year_from": 1982,
+  "year_to": "1995"
+ },
+ {
+  "rank": 158,
+  "name": "Marcus Camby",
+  "player_id": "3C6C14DA",
+  "career_value": 178.2,
+  "career_total": 162.89,
+  "peak_avg": 17.97,
+  "year_from": 1997,
+  "year_to": "2013"
+ },
+ {
+  "rank": 159,
+  "name": "Kevin Love",
+  "player_id": "945E0CCD",
+  "career_value": 171.91,
+  "career_total": 152.4,
+  "peak_avg": 20.65,
+  "year_from": 2009,
+  "year_to": "Present"
+ },
+ {
+  "rank": 160,
+  "name": "Bill Walton",
+  "player_id": "2B16EED4",
+  "career_value": 170.97,
+  "career_total": 151.17,
+  "peak_avg": 20.84,
+  "year_from": 1975,
+  "year_to": "1987"
+ },
+ {
+  "rank": 161,
+  "name": "Billy Cunningham",
+  "player_id": "9B633451",
+  "career_value": 170.91,
+  "career_total": 153.28,
+  "peak_avg": 19.61,
+  "year_from": 1966,
+  "year_to": "1976"
+ },
+ {
+  "rank": 162,
+  "name": "Paul Millsap",
+  "player_id": "6429764E",
+  "career_value": 169.62,
+  "career_total": 156.19,
+  "peak_avg": 17.35,
+  "year_from": 2007,
+  "year_to": "Present"
+ },
+ {
+  "rank": 163,
+  "name": "Dave DeBusschere",
+  "player_id": "5779504B",
+  "career_value": 166.6,
+  "career_total": 154.26,
+  "peak_avg": 16.82,
+  "year_from": 1963,
+  "year_to": "1974"
+ },
+ {
+  "rank": 164,
+  "name": "Anthony Davis",
+  "player_id": "53412120",
+  "career_value": 163.06,
+  "career_total": 144.56,
+  "peak_avg": 20.65,
+  "year_from": 2013,
+  "year_to": "Present"
+ },
+ {
+  "rank": 165,
+  "name": "Mark Price",
+  "player_id": "86C08A5F",
+  "career_value": 162.39,
+  "career_total": 145.64,
+  "peak_avg": 19.63,
+  "year_from": 1987,
+  "year_to": "1998"
+ },
+ {
+  "rank": 166,
+  "name": "Shawn Kemp",
+  "player_id": "ACECD3F1",
+  "career_value": 161.88,
+  "career_total": 145.84,
+  "peak_avg": 19.25,
+  "year_from": 1990,
+  "year_to": "2003"
+ },
+ {
+  "rank": 167,
+  "name": "Bernard King",
+  "player_id": "CDF56DE5",
+  "career_value": 161.38,
+  "career_total": 146.71,
+  "peak_avg": 18.47,
+  "year_from": 1978,
+  "year_to": "1993"
+ },
+ {
+  "rank": 168,
+  "name": "Joe Johnson",
+  "player_id": "701B6B87",
+  "career_value": 160.84,
+  "career_total": 151.74,
+  "peak_avg": 15.21,
+  "year_from": 2002,
+  "year_to": "2018"
+ },
+ {
+  "rank": 169,
+  "name": "Rod Strickland",
+  "player_id": "70F27856",
+  "career_value": 160.41,
+  "career_total": 151.9,
+  "peak_avg": 14.91,
+  "year_from": 1989,
+  "year_to": "2005"
+ },
+ {
+  "rank": 170,
+  "name": "LaMarcus Aldridge",
+  "player_id": "35B5B820",
+  "career_value": 160.18,
+  "career_total": 150.69,
+  "peak_avg": 15.46,
+  "year_from": 2007,
+  "year_to": "Present"
+ },
+ {
+  "rank": 171,
+  "name": "John Wall",
+  "player_id": "93261646",
+  "career_value": 158.99,
+  "career_total": 142.59,
+  "peak_avg": 19.59,
+  "year_from": 2011,
+  "year_to": "Present"
+ },
+ {
+  "rank": 172,
+  "name": "Paul Westphal",
+  "player_id": "E76E40EF",
+  "career_value": 158.15,
+  "career_total": 142.61,
+  "peak_avg": 19.12,
+  "year_from": 1973,
+  "year_to": "1984"
+ },
+ {
+  "rank": 173,
+  "name": "Gail Goodrich",
+  "player_id": "DEBC4B73",
+  "career_value": 157.96,
+  "career_total": 143.6,
+  "peak_avg": 18.45,
+  "year_from": 1966,
+  "year_to": "1979"
+ },
+ {
+  "rank": 174,
+  "name": "Don Nelson",
+  "player_id": "42708BFE",
+  "career_value": 157.11,
+  "career_total": 144.27,
+  "peak_avg": 17.59,
+  "year_from": 1963,
+  "year_to": "1976"
+ },
+ {
+  "rank": 175,
+  "name": "Peja Stojaković",
+  "player_id": "B59D68F4",
+  "career_value": 156.94,
+  "career_total": 143.98,
+  "peak_avg": 17.67,
+  "year_from": 1999,
+  "year_to": "2011"
+ },
+ {
+  "rank": 176,
+  "name": "Neil Johnston",
+  "player_id": "9BB9B693",
+  "career_value": 154.07,
+  "career_total": 138.06,
+  "peak_avg": 19.72,
+  "year_from": 1952,
+  "year_to": "1959"
+ },
+ {
+  "rank": 177,
+  "name": "Danny Green",
+  "player_id": "A6DDC535",
+  "career_value": 153.14,
+  "career_total": 138.09,
+  "peak_avg": 19.17,
+  "year_from": 2010,
+  "year_to": "Present"
+ },
+ {
+  "rank": 178,
+  "name": "Richard Hamilton",
+  "player_id": "2410B189",
+  "career_value": 152.62,
+  "career_total": 137.62,
+  "peak_avg": 19.16,
+  "year_from": 2000,
+  "year_to": "2013"
+ },
+ {
+  "rank": 179,
+  "name": "Metta World Peace",
+  "player_id": "9F8FF46A",
+  "career_value": 151.82,
+  "career_total": 142.15,
+  "peak_avg": 15.83,
+  "year_from": 2000,
+  "year_to": "2017"
+ },
+ {
+  "rank": 180,
+  "name": "George Yardley",
+  "player_id": "9D641BDB",
+  "career_value": 151.69,
+  "career_total": 136.29,
+  "peak_avg": 19.47,
+  "year_from": 1954,
+  "year_to": "1960"
+ },
+ {
+  "rank": 181,
+  "name": "Earl Monroe",
+  "player_id": "437F4244",
+  "career_value": 151.24,
+  "career_total": 140.69,
+  "peak_avg": 16.46,
+  "year_from": 1968,
+  "year_to": "1980"
+ },
+ {
+  "rank": 182,
+  "name": "Jerome Kersey",
+  "player_id": "BDE60459",
+  "career_value": 150.9,
+  "career_total": 138.44,
+  "peak_avg": 17.63,
+  "year_from": 1985,
+  "year_to": "2001"
+ },
+ {
+  "rank": 183,
+  "name": "Jo Jo White",
+  "player_id": "C3919C07",
+  "career_value": 150.71,
+  "career_total": 135.65,
+  "peak_avg": 19.28,
+  "year_from": 1970,
+  "year_to": "1981"
+ },
+ {
+  "rank": 184,
+  "name": "Mel Daniels",
+  "player_id": "64EF8DFC",
+  "career_value": 150.57,
+  "career_total": 135.65,
+  "peak_avg": 19.23,
+  "year_from": 1968,
+  "year_to": "1977"
+ },
+ {
+  "rank": 185,
+  "name": "Terry Cummings",
+  "player_id": "79141377",
+  "career_value": 146.77,
+  "career_total": 135.77,
+  "peak_avg": 16.9,
+  "year_from": 1983,
+  "year_to": "2000"
+ },
+ {
+  "rank": 186,
+  "name": "Trevor Ariza",
+  "player_id": "B6F5EFC4",
+  "career_value": 144.89,
+  "career_total": 135.54,
+  "peak_avg": 15.99,
+  "year_from": 2005,
+  "year_to": "Present"
+ },
+ {
+  "rank": 187,
+  "name": "Nikola Jokić",
+  "player_id": "8858B59A",
+  "career_value": 144.34,
+  "career_total": 130.86,
+  "peak_avg": 18.69,
+  "year_from": 2016,
+  "year_to": "Present"
+ },
+ {
+  "rank": 188,
+  "name": "Andre Miller",
+  "player_id": "75A3B079",
+  "career_value": 143.41,
+  "career_total": 138.83,
+  "peak_avg": 12.88,
+  "year_from": 2000,
+  "year_to": "2016"
+ },
+ {
+  "rank": 189,
+  "name": "Amar'e Stoudemire",
+  "player_id": "7374A3E0",
+  "career_value": 143.08,
+  "career_total": 131.75,
+  "peak_avg": 17.32,
+  "year_from": 2003,
+  "year_to": "2016"
+ },
+ {
+  "rank": 190,
+  "name": "Dennis Rodman",
+  "player_id": "F9A09938",
+  "career_value": 138.72,
+  "career_total": 131.24,
+  "peak_avg": 14.93,
+  "year_from": 1987,
+  "year_to": "2000"
+ },
+ {
+  "rank": 191,
+  "name": "Klay Thompson",
+  "player_id": "8D5A5F60",
+  "career_value": 138.28,
+  "career_total": 126.4,
+  "peak_avg": 17.97,
+  "year_from": 2012,
+  "year_to": "Present"
+ },
+ {
+  "rank": 192,
+  "name": "Bobby Wanzer",
+  "player_id": "B5EEE265",
+  "career_value": 134.94,
+  "career_total": 123.91,
+  "peak_avg": 17.56,
+  "year_from": 1949,
+  "year_to": "1957"
+ },
+ {
+  "rank": 193,
+  "name": "Mitch Richmond",
+  "player_id": "518E90CA",
+  "career_value": 133.41,
+  "career_total": 126.82,
+  "peak_avg": 14.56,
+  "year_from": 1989,
+  "year_to": "2002"
+ },
+ {
+  "rank": 194,
+  "name": "Glen Rice",
+  "player_id": "7BD6932F",
+  "career_value": 133.19,
+  "career_total": 126.37,
+  "peak_avg": 14.74,
+  "year_from": 1990,
+  "year_to": "2004"
+ },
+ {
+  "rank": 195,
+  "name": "Carlos Boozer",
+  "player_id": "54347DF1",
+  "career_value": 132.62,
+  "career_total": 123.94,
+  "peak_avg": 16.03,
+  "year_from": 2003,
+  "year_to": "2015"
+ },
+ {
+  "rank": 196,
+  "name": "Carlos Boozer",
+  "player_id": "54347DF1",
+  "career_value": 132.62,
+  "career_total": 123.94,
+  "peak_avg": 16.03,
+  "year_from": 2003,
+  "year_to": "2015"
+ },
+ {
+  "rank": 197,
+  "name": "Derek Fisher",
+  "player_id": "FE5D44FF",
+  "career_value": 130.11,
+  "career_total": 124.87,
+  "peak_avg": 13.72,
+  "year_from": 1997,
+  "year_to": "2014"
+ },
+ {
+  "rank": 198,
+  "name": "George Hill",
+  "player_id": "C067D5AA",
+  "career_value": 128.17,
+  "career_total": 121.6,
+  "peak_avg": 14.73,
+  "year_from": 2009,
+  "year_to": "Present"
+ },
+ {
+  "rank": 199,
+  "name": "Johnny Moore",
+  "player_id": "816F02D9",
+  "career_value": 127.32,
+  "career_total": 117.89,
+  "peak_avg": 16.84,
+  "year_from": 1981,
+  "year_to": "1990"
+ },
+ {
+  "rank": 200,
+  "name": "Joakim Noah",
+  "player_id": "E1D340FB",
+  "career_value": 125.5,
+  "career_total": 117.62,
+  "peak_avg": 15.79,
+  "year_from": 2008,
+  "year_to": "2019"
+ },
+ {
+  "rank": 201,
+  "name": "Jason Richardson",
+  "player_id": "FE9315DD",
+  "career_value": 123.52,
+  "career_total": 117.86,
+  "peak_avg": 14.18,
+  "year_from": 2002,
+  "year_to": "2015"
+ },
+ {
+  "rank": 202,
+  "name": "David Thompson",
+  "player_id": "0481AB78",
+  "career_value": 122.63,
+  "career_total": 114.5,
+  "peak_avg": 16.13,
+  "year_from": 1976,
+  "year_to": "1984"
+ },
+ {
+  "rank": 203,
+  "name": "Kemba Walker",
+  "player_id": "B5543B2F",
+  "career_value": 122.57,
+  "career_total": 114.77,
+  "peak_avg": 15.87,
+  "year_from": 2012,
+  "year_to": "Present"
+ },
+ {
+  "rank": 204,
+  "name": "Derrick Rose",
+  "player_id": "E4870E32",
+  "career_value": 121.05,
+  "career_total": 113.13,
+  "peak_avg": 16.07,
+  "year_from": 2009,
+  "year_to": "Present"
+ },
+ {
+  "rank": 205,
+  "name": "Gilbert Arenas",
+  "player_id": "416BE99C",
+  "career_value": 120.91,
+  "career_total": 113.32,
+  "peak_avg": 15.79,
+  "year_from": 2002,
+  "year_to": "2012"
+ },
+ {
+  "rank": 206,
+  "name": "Stephon Marbury",
+  "player_id": "3E94D1FF",
+  "career_value": 120.31,
+  "career_total": 115.46,
+  "peak_avg": 13.68,
+  "year_from": 1997,
+  "year_to": "2009"
+ },
+ {
+  "rank": 207,
+  "name": "Clyde Lovellette",
+  "player_id": "DFBDED87",
+  "career_value": 120.31,
+  "career_total": 114.15,
+  "peak_avg": 14.68,
+  "year_from": 1954,
+  "year_to": "1964"
+ },
+ {
+  "rank": 208,
+  "name": "Charlie Ward",
+  "player_id": "485650FE",
+  "career_value": 119.66,
+  "career_total": 113.21,
+  "peak_avg": 14.96,
+  "year_from": 1995,
+  "year_to": "2005"
+ },
+ {
+  "rank": 209,
+  "name": "Jamaal Wilkes",
+  "player_id": "9B28CA6A",
+  "career_value": 119.36,
+  "career_total": 114.11,
+  "peak_avg": 14.02,
+  "year_from": 1975,
+  "year_to": "1986"
+ },
+ {
+  "rank": 210,
+  "name": "Tiny Archibald",
+  "player_id": "55DFCAFE",
+  "career_value": 117.35,
+  "career_total": 111.55,
+  "peak_avg": 14.53,
+  "year_from": 1971,
+  "year_to": "1984"
+ },
+ {
+  "rank": 211,
+  "name": "Derrick Coleman",
+  "player_id": "0DF6421A",
+  "career_value": 113.83,
+  "career_total": 109.56,
+  "peak_avg": 13.42,
+  "year_from": 1991,
+  "year_to": "2005"
+ },
+ {
+  "rank": 212,
+  "name": "Brad Daugherty",
+  "player_id": "E8F18AEE",
+  "career_value": 112.12,
+  "career_total": 106.48,
+  "peak_avg": 14.66,
+  "year_from": 1987,
+  "year_to": "1994"
+ },
+ {
+  "rank": 213,
+  "name": "Dave Bing",
+  "player_id": "0058E4CF",
+  "career_value": 111.88,
+  "career_total": 108.62,
+  "peak_avg": 12.66,
+  "year_from": 1967,
+  "year_to": "1978"
+ },
+ {
+  "rank": 214,
+  "name": "Happy Hairston",
+  "player_id": "E23E90A0",
+  "career_value": 108.91,
+  "career_total": 104.02,
+  "peak_avg": 14.13,
+  "year_from": 1965,
+  "year_to": "1975"
+ },
+ {
+  "rank": 215,
+  "name": "A.C. Green",
+  "player_id": "DA567707",
+  "career_value": 106.25,
+  "career_total": 104.06,
+  "peak_avg": 11.9,
+  "year_from": 1986,
+  "year_to": "2001"
+ },
+ {
+  "rank": 216,
+  "name": "DeAndre Jordan",
+  "player_id": "8B8E13D1",
+  "career_value": 105.98,
+  "career_total": 101.61,
+  "peak_avg": 13.76,
+  "year_from": 2009,
+  "year_to": "Present"
+ },
+ {
+  "rank": 217,
+  "name": "Buck Williams",
+  "player_id": "24649BEF",
+  "career_value": 104.31,
+  "career_total": 103.58,
+  "peak_avg": 10.66,
+  "year_from": 1982,
+  "year_to": "1998"
+ },
+ {
+  "rank": 218,
+  "name": "Otis Thorpe",
+  "player_id": "67436191",
+  "career_value": 100.61,
+  "career_total": 99.71,
+  "peak_avg": 10.83,
+  "year_from": 1985,
+  "year_to": "2001"
+ },
+ {
+  "rank": 219,
+  "name": "Zach Randolph",
+  "player_id": "B2441D6B",
+  "career_value": 98,
+  "career_total": 96.93,
+  "peak_avg": 11.01,
+  "year_from": 2002,
+  "year_to": "2018"
+ },
+ {
+  "rank": 220,
+  "name": "World B. Free",
+  "player_id": "124D996E",
+  "career_value": 97.99,
+  "career_total": 96.64,
+  "peak_avg": 11.28,
+  "year_from": 1976,
+  "year_to": "1988"
+ },
+ {
+  "rank": 221,
+  "name": "Nicolas Batum",
+  "player_id": "989C331B",
+  "career_value": 96.39,
+  "career_total": 95.06,
+  "peak_avg": 11.25,
+  "year_from": 2009,
+  "year_to": "2019"
+ },
+ {
+  "rank": 222,
+  "name": "Antawn Jamison",
+  "player_id": "44BD35B1",
+  "career_value": 96,
+  "career_total": 96.39,
+  "peak_avg": 9.67,
+  "year_from": 1999,
+  "year_to": "2014"
+ },
+ {
+  "rank": 223,
+  "name": "Sleepy Floyd",
+  "player_id": "F2C53550",
+  "career_value": 95.29,
+  "career_total": 92.51,
+  "peak_avg": 12.66,
+  "year_from": 1983,
+  "year_to": "1995"
+ },
+ {
+  "rank": 224,
+  "name": "Yao Ming",
+  "player_id": "28F0D404",
+  "career_value": 95.27,
+  "career_total": 92.05,
+  "peak_avg": 13.12,
+  "year_from": 2003,
+  "year_to": "2011"
+ },
+ {
+  "rank": 225,
+  "name": "Spencer Haywood",
+  "player_id": "DB2C2126",
+  "career_value": 93.08,
+  "career_total": 91.08,
+  "peak_avg": 11.98,
+  "year_from": 1970,
+  "year_to": "1983"
+ },
+ {
+  "rank": 226,
+  "name": "Tyson Chandler",
+  "player_id": "9492C5EB",
+  "career_value": 92.02,
+  "career_total": 90.75,
+  "peak_avg": 11.28,
+  "year_from": 2002,
+  "year_to": "2019"
+ },
+ {
+  "rank": 227,
+  "name": "Isaiah Thomas",
+  "player_id": "904CE831",
+  "career_value": 91.8,
+  "career_total": 89.04,
+  "peak_avg": 12.72,
+  "year_from": 2012,
+  "year_to": "Present"
+ },
+ {
+  "rank": 228,
+  "name": "Robert Reid",
+  "player_id": "0B0019F6",
+  "career_value": 91.45,
+  "career_total": 88.96,
+  "peak_avg": 12.46,
+  "year_from": 1978,
+  "year_to": "1991"
+ },
+ {
+  "rank": 229,
+  "name": "DeMar DeRozan",
+  "player_id": "32323DEB",
+  "career_value": 90.71,
+  "career_total": 88.15,
+  "peak_avg": 12.59,
+  "year_from": 2010,
+  "year_to": "Present"
+ },
+ {
+  "rank": 230,
+  "name": "Al Jefferson",
+  "player_id": "9CD8AA1E",
+  "career_value": 89.82,
+  "career_total": 89.28,
+  "peak_avg": 10.54,
+  "year_from": 2005,
+  "year_to": "2018"
+ },
+ {
+  "rank": 231,
+  "name": "Guy Rodgers",
+  "player_id": "BEE67C78",
+  "career_value": 88.02,
+  "career_total": 86.8,
+  "peak_avg": 11.23,
+  "year_from": 1959,
+  "year_to": "1970"
+ },
+ {
+  "rank": 232,
+  "name": "Danny Granger",
+  "player_id": "EEB40899",
+  "career_value": 84.08,
+  "career_total": 82.51,
+  "peak_avg": 11.69,
+  "year_from": 2006,
+  "year_to": "2015"
+ },
+ {
+  "rank": 233,
+  "name": "Jermaine O'Neal",
+  "player_id": "98F7F77A",
+  "career_value": 83.86,
+  "career_total": 83.28,
+  "peak_avg": 10.66,
+  "year_from": 1997,
+  "year_to": "2014"
+ },
+ {
+  "rank": 234,
+  "name": "Rudy Gobert",
+  "player_id": "49ABF204",
+  "career_value": 79.71,
+  "career_total": 78.61,
+  "peak_avg": 11.23,
+  "year_from": 2014,
+  "year_to": "Present"
+ },
+ {
+  "rank": 235,
+  "name": "Joe Fulks",
+  "player_id": "6C2A1043",
+  "career_value": 78.94,
+  "career_total": 77.93,
+  "peak_avg": 11.13,
+  "year_from": 1947,
+  "year_to": "1954"
+ },
+ {
+  "rank": 236,
+  "name": "Brandon Roy",
+  "player_id": "7FC80494",
+  "career_value": 78.71,
+  "career_total": 77.78,
+  "peak_avg": 11.11,
+  "year_from": 2007,
+  "year_to": "2013"
+ },
+ {
+  "rank": 237,
+  "name": "DeMarcus Cousins",
+  "player_id": "E6086E5F",
+  "career_value": 77.41,
+  "career_total": 76.87,
+  "peak_avg": 10.61,
+  "year_from": 2011,
+  "year_to": "Present"
+ },
+ {
+  "rank": 238,
+  "name": "Gus Johnson",
+  "player_id": "A0532DA3",
+  "career_value": 76.8,
+  "career_total": 76.57,
+  "peak_avg": 10.31,
+  "year_from": 1964,
+  "year_to": "1973"
+ },
+ {
+  "rank": 239,
+  "name": "Jack Twyman",
+  "player_id": "8C1D7A17",
+  "career_value": 70.79,
+  "career_total": 71.43,
+  "peak_avg": 9.13,
+  "year_from": 1956,
+  "year_to": "1966"
+ },
+ {
+  "rank": 240,
+  "name": "Tom Chambers",
+  "player_id": "8A77A916",
+  "career_value": 70.42,
+  "career_total": 70.85,
+  "peak_avg": 9.47,
+  "year_from": 1982,
+  "year_to": "1998"
+ },
+ {
+  "rank": 241,
+  "name": "Pete Maravich",
+  "player_id": "0C70307C",
+  "career_value": 68.9,
+  "career_total": 69.39,
+  "peak_avg": 9.39,
+  "year_from": 1971,
+  "year_to": "1980"
+ },
+ {
+  "rank": 242,
+  "name": "Maurice Stokes",
+  "player_id": "97D99CCC",
+  "career_value": 67.97,
+  "career_total": 68.17,
+  "peak_avg": 9.74,
+  "year_from": 1956,
+  "year_to": "1958"
+ },
+ {
+  "rank": 243,
+  "name": "Danilo Gallinari",
+  "player_id": "36B3F135",
+  "career_value": 63.9,
+  "career_total": 65.01,
+  "peak_avg": 8.39,
+  "year_from": 2009,
+  "year_to": "Present"
+ },
+ {
+  "rank": 244,
+  "name": "Andre Drummond",
+  "player_id": "C3919019",
+  "career_value": 56.19,
+  "career_total": 57.34,
+  "peak_avg": 8.19,
+  "year_from": 2013,
+  "year_to": "Present"
+ },
+ {
+  "rank": 245,
+  "name": "Monta Ellis",
+  "player_id": "3C0D9044",
+  "career_value": 54.8,
+  "career_total": 56.32,
+  "peak_avg": 7.53,
+  "year_from": 2006,
+  "year_to": "2017"
+ },
+ {
+  "rank": 246,
+  "name": "Hassan Whiteside",
+  "player_id": "B9E306D8",
+  "career_value": 51.31,
+  "career_total": 52.73,
+  "peak_avg": 7.53,
+  "year_from": 2011,
+  "year_to": "Present"
+ },
+ {
+  "rank": 247,
+  "name": "Joel Embiid",
+  "player_id": "0F3314F5",
+  "career_value": 44.24,
+  "career_total": 45.94,
+  "peak_avg": 6.56,
+  "year_from": 2017,
+  "year_to": "Present"
+ }
+]
