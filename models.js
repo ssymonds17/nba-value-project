@@ -69,7 +69,7 @@ let playerListSchema = mongoose.Schema({
  first_name: { type: String, required: true },
  last_name: { type: String, required: true },
  first_year: Number,
- last_year: Number,
+ last_year: Number
 }, { collection: 'player_list' });
 
 // Schema for regular season data
@@ -128,8 +128,21 @@ let allTimePlayerSchema = mongoose.Schema({
  peak_avg: Number,
  year_from: Number,
  year_to: Number,
- active: String,
+ active: String
 }, { collection: 'all_time_player' });
+
+let allTimeTeamSchema = mongoose.Schema({
+ _id: String,
+ rank: Number,
+ team: String,
+ team_abbreviation: String,
+ year: Number,
+ overall: Number,
+ regular_season: Number,
+ playoffs: Number,
+ record: String,
+ result: String
+}, { collection: 'all_time_team' });
 
 
 let Player = mongoose.model('Player', playerSchema);
@@ -138,6 +151,7 @@ let PlayerList = mongoose.model('PlayerList', playerListSchema);
 let RegularSeason = mongoose.model('RegularSeason', regularSeasonSchema);
 let Playoff = mongoose.model('Playoff', playoffSchema);
 let AllTimePlayer = mongoose.model('AllTimePlayer', allTimePlayerSchema);
+let AllTimeTeam = mongoose.model('AllTimeTeam', allTimeTeamSchema);
 
 module.exports.Player = Player;
 module.exports.Team = Team;
@@ -145,3 +159,4 @@ module.exports.PlayerList = PlayerList;
 module.exports.RegularSeason = RegularSeason;
 module.exports.Playoff = Playoff;
 module.exports.AllTimePlayer = AllTimePlayer;
+module.exports.AllTimeTeam = AllTimeTeam;

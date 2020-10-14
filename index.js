@@ -11,6 +11,7 @@ const PlayerLists = Models.PlayerList;
 const RegularSeasons = Models.RegularSeason;
 const Playoffs = Models.Playoff;
 const AllTimePlayers = Models.AllTimePlayer;
+const AllTimeTeams = Models.AllTimeTeam;
 
 app.use(bodyParser.json());
 app.use(cors());
@@ -139,6 +140,7 @@ app.get('/playerranking',
   (req, res) => {
     let rankSort = { rank: 1 };
     AllTimePlayers.find()
+      .limit(100)
       .sort(rankSort)
       .then((ranking) => {
         res.status(200).json(ranking);
@@ -150,6 +152,22 @@ app.get('/playerranking',
   });
 
 // GET greatest all time team list
+app.get('/teamranking',
+  cors(corsOptions),
+  (req, res) => {
+    let rankSort = { rank: 1 };
+    AllTimeTeams.find()
+      .limit(100)
+      .sort(rankSort)
+      .then((ranking) => {
+        res.status(200).json(ranking);
+      })
+      .catch((e) => {
+        console.error(e);
+        res.status(500).send('Error ' + e);
+      });
+  });
+
 // GET greatest all time seasons list
 
 
