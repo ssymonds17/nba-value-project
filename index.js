@@ -76,7 +76,7 @@ app.get('/players/:char',
   });
 
 // GET regular season data by year and league
-app.get('/seasons/:league/:year',
+app.get('/regularseasons/:league/:year',
   cors(corsOptions),
   (req, res) => {
     let scoreSort = { score: -1 };
@@ -85,8 +85,8 @@ app.get('/seasons/:league/:year',
       year: req.params.year
     })
       .sort(scoreSort)
-      .then((season) => {
-        res.status(200).json(season);
+      .then((regularseason) => {
+        res.status(200).json(regularseason);
       })
       .catch((e) => {
         console.error(e);
@@ -114,6 +114,24 @@ app.get('/playoffs/:league/:year',
   });
 
 // GET total season data (RS + PO) by league and year
+app.get('/season/:league/:year',
+  cors(corsOptions),
+  (req, res) => {
+    let scoreSort = { score: -1 };
+    Players.find({
+      league: req.params.league,
+      year: req.params.year
+    })
+      .sort(scoreSort)
+      .then((season) => {
+        res.status(200).json(season);
+      })
+      .catch((e) => {
+        console.error(e);
+        res.status(500).send('Error ' + e);
+      });
+  });
+
 // GET greatest all time player list
 // GET greatest all time team list
 // GET greatest all time seasons list
