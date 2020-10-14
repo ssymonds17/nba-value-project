@@ -118,14 +118,30 @@ let playoffSchema = mongoose.Schema({
 },
  { collection: 'playoffs' });
 
+let allTimePlayerSchema = mongoose.Schema({
+ _id: String,
+ rank: Number,
+ name: String,
+ player_id: String,
+ career_value: Number,
+ career_total: Number,
+ peak_avg: Number,
+ year_from: Number,
+ year_to: Number,
+ active: String,
+}, { collection: 'all_time_player' });
+
+
 let Player = mongoose.model('Player', playerSchema);
 let Team = mongoose.model('Team', teamSchema);
 let PlayerList = mongoose.model('PlayerList', playerListSchema);
 let RegularSeason = mongoose.model('RegularSeason', regularSeasonSchema);
 let Playoff = mongoose.model('Playoff', playoffSchema);
+let AllTimePlayer = mongoose.model('AllTimePlayer', allTimePlayerSchema);
 
 module.exports.Player = Player;
 module.exports.Team = Team;
 module.exports.PlayerList = PlayerList;
 module.exports.RegularSeason = RegularSeason;
 module.exports.Playoff = Playoff;
+module.exports.AllTimePlayer = AllTimePlayer;

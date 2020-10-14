@@ -10,6 +10,7 @@ const Teams = Models.Team;
 const PlayerLists = Models.PlayerList;
 const RegularSeasons = Models.RegularSeason;
 const Playoffs = Models.Playoff;
+const AllTimePlayers = Models.AllTimePlayer;
 
 app.use(bodyParser.json());
 app.use(cors());
@@ -76,7 +77,7 @@ app.get('/players/:char',
   });
 
 // GET regular season data by year and league
-app.get('/regularseasons/:league/:year',
+app.get('/regularSeasons/:league/:year',
   cors(corsOptions),
   (req, res) => {
     let scoreSort = { score: -1 };
@@ -114,10 +115,10 @@ app.get('/playoffs/:league/:year',
   });
 
 // GET total season data (RS + PO) by league and year
-app.get('/season/:league/:year',
+app.get('/seasons/:league/:year',
   cors(corsOptions),
   (req, res) => {
-    let scoreSort = { score: -1 };
+    let scoreSort = { total_season_value: -1 };
     Players.find({
       league: req.params.league,
       year: req.params.year
@@ -133,6 +134,21 @@ app.get('/season/:league/:year',
   });
 
 // GET greatest all time player list
+app.get('/playerranking',
+  cors(corsOptions),
+  (req, res) => {
+    let rankSort = { rank: 1 };
+    AllTimePlayers.find()
+      .sort(rankSort)
+      .then((ranking) => {
+        res.status(200).json(ranking);
+      })
+      .catch((e) => {
+        console.error(e);
+        res.status(500).send('Error ' + e);
+      });
+  });
+
 // GET greatest all time team list
 // GET greatest all time seasons list
 
