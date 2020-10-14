@@ -92,15 +92,40 @@ let regularSeasonSchema = mongoose.Schema({
  team_full_name: { type: String, required: true },
  team_record: { type: String, required: true },
  team_result: { type: String, required: true }
-});
+},
+ { collection: 'regular_season' });
 
+// Schema for playoff data
+let playoffSchema = mongoose.Schema({
+ _id: String,
+ year: { type: Number, required: true },
+ league: String,
+ player_id: { type: String, required: true },
+ name: { type: String, required: true },
+ score: { type: Number, required: true },
+ position: String,
+ age: Number,
+ team_abbreviation: { type: String, required: true },
+ win_shares: Number,
+ win_shares_48: Number,
+ vorp: Number,
+ bpm: Number,
+ games: Number,
+ mpg: Number,
+ team_full_name: { type: String, required: true },
+ team_record: { type: String, required: true },
+ team_result: { type: String, required: true }
+},
+ { collection: 'playoffs' });
 
 let Player = mongoose.model('Player', playerSchema);
 let Team = mongoose.model('Team', teamSchema);
 let PlayerList = mongoose.model('PlayerList', playerListSchema);
 let RegularSeason = mongoose.model('RegularSeason', regularSeasonSchema);
+let Playoff = mongoose.model('Playoff', playoffSchema);
 
 module.exports.Player = Player;
 module.exports.Team = Team;
 module.exports.PlayerList = PlayerList;
 module.exports.RegularSeason = RegularSeason;
+module.exports.Playoff = Playoff;

@@ -9,6 +9,7 @@ const Players = Models.Player;
 const Teams = Models.Team;
 const PlayerLists = Models.PlayerList;
 const RegularSeasons = Models.RegularSeason;
+const Playoffs = Models.Playoff;
 
 app.use(bodyParser.json());
 app.use(cors());
@@ -78,11 +79,12 @@ app.get('/players/:char',
 app.get('/seasons/:league/:year',
   cors(corsOptions),
   (req, res) => {
+    let scoreSort = { score: -1 };
     RegularSeasons.find({
       league: req.params.league,
       year: req.params.year
     })
-      .sort({ score: 1 })
+      .sort(scoreSort)
       .then((season) => {
         res.status(200).json(season);
       })
@@ -93,6 +95,24 @@ app.get('/seasons/:league/:year',
   });
 
 // GET playoff data by league and year
+app.get('/playoffs/:league/:year',
+  cors(corsOptions),
+  (req, res) => {
+    let scoreSort = { score: -1 };
+    Playoffs.find({
+      league: req.params.league,
+      year: req.params.year
+    })
+      .sort(scoreSort)
+      .then((playoff) => {
+        res.status(200).json(playoff);
+      })
+      .catch((e) => {
+        console.error(e);
+        res.status(500).send('Error ' + e);
+      });
+  });
+
 // GET total season data (RS + PO) by league and year
 // GET greatest all time player list
 // GET greatest all time team list
