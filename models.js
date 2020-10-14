@@ -69,13 +69,38 @@ let playerListSchema = mongoose.Schema({
  first_name: { type: String, required: true },
  last_name: { type: String, required: true },
  first_year: Number,
- last_year: Number
+ last_year: Number,
+}, { collection: 'player_list' });
+
+// Schema for regular season data
+let regularSeasonSchema = mongoose.Schema({
+ _id: String,
+ year: { type: Number, required: true },
+ league: String,
+ player_id: { type: String, required: true },
+ name: { type: String, required: true },
+ score: { type: Number, required: true },
+ position: String,
+ age: Number,
+ team_abbreviation: { type: String, required: true },
+ win_shares: Number,
+ win_shares_48: Number,
+ vorp: Number,
+ bpm: Number,
+ games: Number,
+ mpg: Number,
+ team_full_name: { type: String, required: true },
+ team_record: { type: String, required: true },
+ team_result: { type: String, required: true }
 });
+
 
 let Player = mongoose.model('Player', playerSchema);
 let Team = mongoose.model('Team', teamSchema);
-let PlayerList = mongoose.model('Team', playerListSchema);
+let PlayerList = mongoose.model('PlayerList', playerListSchema);
+let RegularSeason = mongoose.model('RegularSeason', regularSeasonSchema);
 
 module.exports.Player = Player;
 module.exports.Team = Team;
 module.exports.PlayerList = PlayerList;
+module.exports.RegularSeason = RegularSeason;

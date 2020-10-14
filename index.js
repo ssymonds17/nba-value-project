@@ -7,7 +7,8 @@ const path = require('path');
 const Models = require('./models.js');
 const Players = Models.Player;
 const Teams = Models.Team;
-const PlayerList = Models.PlayerList;
+const PlayerLists = Models.PlayerList;
+const RegularSeasons = Models.RegularSeason;
 
 app.use(bodyParser.json());
 app.use(cors());
@@ -58,12 +59,12 @@ app.get('/teams/:teamAbb/:year',
       });
   });
 
-// GET player list by letter
-app.get('/players/:letter',
+// {WIP} GET player list by letter 
+app.get('/players/:char',
   cors(corsOptions),
   (req, res) => {
-    let char = req.params.letter;
-    PlayerList.find({ "last_name": { $regex: '^' + char, $options: 'i' } }).exec(callback)
+    let char = req.params.char;
+    PlayerLists.find({ last_name: { $regex: '/^' + char + '/' } })
       .then((players) => {
         res.status(200).json(players);
       })
@@ -73,8 +74,26 @@ app.get('/players/:letter',
       });
   });
 
-// GET regular season data by year
-// GET playoff data by year
+// GET regular season data by year and league
+app.get('/seasons/:league/:year',
+  cors(corsOptions),
+  (req, res) => {
+    RegularSeasons.find({
+      league: req.params.league,
+      year: req.params.year
+    })
+      .sort({ score: 1 })
+      .then((season) => {
+        res.status(200).json(season);
+      })
+      .catch((e) => {
+        console.error(e);
+        res.status(500).send('Error ' + e);
+      });
+  });
+
+// GET playoff data by league and year
+// GET total season data (RS + PO) by league and year
 // GET greatest all time player list
 // GET greatest all time team list
 // GET greatest all time seasons list
