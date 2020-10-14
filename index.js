@@ -140,8 +140,8 @@ app.get('/playerranking',
   (req, res) => {
     let rankSort = { rank: 1 };
     AllTimePlayers.find()
-      .limit(100)
       .sort(rankSort)
+      .limit(100)
       .then((ranking) => {
         res.status(200).json(ranking);
       })
@@ -157,8 +157,8 @@ app.get('/teamranking',
   (req, res) => {
     let rankSort = { rank: 1 };
     AllTimeTeams.find()
-      .limit(100)
       .sort(rankSort)
+      .limit(100)
       .then((ranking) => {
         res.status(200).json(ranking);
       })
@@ -169,6 +169,21 @@ app.get('/teamranking',
   });
 
 // GET greatest all time seasons list
+app.get('/seasonranking',
+  cors(corsOptions),
+  (req, res) => {
+    let scoreSort = { total_season_value: -1 };
+    Players.find()
+      .sort(scoreSort)
+      .limit(100)
+      .then((ranking) => {
+        res.status(200).json(ranking);
+      })
+      .catch((e) => {
+        console.error(e);
+        res.status(500).send('Error ' + e);
+      });
+  });
 
 
 app.use(express.static('frontend/build'));
