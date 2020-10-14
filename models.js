@@ -61,8 +61,21 @@ let teamSchema = mongoose.Schema({
  team_result: { type: String, required: true }
 });
 
+// define the player list schema with the existing fields and data types
+let playerListSchema = mongoose.Schema({
+ _id: String,
+ player_id: String,
+ name: { type: String, required: true },
+ first_name: { type: String, required: true },
+ last_name: { type: String, required: true },
+ first_year: Number,
+ last_year: Number
+});
+
 let Player = mongoose.model('Player', playerSchema);
 let Team = mongoose.model('Team', teamSchema);
+let PlayerList = mongoose.model('Team', playerListSchema);
 
 module.exports.Player = Player;
 module.exports.Team = Team;
+module.exports.PlayerList = PlayerList;

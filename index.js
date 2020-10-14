@@ -7,6 +7,7 @@ const path = require('path');
 const Models = require('./models.js');
 const Players = Models.Player;
 const Teams = Models.Team;
+const PlayerList = Models.PlayerList;
 
 app.use(bodyParser.json());
 app.use(cors());
@@ -56,6 +57,28 @@ app.get('/teams/:teamAbb/:year',
         res.status(500).send('Error ' + e);
       });
   });
+
+// GET player list by letter
+app.get('/players/:letter',
+  cors(corsOptions),
+  (req, res) => {
+    let char = req.params.letter;
+    PlayerList.find({ "last_name": { $regex: '^' + char, $options: 'i' } }).exec(callback)
+      .then((players) => {
+        res.status(200).json(players);
+      })
+      .catch((e) => {
+        console.error(e);
+        res.status(500).send('Error ' + e);
+      });
+  });
+
+// GET regular season data by year
+// GET playoff data by year
+// GET greatest all time player list
+// GET greatest all time team list
+// GET greatest all time seasons list
+
 
 app.use(express.static('frontend/build'));
 app.get('/*',
