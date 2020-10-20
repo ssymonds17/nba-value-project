@@ -82,7 +82,7 @@ app.get('/players',
   });
 
 // {WIP} GET player list by letter 
-app.get('/players/list/:char',
+app.get('/playerlist/:char',
   cors(corsOptions),
   (req, res) => {
     let char = req.params.char;
