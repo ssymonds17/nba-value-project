@@ -25,13 +25,13 @@ export class HomeView extends React.Component {
       <Link to={`/playoffs`}>Playoffs</Link>
      </Button>
      <Button>
-      <Link to={`/greatestplayers`}>Greatest Players</Link>
+      <Link to={`/greatest/players`}>Greatest Players</Link>
      </Button>
      <Button>
-      <Link to={`/greatestteams`}>Greatest Teams</Link>
+      <Link to={`/greatest/teams`}>Greatest Teams</Link>
      </Button>
      <Button>
-      <Link to={`/greatestseasons`}>Greatest Seasons</Link>
+      <Link to={`/greatest/seasons`}>Greatest Seasons</Link>
      </Button>
      <Button>
       <Link to={`/about`}>About</Link>

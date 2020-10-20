@@ -16,6 +16,7 @@ export default class MainView extends React.Component {
         <Container className="main-view">
           <Route exact path="/" render={() => <HomeView />} />
           <Route exact path="/players" render={() => <PlayerListView />} />
+          {/* <Route exact path="players/list/:char" render={() => <PlayerListByCharView />} /> */}
           <Route exact path="/players/:playerID" render={() => <PlayerView />} />
           <Route exact path="/teams" render={() => <TeamListView />} />
           <Route exact path="/teams/:teamAbb/:year" render={() => <TeamView />} />

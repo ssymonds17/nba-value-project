@@ -27,6 +27,8 @@ mongoose.connect('mongodb+srv://ssymonds17:klrGPn2TwoQKpxi5@cluster0.bwlxj.mongo
   useUnifiedTopology: true
 });
 
+// PATHS ------------------------------------------------------------
+
 // GET player data by player ID
 app.get('/players/:playerID',
   cors(corsOptions),
@@ -43,6 +45,7 @@ app.get('/players/:playerID',
       });
   });
 
+// (TRY MAKE SECOND CALL FOR UNIQUE FRANCHISE ID THEN CALL TEAMS DATABASE)
 // GET team data by team abbreviation and year
 app.get('/teams/:teamAbb/:year',
   cors(corsOptions),
@@ -62,12 +65,28 @@ app.get('/teams/:teamAbb/:year',
       });
   });
 
+// GET entire player list
+app.get('/players',
+  cors(corsOptions),
+  (req, res) => {
+    let lastNameSort = { last_name: 1 };
+    PlayerLists.find()
+      .sort(lastNameSort)
+      .then((players) => {
+        res.status(200).json(players);
+      })
+      .catch((e) => {
+        console.error(e);
+        res.status(500).send('Error ' + e);
+      });
+  });
+
 // {WIP} GET player list by letter 
-app.get('/players/:char',
+app.get('/players/list/:char',
   cors(corsOptions),
   (req, res) => {
     let char = req.params.char;
-    PlayerLists.find({ last_name: { $regex: '/^' + char + '/' } })
+    PlayerLists.find({ last_name: { $regex: '^' + char + '.*', $options: 'i' } })
       .then((players) => {
         res.status(200).json(players);
       })
@@ -185,7 +204,24 @@ app.get('/seasonranking',
       });
   });
 
+// GET request to search for players in search bar
+app.get('/playersearch/:query',
+  cors(corsOptions),
+  (req, res) => {
+    // {GOOGLE ESCAPING STRING}
+    let string = req.params.query;
+    PlayerLists.find({ name: { $regex: string, $options: 'i' } })
+      .then((players) => {
+        console.log(players);
+        res.status(200).json(players);
+      })
+      .catch((e) => {
+        console.error(e);
+        res.status(500).send('Error ' + e);
+      });
+  });
 
+// Serve static files
 app.use(express.static('frontend/build'));
 app.get('/*',
   cors(corsOptions),
@@ -193,6 +229,7 @@ app.get('/*',
     res.sendFile(path.join(__dirname, 'frontend', 'build', 'index.html'));
   });
 
+// Server
 const port = process.env.PORT || 8080;
 app.listen(port, '0.0.0.0', () => {
   console.log('Listening on Port ' + port);
