@@ -13,6 +13,10 @@ export class PlayerListView extends React.Component {
       };
    }
 
+   componentDidMount() {
+      this.getPlayerList();
+   }
+
    getPlayerList = () => {
       axios.get(`https://nba-value-reference.herokuapp.com/players`)
          .then((response) => {
@@ -28,7 +32,7 @@ export class PlayerListView extends React.Component {
 
    render() {
       const alphabet = Array.from({ length: 26 }, (_, i) => String.fromCharCode('A'.charCodeAt(0) + i));
-      const playerList = this.state;
+      const { playerList } = this.state;
 
       return (
          <div className="player-list-wrapper">
