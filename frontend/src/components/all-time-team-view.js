@@ -16,7 +16,7 @@ export class AllTimeTeamView extends React.Component {
   }
 
   getTeamList = () => {
-    axios.get(`https://nba-value-reference.herokuapp.com/rankings/players`)
+    axios.get(`https://nba-value-reference.herokuapp.com/rankings/teams`)
       .then((response) => {
         this.setState({
           teamList: response.data

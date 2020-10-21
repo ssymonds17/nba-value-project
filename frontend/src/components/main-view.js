@@ -7,6 +7,9 @@ import { TeamListView } from './team-list-view';
 import { TeamView } from './team-view';
 import { AllTimePlayerView } from './all-time-player-view';
 import { AllTimeTeamView } from './all-time-team-view';
+import { GreatestSeasonsOverallView } from './greatest-seasons-overall-view';
+import { GreatestSeasonsRSView } from './greatest-seasons-regularseason-view';
+import { GreatestSeasonsPlayoffsView } from './greatest-seasons-playoffs-view';
 
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
@@ -25,6 +28,9 @@ export default class MainView extends React.Component {
           <Route exact path="/teams/:teamAbb/:year" render={() => <TeamView />} />
           <Route exact path="/rankings/players" render={() => <AllTimePlayerView />} />
           <Route exact path="/rankings/teams" render={() => <AllTimeTeamView />} />
+          <Route exact path="/rankings/seasons/overall" render={() => <GreatestSeasonsOverallView />} />
+          <Route exact path="/rankings/seasons/regularseason" render={() => <GreatestSeasonsRSView />} />
+          <Route exact path="/rankings/seasons/playoffs" render={() => <GreatestSeasonsPlayoffsView />} />
         </Container>
       </Router>
     );
