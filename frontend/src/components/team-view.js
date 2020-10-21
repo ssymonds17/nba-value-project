@@ -22,7 +22,6 @@ export class TeamView extends React.Component {
           team: response.data
         });
       })
-      //need to error/fail properly
       .catch(() => {
         console.log('data has not been received');
       })
@@ -100,7 +99,7 @@ export class TeamView extends React.Component {
           <tbody>
             {
               team.map(season => (
-                <tr className="player-name" key={season._id}>
+                <tr key={season._id}>
                   <td>{season.name}</td>
                   <td>{season.league}</td>
                   <td>{Number((season.regularSeason__score + season.playoff__score)).toFixed(2)}</td>

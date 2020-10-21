@@ -1,25 +1,26 @@
 import React from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 // Need new SCSS file
 
-export class GreatestSeasonsPlayoffsView extends React.Component {
+export class OverallSeasonView extends React.Component {
  constructor() {
   super();
   this.state = {
-   seasonList: [{}],
+   season: [{}],
   };
  }
 
  componentDidMount() {
-  this.getSeasonList();
+  let seasonID = window.location.pathname;
+  this.getSeasonData(seasonID);
  }
 
- getSeasonList = () => {
-  axios.get(`https://nba-value-reference.herokuapp.com/rankings/seasons/playoffs`)
+ getSeasonData = (seasonID) => {
+  axios.get(`https://nba-value-reference.herokuapp.com${seasonID}`)
    .then((response) => {
     this.setState({
-     seasonList: response.data
+     team: response.data
     });
    })
    .catch(() => {
@@ -28,23 +29,24 @@ export class GreatestSeasonsPlayoffsView extends React.Component {
  }
 
  render() {
-  const { seasonList } = this.state;
+  const { season } = this.state;
 
   return (
    <div>
-    <h1>Greatest Playoff Seasons All Time</h1>
-    <Link to={`/rankings/seasons/overall`}><button>Greatest Seasons Overall</button></Link>
-    <Link to={`/rankings/seasons/regularseason`}><button>Greatest Regular Seasons</button></Link>
+    <h1>{season[0].league} {season[0].year} Playoffs</h1>
     <table>
      <thead>
       <tr>
+       <th colSpan="8"></th>
+       <th colSpan="7">Regular Season</th>
+       <th colSpan="7">Playoffs</th>
+      </tr>
+      <tr>
        <th>Name</th>
-       <th>Year</th>
-       <th>Lg</th>
        <th>Season Value</th>
        <th>Pos</th>
        <th>Age</th>
-       <th>Tm</th>
+       <th>Tm 1</th>
        <th>G</th>
        <th>MPG</th>
        <th>WS/48</th>
@@ -57,11 +59,9 @@ export class GreatestSeasonsPlayoffsView extends React.Component {
      </thead>
      <tbody>
       {
-       seasonList.map(season => (
+       season.map(season => (
         <tr key={season._id}>
          <td>{season.name}</td>
-         <td>{season.year}</td>
-         <td>{season.league}</td>
          <td>{season.playoff__score ? Number(season.playoff__score).toFixed(2) : Number(0).toFixed(2)}</td>
          <td>{season.position}</td>
          <td>{season.age}</td>

@@ -1,26 +1,26 @@
 import React from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
-
+// import { Link } from 'react-router-dom';
 // Need new SCSS file
 
-export class GreatestSeasonsOverallView extends React.Component {
+export class OverallSeasonView extends React.Component {
   constructor() {
     super();
     this.state = {
-      seasonList: [{}],
+      season: [{}],
     };
   }
 
   componentDidMount() {
-    this.getSeasonList();
+    let seasonID = window.location.pathname;
+    this.getSeasonData(seasonID);
   }
 
-  getSeasonList = () => {
-    axios.get(`https://nba-value-reference.herokuapp.com/rankings/seasons/overall`)
+  getSeasonData = (seasonID) => {
+    axios.get(`https://nba-value-reference.herokuapp.com${seasonID}`)
       .then((response) => {
         this.setState({
-          seasonList: response.data
+          team: response.data
         });
       })
       .catch(() => {
@@ -29,26 +29,26 @@ export class GreatestSeasonsOverallView extends React.Component {
   }
 
   render() {
-    const { seasonList } = this.state;
+    const { season } = this.state;
 
     return (
       <div>
-        <h1>Greatest Seasons All Time</h1>
-        <small>Combination of both regular season and playoffs</small>
-        <div>
-          <Link to={`/rankings/seasons/regularseason`}><button>Greatest Regular Seasons</button></Link>
-          <Link to={`/rankings/seasons/playoffs`}><button>Greatest Playoff Seasons</button></Link>
-        </div>
+        <h1>{season[0].league} {season[0].year} Overall</h1>
         <table>
           <thead>
             <tr>
+              <th colSpan="8"></th>
+              <th colSpan="7">Regular Season</th>
+              <th colSpan="7">Playoffs</th>
+            </tr>
+            <tr>
               <th>Name</th>
-              <th>Year</th>
-              <th>Lg</th>
               <th>Season Value</th>
               <th>Pos</th>
               <th>Age</th>
-              <th>Tm</th>
+              <th>Tm 1</th>
+              <th>Tm 2</th>
+              <th>Tm 3</th>
               <th>Score</th>
               <th>G</th>
               <th>MPG</th>
@@ -69,15 +69,15 @@ export class GreatestSeasonsOverallView extends React.Component {
           </thead>
           <tbody>
             {
-              seasonList.map(season => (
+              season.map(season => (
                 <tr key={season._id}>
                   <td>{season.name}</td>
-                  <td>{season.year}</td>
-                  <td>{season.league}</td>
                   <td>{Number(season.total_season_value).toFixed(2)}</td>
                   <td>{season.position}</td>
                   <td>{season.age}</td>
                   <td>{season.team_one}</td>
+                  <td>{season.team_two}</td>
+                  <td>{season.team_three}</td>
                   <td>{Number(season.regularseason__score).toFixed(2)}</td>
                   <td>{season.regularseason__games}</td>
                   <td>{Number(season.regularseason__mpg).toFixed(1)}</td>

@@ -3,7 +3,6 @@ import axios from 'axios';
 import '../styles/components/player-list-view.scss';
 import { Link } from 'react-router-dom';
 
-
 export class PlayerListView extends React.Component {
    constructor() {
       super();

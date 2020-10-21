@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 // Need new SCSS file
 
 export class GreatestSeasonsRSView extends React.Component {
@@ -32,17 +33,18 @@ export class GreatestSeasonsRSView extends React.Component {
     return (
       <div>
         <h1>Greatest Regular Seasons All Time</h1>
+        <Link to={`/rankings/seasons/overall`}><button>Greatest Seasons Overall</button></Link>
+        <Link to={`/rankings/seasons/playoffs`}><button>Greatest Playoff Seasons</button></Link>
         <table>
           <thead>
             <tr>
+              <th>Name</th>
               <th>Year</th>
               <th>Lg</th>
               <th>Season Value</th>
               <th>Pos</th>
               <th>Age</th>
-              <th>Tm 1</th>
-              <th>Tm 2</th>
-              <th>Tm 3</th>
+              <th>Tm</th>
               <th>G</th>
               <th>MPG</th>
               <th>WS/48</th>
@@ -57,14 +59,13 @@ export class GreatestSeasonsRSView extends React.Component {
             {
               seasonList.map(season => (
                 <tr key={season._id}>
+                  <td>{season.name}</td>
                   <td>{season.year}</td>
                   <td>{season.league}</td>
                   <td>{Number(season.regularseason__score).toFixed(2)}</td>
                   <td>{season.position}</td>
                   <td>{season.age}</td>
                   <td>{season.team_one}</td>
-                  <td>{season.team_two}</td>
-                  <td>{season.team_three}</td>
                   <td>{season.regularseason__games}</td>
                   <td>{Number(season.regularseason__mpg).toFixed(1)}</td>
                   <td>{Number(season.regularseason__win_shares_48).toFixed(3)}</td>
