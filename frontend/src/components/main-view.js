@@ -6,6 +6,7 @@ import { PlayerView } from './player-view';
 import { TeamListView } from './team-list-view';
 import { TeamView } from './team-view';
 import { AllTimePlayerView } from './all-time-player-view';
+import { AllTimeTeamView } from './all-time-player-view';
 
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
@@ -23,6 +24,7 @@ export default class MainView extends React.Component {
           <Route exact path="/teams" render={() => <TeamListView />} />
           <Route exact path="/teams/:teamAbb/:year" render={() => <TeamView />} />
           <Route exact path="/rankings/players" render={() => <AllTimePlayerView />} />
+          <Route exact path="/rankings/teams" render={() => <AllTimeTeamView />} />
         </Container>
       </Router>
     );

@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 // Need new SCSS file
 
 export class AllTimePlayerView extends React.Component {
@@ -37,7 +38,7 @@ export class AllTimePlayerView extends React.Component {
       <tr>
        <th>Rank</th>
        <th>Name</th>
-       <th>Value</th>
+       <th>Career Value</th>
        <th>Career Total</th>
        <th>Peak Average</th>
        <th>Year From</th>
@@ -48,11 +49,17 @@ export class AllTimePlayerView extends React.Component {
       {
        playerList.map(player => (
         <tr className="player-name" key={player._id}>
-         <td>{player.rank}</td>
-         <td>{player.name}</td>
-         <td>{player.career_value}</td>
-         <td>{player.career_total}</td>
-         <td>{player.peak_avg}</td>
+         <td>
+          {player.rank}
+         </td>
+         <Link to={`/players/${player.player_id}`}>
+          <td>
+           {player.name}
+          </td>
+         </Link>
+         <td>{Number(player.career_value).toFixed(2)}</td>
+         <td>{Number(player.career_total).toFixed(2)}</td>
+         <td>{Number(player.peak_avg).toFixed(2)}</td>
          <td>{player.year_from}</td>
          <td>{player.year_to}</td>
         </tr>
