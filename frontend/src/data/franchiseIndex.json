@@ -1,0 +1,834 @@
+[
+ {
+  "team_abbreviation": "AND",
+  "team_name": "Anderson Packers",
+  "franchise": "Anderson Packers",
+  "franchise_code": "AND",
+  "first_year": 1950,
+  "last_year": 1950
+ },
+ {
+  "team_abbreviation": "ATL",
+  "team_name": "Atlanta Hawks",
+  "franchise": "Atlanta Hawks",
+  "franchise_code": "ATL",
+  "first_year": 1950,
+  "last_year": 2020
+ },
+ {
+  "team_abbreviation": "MLH",
+  "team_name": "Milwaukee Hawks",
+  "franchise": "Atlanta Hawks",
+  "franchise_code": "ATL",
+  "first_year": 1950,
+  "last_year": 2020
+ },
+ {
+  "team_abbreviation": "STL",
+  "team_name": "St. Louis Hawks",
+  "franchise": "Atlanta Hawks",
+  "franchise_code": "ATL",
+  "first_year": 1950,
+  "last_year": 2020
+ },
+ {
+  "team_abbreviation": "TRI",
+  "team_name": "Tri-Cities Blackhawks",
+  "franchise": "Atlanta Hawks",
+  "franchise_code": "ATL",
+  "first_year": 1950,
+  "last_year": 2020
+ },
+ {
+  "team_abbreviation": "BLB",
+  "team_name": "Baltimore Bullets",
+  "franchise": "Baltimore Bullets",
+  "franchise_code": "BLB",
+  "first_year": 1948,
+  "last_year": 1955
+ },
+ {
+  "team_abbreviation": "BOS",
+  "team_name": "Boston Celtics",
+  "franchise": "Boston Celtics",
+  "franchise_code": "BOS",
+  "first_year": 1947,
+  "last_year": 2020
+ },
+ {
+  "team_abbreviation": "BRK",
+  "team_name": "Brooklyn Nets",
+  "franchise": "Brooklyn Nets",
+  "franchise_code": "BRK",
+  "first_year": 1968,
+  "last_year": 2020
+ },
+ {
+  "team_abbreviation": "NJA",
+  "team_name": "New Jersey Americans",
+  "franchise": "Brooklyn Nets",
+  "franchise_code": "BRK",
+  "first_year": 1968,
+  "last_year": 2020
+ },
+ {
+  "team_abbreviation": "NJN",
+  "team_name": "New Jersey Nets",
+  "franchise": "Brooklyn Nets",
+  "franchise_code": "BRK",
+  "first_year": 1968,
+  "last_year": 2020
+ },
+ {
+  "team_abbreviation": "NYA",
+  "team_name": "New York Nets",
+  "franchise": "Brooklyn Nets",
+  "franchise_code": "BRK",
+  "first_year": 1968,
+  "last_year": 2020
+ },
+ {
+  "team_abbreviation": "NYN",
+  "team_name": "New York Nets",
+  "franchise": "Brooklyn Nets",
+  "franchise_code": "BRK",
+  "first_year": 1968,
+  "last_year": 2020
+ },
+ {
+  "team_abbreviation": "CHI",
+  "team_name": "Chicago Bulls",
+  "franchise": "Chicago Bulls",
+  "franchise_code": "CHI",
+  "first_year": 1967,
+  "last_year": 2020
+ },
+ {
+  "team_abbreviation": "CHO",
+  "team_name": "Charlotte Hornets",
+  "franchise": "Charlotte Hornets",
+  "franchise_code": "CHO",
+  "first_year": 1989,
+  "last_year": 2020
+ },
+ {
+  "team_abbreviation": "CHA",
+  "team_name": "Charlotte Bobcats",
+  "franchise": "Charlotte Hornets",
+  "franchise_code": "CHO",
+  "first_year": 1989,
+  "last_year": 2020
+ },
+ {
+  "team_abbreviation": "CHH",
+  "team_name": "Charlotte Hornets",
+  "franchise": "Charlotte Hornets",
+  "franchise_code": "CHO",
+  "first_year": 1989,
+  "last_year": 2020
+ },
+ {
+  "team_abbreviation": "CHS",
+  "team_name": "Chicago Stags",
+  "franchise": "Chicago Stags",
+  "franchise_code": "CHS",
+  "first_year": 1947,
+  "last_year": 1950
+ },
+ {
+  "team_abbreviation": "CLE",
+  "team_name": "Cleveland Cavaliers",
+  "franchise": "Cleveland Cavaliers",
+  "franchise_code": "CLE",
+  "first_year": 1971,
+  "last_year": 2020
+ },
+ {
+  "team_abbreviation": "CLR",
+  "team_name": "Cleveland Rebels",
+  "franchise": "Cleveland Rebels",
+  "franchise_code": "CLR",
+  "first_year": 1947,
+  "last_year": 1947
+ },
+ {
+  "team_abbreviation": "DAL",
+  "team_name": "Dallas Mavericks",
+  "franchise": "Dallas Mavericks",
+  "franchise_code": "DAL",
+  "first_year": 1981,
+  "last_year": 2020
+ },
+ {
+  "team_abbreviation": "DEN",
+  "team_name": "Denver Nuggets",
+  "franchise": "Denver Nuggets",
+  "franchise_code": "DEN",
+  "first_year": 1968,
+  "last_year": 2020
+ },
+ {
+  "team_abbreviation": "DNA",
+  "team_name": "Denver Nuggets",
+  "franchise": "Denver Nuggets",
+  "franchise_code": "DEN",
+  "first_year": 1968,
+  "last_year": 2020
+ },
+ {
+  "team_abbreviation": "DNR",
+  "team_name": "Denver Rockets",
+  "franchise": "Denver Nuggets",
+  "franchise_code": "DEN",
+  "first_year": 1968,
+  "last_year": 2020
+ },
+ {
+  "team_abbreviation": "DET",
+  "team_name": "Detroit Pistons",
+  "franchise": "Detroit Pistons",
+  "franchise_code": "DET",
+  "first_year": 1949,
+  "last_year": 2020
+ },
+ {
+  "team_abbreviation": "FTW",
+  "team_name": "Fort Wayne Pistons",
+  "franchise": "Detroit Pistons",
+  "franchise_code": "DET",
+  "first_year": 1949,
+  "last_year": 2020
+ },
+ {
+  "team_abbreviation": "DNN",
+  "team_name": "Denver Nuggets",
+  "franchise": "Denver Nuggets",
+  "franchise_code": "DNN",
+  "first_year": 1950,
+  "last_year": 1950
+ },
+ {
+  "team_abbreviation": "DTF",
+  "team_name": "Detroit Falcons",
+  "franchise": "Detroit Falcons",
+  "franchise_code": "DTF",
+  "first_year": 1947,
+  "last_year": 1947
+ },
+ {
+  "team_abbreviation": "FLO",
+  "team_name": "The Floridians",
+  "franchise": "The Floridians",
+  "franchise_code": "FLO",
+  "first_year": 1968,
+  "last_year": 1972
+ },
+ {
+  "team_abbreviation": "MMF",
+  "team_name": "Miami Floridians",
+  "franchise": "The Floridians",
+  "franchise_code": "FLO",
+  "first_year": 1968,
+  "last_year": 1972
+ },
+ {
+  "team_abbreviation": "MNM",
+  "team_name": "Minnesota Muskies",
+  "franchise": "The Floridians",
+  "franchise_code": "FLO",
+  "first_year": 1968,
+  "last_year": 1972
+ },
+ {
+  "team_abbreviation": "GSW",
+  "team_name": "Golden State Warriors",
+  "franchise": "Golden State Warriors",
+  "franchise_code": "GSW",
+  "first_year": 1947,
+  "last_year": 2020
+ },
+ {
+  "team_abbreviation": "PHW",
+  "team_name": "Philadelphia Warriors",
+  "franchise": "Golden State Warriors",
+  "franchise_code": "GSW",
+  "first_year": 1947,
+  "last_year": 2020
+ },
+ {
+  "team_abbreviation": "SFW",
+  "team_name": "San Francisco Warriors",
+  "franchise": "Golden State Warriors",
+  "franchise_code": "GSW",
+  "first_year": 1947,
+  "last_year": 2020
+ },
+ {
+  "team_abbreviation": "HOU",
+  "team_name": "Houston Rockets",
+  "franchise": "Houston Rockets",
+  "franchise_code": "HOU",
+  "first_year": 1968,
+  "last_year": 2020
+ },
+ {
+  "team_abbreviation": "SDR",
+  "team_name": "San Diego Rockets",
+  "franchise": "Houston Rockets",
+  "franchise_code": "HOU",
+  "first_year": 1968,
+  "last_year": 2020
+ },
+ {
+  "team_abbreviation": "IND",
+  "team_name": "Indiana Pacers",
+  "franchise": "Indiana Pacers",
+  "franchise_code": "IND",
+  "first_year": 1968,
+  "last_year": 2020
+ },
+ {
+  "team_abbreviation": "INA",
+  "team_name": "Indiana Pacers",
+  "franchise": "Indiana Pacers",
+  "franchise_code": "IND",
+  "first_year": 1968,
+  "last_year": 2020
+ },
+ {
+  "team_abbreviation": "INJ",
+  "team_name": "Indianapolis Jets",
+  "franchise": "Indianapolis Jets",
+  "franchise_code": "INJ",
+  "first_year": 1949,
+  "last_year": 1949
+ },
+ {
+  "team_abbreviation": "INO",
+  "team_name": "Indianapolis Olympians",
+  "franchise": "Indianapolis Olympians",
+  "franchise_code": "INO",
+  "first_year": 1950,
+  "last_year": 1953
+ },
+ {
+  "team_abbreviation": "KEN",
+  "team_name": "Kentucky Colonels",
+  "franchise": "Kentucky Colonels",
+  "franchise_code": "KEN",
+  "first_year": 1968,
+  "last_year": 1976
+ },
+ {
+  "team_abbreviation": "LAC",
+  "team_name": "Los Angeles Clippers",
+  "franchise": "Los Angeles Clippers",
+  "franchise_code": "LAC",
+  "first_year": 1971,
+  "last_year": 2020
+ },
+ {
+  "team_abbreviation": "BUF",
+  "team_name": "Buffalo Braves",
+  "franchise": "Los Angeles Clippers",
+  "franchise_code": "LAC",
+  "first_year": 1971,
+  "last_year": 2020
+ },
+ {
+  "team_abbreviation": "SDC",
+  "team_name": "San Diego Clippers",
+  "franchise": "Los Angeles Clippers",
+  "franchise_code": "LAC",
+  "first_year": 1971,
+  "last_year": 2020
+ },
+ {
+  "team_abbreviation": "LAL",
+  "team_name": "Los Angeles Lakers",
+  "franchise": "Los Angeles Lakers",
+  "franchise_code": "LAL",
+  "first_year": 1949,
+  "last_year": 2020
+ },
+ {
+  "team_abbreviation": "MNL",
+  "team_name": "Minneapolis Lakers",
+  "franchise": "Los Angeles Lakers",
+  "franchise_code": "LAL",
+  "first_year": 1949,
+  "last_year": 2020
+ },
+ {
+  "team_abbreviation": "MEM",
+  "team_name": "Memphis Grizzlies",
+  "franchise": "Memphis Grizzlies",
+  "franchise_code": "MEM",
+  "first_year": 1996,
+  "last_year": 2020
+ },
+ {
+  "team_abbreviation": "VAN",
+  "team_name": "Vancouver Grizzlies",
+  "franchise": "Memphis Grizzlies",
+  "franchise_code": "MEM",
+  "first_year": 1996,
+  "last_year": 2020
+ },
+ {
+  "team_abbreviation": "MIA",
+  "team_name": "Miami Heat",
+  "franchise": "Miami Heat",
+  "franchise_code": "MIA",
+  "first_year": 1989,
+  "last_year": 2020
+ },
+ {
+  "team_abbreviation": "MIL",
+  "team_name": "Milwaukee Bucks",
+  "franchise": "Milwaukee Bucks",
+  "franchise_code": "MIL",
+  "first_year": 1969,
+  "last_year": 2020
+ },
+ {
+  "team_abbreviation": "MIN",
+  "team_name": "Minnesota Timberwolves",
+  "franchise": "Minnesota Timberwolves",
+  "franchise_code": "MIN",
+  "first_year": 1990,
+  "last_year": 2020
+ },
+ {
+  "team_abbreviation": "MMP",
+  "team_name": "Memphis Pros",
+  "franchise": "Memphis Sounds",
+  "franchise_code": "MMS",
+  "first_year": 1968,
+  "last_year": 1975
+ },
+ {
+  "team_abbreviation": "MMS",
+  "team_name": "Memphis Sounds",
+  "franchise": "Memphis Sounds",
+  "franchise_code": "MMS",
+  "first_year": 1968,
+  "last_year": 1975
+ },
+ {
+  "team_abbreviation": "MMT",
+  "team_name": "Memphis Tams",
+  "franchise": "Memphis Sounds",
+  "franchise_code": "MMS",
+  "first_year": 1968,
+  "last_year": 1975
+ },
+ {
+  "team_abbreviation": "NOB",
+  "team_name": "New Orleans Buccaneers",
+  "franchise": "Memphis Sounds",
+  "franchise_code": "MMS",
+  "first_year": 1968,
+  "last_year": 1975
+ },
+ {
+  "team_abbreviation": "NOP",
+  "team_name": "New Orleans Pelicans",
+  "franchise": "New Orleans Pelicans",
+  "franchise_code": "NOP",
+  "first_year": 2003,
+  "last_year": 2020
+ },
+ {
+  "team_abbreviation": "NOH",
+  "team_name": "New Orleans Hornets",
+  "franchise": "New Orleans Pelicans",
+  "franchise_code": "NOP",
+  "first_year": 2003,
+  "last_year": 2020
+ },
+ {
+  "team_abbreviation": "NOK",
+  "team_name": "New Orleans/Oklahoma City Hornets",
+  "franchise": "New Orleans Pelicans",
+  "franchise_code": "NOP",
+  "first_year": 2003,
+  "last_year": 2020
+ },
+ {
+  "team_abbreviation": "NYK",
+  "team_name": "New York Knicks",
+  "franchise": "New York Knicks",
+  "franchise_code": "NYK",
+  "first_year": 1947,
+  "last_year": 2020
+ },
+ {
+  "team_abbreviation": "OKC",
+  "team_name": "Oklahoma City Thunder",
+  "franchise": "Oklahoma City Thunder",
+  "franchise_code": "OKC",
+  "first_year": 1968,
+  "last_year": 2020
+ },
+ {
+  "team_abbreviation": "SEA",
+  "team_name": "Seattle SuperSonics",
+  "franchise": "Oklahoma City Thunder",
+  "franchise_code": "OKC",
+  "first_year": 1968,
+  "last_year": 2020
+ },
+ {
+  "team_abbreviation": "ORL",
+  "team_name": "Orlando Magic",
+  "franchise": "Orlando Magic",
+  "franchise_code": "ORL",
+  "first_year": 1990,
+  "last_year": 2020
+ },
+ {
+  "team_abbreviation": "PHI",
+  "team_name": "Philadelphia 76ers",
+  "franchise": "Philadelphia 76ers",
+  "franchise_code": "PHI",
+  "first_year": 1950,
+  "last_year": 2020
+ },
+ {
+  "team_abbreviation": "SYR",
+  "team_name": "Syracuse Nationals",
+  "franchise": "Philadelphia 76ers",
+  "franchise_code": "PHI",
+  "first_year": 1950,
+  "last_year": 2020
+ },
+ {
+  "team_abbreviation": "PHO",
+  "team_name": "Phoenix Suns",
+  "franchise": "Phoenix Suns",
+  "franchise_code": "PHO",
+  "first_year": 1969,
+  "last_year": 2020
+ },
+ {
+  "team_abbreviation": "PIT",
+  "team_name": "Pittsburgh Ironmen",
+  "franchise": "Pittsburgh Ironmen",
+  "franchise_code": "PIT",
+  "first_year": 1947,
+  "last_year": 1947
+ },
+ {
+  "team_abbreviation": "POR",
+  "team_name": "Portland Trail Blazers",
+  "franchise": "Portland Trail Blazers",
+  "franchise_code": "POR",
+  "first_year": 1971,
+  "last_year": 2020
+ },
+ {
+  "team_abbreviation": "PRO",
+  "team_name": "Providence Steam Rollers",
+  "franchise": "Providence Steam Rollers",
+  "franchise_code": "PRO",
+  "first_year": 1947,
+  "last_year": 1949
+ },
+ {
+  "team_abbreviation": "MNP",
+  "team_name": "Minnesota Pipers",
+  "franchise": "Pittsburgh Condors",
+  "franchise_code": "PTC",
+  "first_year": 1968,
+  "last_year": 1972
+ },
+ {
+  "team_abbreviation": "PTC",
+  "team_name": "Pittsburgh Condors",
+  "franchise": "Pittsburgh Condors",
+  "franchise_code": "PTC",
+  "first_year": 1968,
+  "last_year": 1972
+ },
+ {
+  "team_abbreviation": "PTP",
+  "team_name": "Pittsburgh Pipers",
+  "franchise": "Pittsburgh Condors",
+  "franchise_code": "PTC",
+  "first_year": 1968,
+  "last_year": 1972
+ },
+ {
+  "team_abbreviation": "SAC",
+  "team_name": "Sacramento Kings",
+  "franchise": "Sacramento Kings",
+  "franchise_code": "SAC",
+  "first_year": 1949,
+  "last_year": 2020
+ },
+ {
+  "team_abbreviation": "CIN",
+  "team_name": "Cincinnati Royals",
+  "franchise": "Sacramento Kings",
+  "franchise_code": "SAC",
+  "first_year": 1949,
+  "last_year": 2020
+ },
+ {
+  "team_abbreviation": "KCK",
+  "team_name": "Kansas City Kings",
+  "franchise": "Sacramento Kings",
+  "franchise_code": "SAC",
+  "first_year": 1949,
+  "last_year": 2020
+ },
+ {
+  "team_abbreviation": "KCO",
+  "team_name": "Kansas City-Omaha Kings",
+  "franchise": "Sacramento Kings",
+  "franchise_code": "SAC",
+  "first_year": 1949,
+  "last_year": 2020
+ },
+ {
+  "team_abbreviation": "ROC",
+  "team_name": "Rochester Royals",
+  "franchise": "Sacramento Kings",
+  "franchise_code": "SAC",
+  "first_year": 1949,
+  "last_year": 2020
+ },
+ {
+  "team_abbreviation": "SAS",
+  "team_name": "San Antonio Spurs",
+  "franchise": "San Antonio Spurs",
+  "franchise_code": "SAS",
+  "first_year": 1968,
+  "last_year": 2020
+ },
+ {
+  "team_abbreviation": "DLC",
+  "team_name": "Dallas Chaparrals",
+  "franchise": "San Antonio Spurs",
+  "franchise_code": "SAS",
+  "first_year": 1968,
+  "last_year": 2020
+ },
+ {
+  "team_abbreviation": "SAA",
+  "team_name": "San Antonio Spurs",
+  "franchise": "San Antonio Spurs",
+  "franchise_code": "SAS",
+  "first_year": 1968,
+  "last_year": 2020
+ },
+ {
+  "team_abbreviation": "TEX",
+  "team_name": "Texas Chaparrals",
+  "franchise": "San Antonio Spurs",
+  "franchise_code": "SAS",
+  "first_year": 1968,
+  "last_year": 2020
+ },
+ {
+  "team_abbreviation": "SDA",
+  "team_name": "San Diego Conquistadors",
+  "franchise": "San Diego Sails",
+  "franchise_code": "SDS",
+  "first_year": 1973,
+  "last_year": 1976
+ },
+ {
+  "team_abbreviation": "SDS",
+  "team_name": "San Diego Sails",
+  "franchise": "San Diego Sails",
+  "franchise_code": "SDS",
+  "first_year": 1973,
+  "last_year": 1976
+ },
+ {
+  "team_abbreviation": "SHE",
+  "team_name": "Sheboygan Red Skins",
+  "franchise": "Sheboygan Red Skins",
+  "franchise_code": "SHE",
+  "first_year": 1950,
+  "last_year": 1950
+ },
+ {
+  "team_abbreviation": "CAR",
+  "team_name": "Carolina Cougars",
+  "franchise": "Spirits of St. Louis",
+  "franchise_code": "SSL",
+  "first_year": 1968,
+  "last_year": 1976
+ },
+ {
+  "team_abbreviation": "HSM",
+  "team_name": "Houston Mavericks",
+  "franchise": "Spirits of St. Louis",
+  "franchise_code": "SSL",
+  "first_year": 1968,
+  "last_year": 1976
+ },
+ {
+  "team_abbreviation": "SSL",
+  "team_name": "Spirits of St. Louis",
+  "franchise": "Spirits of St. Louis",
+  "franchise_code": "SSL",
+  "first_year": 1968,
+  "last_year": 1976
+ },
+ {
+  "team_abbreviation": "STB",
+  "team_name": "St. Louis Bombers",
+  "franchise": "St. Louis Bombers",
+  "franchise_code": "STB",
+  "first_year": 1947,
+  "last_year": 1950
+ },
+ {
+  "team_abbreviation": "TOR",
+  "team_name": "Toronto Raptors",
+  "franchise": "Toronto Raptors",
+  "franchise_code": "TOR",
+  "first_year": 1996,
+  "last_year": 2020
+ },
+ {
+  "team_abbreviation": "TRH",
+  "team_name": "Toronto Huskies",
+  "franchise": "Toronto Huskies",
+  "franchise_code": "TRH",
+  "first_year": 1947,
+  "last_year": 1947
+ },
+ {
+  "team_abbreviation": "UTA",
+  "team_name": "Utah Jazz",
+  "franchise": "Utah Jazz",
+  "franchise_code": "UTA",
+  "first_year": 1975,
+  "last_year": 2020
+ },
+ {
+  "team_abbreviation": "NOJ",
+  "team_name": "New Orleans Jazz",
+  "franchise": "Utah Jazz",
+  "franchise_code": "UTA",
+  "first_year": 1975,
+  "last_year": 2020
+ },
+ {
+  "team_abbreviation": "ANA",
+  "team_name": "Anaheim Amigos",
+  "franchise": "Utah Stars",
+  "franchise_code": "UTS",
+  "first_year": 1968,
+  "last_year": 1976
+ },
+ {
+  "team_abbreviation": "LAS",
+  "team_name": "Los Angeles Stars",
+  "franchise": "Utah Stars",
+  "franchise_code": "UTS",
+  "first_year": 1968,
+  "last_year": 1976
+ },
+ {
+  "team_abbreviation": "UTS",
+  "team_name": "Utah Stars",
+  "franchise": "Utah Stars",
+  "franchise_code": "UTS",
+  "first_year": 1968,
+  "last_year": 1976
+ },
+ {
+  "team_abbreviation": "OAK",
+  "team_name": "Oakland Oaks",
+  "franchise": "Virginia Squires",
+  "franchise_code": "VIR",
+  "first_year": 1968,
+  "last_year": 1976
+ },
+ {
+  "team_abbreviation": "VIR",
+  "team_name": "Virginia Squires",
+  "franchise": "Virginia Squires",
+  "franchise_code": "VIR",
+  "first_year": 1968,
+  "last_year": 1976
+ },
+ {
+  "team_abbreviation": "WSA",
+  "team_name": "Washington Capitols",
+  "franchise": "Virginia Squires",
+  "franchise_code": "VIR",
+  "first_year": 1968,
+  "last_year": 1976
+ },
+ {
+  "team_abbreviation": "WAS",
+  "team_name": "Washington Wizards",
+  "franchise": "Washington Wizards",
+  "franchise_code": "WAS",
+  "first_year": 1962,
+  "last_year": 2020
+ },
+ {
+  "team_abbreviation": "BAL",
+  "team_name": "Baltimore Bullets",
+  "franchise": "Washington Wizards",
+  "franchise_code": "WAS",
+  "first_year": 1962,
+  "last_year": 2020
+ },
+ {
+  "team_abbreviation": "CAP",
+  "team_name": "Capital Bullets",
+  "franchise": "Washington Wizards",
+  "franchise_code": "WAS",
+  "first_year": 1962,
+  "last_year": 2020
+ },
+ {
+  "team_abbreviation": "CHP",
+  "team_name": "Chicago Packers",
+  "franchise": "Washington Wizards",
+  "franchise_code": "WAS",
+  "first_year": 1962,
+  "last_year": 2020
+ },
+ {
+  "team_abbreviation": "CHZ",
+  "team_name": "Chicago Zephyrs",
+  "franchise": "Washington Wizards",
+  "franchise_code": "WAS",
+  "first_year": 1962,
+  "last_year": 2020
+ },
+ {
+  "team_abbreviation": "WSB",
+  "team_name": "Washington Bullets",
+  "franchise": "Washington Wizards",
+  "franchise_code": "WAS",
+  "first_year": 1962,
+  "last_year": 2020
+ },
+ {
+  "team_abbreviation": "WAT",
+  "team_name": "Waterloo Hawks",
+  "franchise": "Waterloo Hawks",
+  "franchise_code": "WAT",
+  "first_year": 1950,
+  "last_year": 1950
+ },
+ {
+  "team_abbreviation": "WSC",
+  "team_name": "Washington Capitols",
+  "franchise": "Washington Capitols",
+  "franchise_code": "WSC",
+  "first_year": 1947,
+  "last_year": 1951
+ }
+]

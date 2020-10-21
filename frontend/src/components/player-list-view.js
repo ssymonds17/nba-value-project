@@ -37,28 +37,23 @@ export class PlayerListView extends React.Component {
          <div className="player-list-wrapper">
             <div className="alphabet-container">
                <div className="alphabet-list">
-                  <table>
-                     <tbody>
-                        <tr>
-                           {
-                              alphabet.map(
-                                 (char) => (
-                                    <td className="alphabet-character" key={char}>
-                                       <Link to={`/playerlist/${char.toLowerCase()}`}>{char}</Link>
-                                    </td>
-                                 )
-                              )
-                           }
-                        </tr>
-                     </tbody>
-                  </table>
+                  <ul>
+                     {
+                        alphabet.map(
+                           (char) => (
+                              <li className="alphabet-character" key={char}>
+                                 <Link to={`/playerlist/${char.toLowerCase()}`}>{char}</Link>
+                              </li>
+                           )
+                        )
+                     }
+                  </ul>
                </div>
             </div>
             <table className="player-list-table">
                <tbody>
                   <tr>
-                     <th>First Name</th>
-                     <th>Last Name</th>
+                     <th>Name</th>
                      <th>From</th>
                      <th>To</th>
                   </tr>
@@ -67,10 +62,7 @@ export class PlayerListView extends React.Component {
                         (player) => (
                            <tr className="player-list" key={player.player_id}>
                               <td className="player-list-first-name">
-                                 <Link to={`/players/${player.player_id}`}>{player.first_name}</Link>
-                              </td>
-                              <td className="player-list-last-name">
-                                 <Link to={`/players/${player.player_id}`}>{player.last_name}</Link>
+                                 <Link to={`/players/${player.player_id}`}>{player.name}</Link>
                               </td>
                               <td>
                                  TBD

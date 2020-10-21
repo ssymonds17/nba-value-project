@@ -82,19 +82,19 @@ export class TeamView extends React.Component {
               <th>Pos</th>
               <th>Age</th>
               <th>Score</th>
-              <th>WS</th>
-              <th>WS/48</th>
-              <th>VORP</th>
-              <th>BPM</th>
               <th>G</th>
               <th>MPG</th>
+              <th>WS/48</th>
+              <th>WS</th>
+              <th>BPM</th>
+              <th>VORP</th>
               <th>Score</th>
-              <th>WS</th>
-              <th>WS/48</th>
-              <th>VORP</th>
-              <th>BPM</th>
               <th>G</th>
               <th>MPG</th>
+              <th>WS/48</th>
+              <th>WS</th>
+              <th>BPM</th>
+              <th>VORP</th>
             </tr>
           </thead>
           <tbody>
@@ -107,19 +107,19 @@ export class TeamView extends React.Component {
                   <td>{season.position}</td>
                   <td>{season.age}</td>
                   <td>{Number(season.regularSeason__score).toFixed(2)}</td>
-                  <td>{Number(season.regularSeason__win_shares).toFixed(1)}</td>
-                  <td>{Number(season.regularSeason__win_shares_48).toFixed(3)}</td>
-                  <td>{Number(season.regularSeason__vorp).toFixed(1)}</td>
-                  <td>{Number(season.regularSeason__bpm).toFixed(1)}</td>
                   <td>{season.regularSeason__games}</td>
                   <td>{Number(season.regularSeason__mpg).toFixed(1)}</td>
+                  <td>{Number(season.regularSeason__win_shares_48).toFixed(3)}</td>
+                  <td>{Number(season.regularSeason__win_shares).toFixed(1)}</td>
+                  <td>{Number(season.regularSeason__bpm).toFixed(1)}</td>
+                  <td>{Number(season.regularSeason__vorp).toFixed(1)}</td>
                   <td>{season.playoff__score ? Number(season.playoff__score).toFixed(2) : Number(0).toFixed(2)}</td>
-                  <td>{season.playoff__win_shares ? Number(season.playoff__win_shares).toFixed(1) : Number(0).toFixed(1)}</td>
-                  <td>{season.playoff__win_shares_48 ? Number(season.playoff__win_shares_48).toFixed(3) : Number(0).toFixed(3)}</td>
-                  <td>{season.playoff__vorp ? Number(season.playoff__vorp).toFixed(1) : Number(0).toFixed(1)}</td>
-                  <td>{season.playoff__bpm ? Number(season.playoff__bpm).toFixed(1) : Number(0).toFixed(1)}</td>
                   <td>{season.playoff__games ? season.playoff__games : Number(0)}</td>
                   <td>{season.playoff__mpg ? Number(season.playoff__mpg).toFixed(1) : Number(0).toFixed(1)}</td>
+                  <td>{season.playoff__win_shares_48 ? Number(season.playoff__win_shares_48).toFixed(3) : Number(0).toFixed(3)}</td>
+                  <td>{season.playoff__win_shares ? Number(season.playoff__win_shares).toFixed(1) : Number(0).toFixed(1)}</td>
+                  <td>{season.playoff__bpm ? Number(season.playoff__bpm).toFixed(1) : Number(0).toFixed(1)}</td>
+                  <td>{season.playoff__vorp ? Number(season.playoff__vorp).toFixed(1) : Number(0).toFixed(1)}</td>
                 </tr>
               ))}
           </tbody>

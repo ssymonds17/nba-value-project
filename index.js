@@ -81,7 +81,7 @@ app.get('/players',
       });
   });
 
-// {WIP} GET player list by letter 
+// GET player list by letter 
 app.get('/playerlist/:char',
   cors(corsOptions),
   (req, res) => {
@@ -97,7 +97,7 @@ app.get('/playerlist/:char',
   });
 
 // GET regular season data by year and league
-app.get('/regularSeasons/:league/:year',
+app.get('/seasons/regular/:league/:year',
   cors(corsOptions),
   (req, res) => {
     let scoreSort = { score: -1 };
@@ -116,7 +116,7 @@ app.get('/regularSeasons/:league/:year',
   });
 
 // GET playoff data by league and year
-app.get('/playoffs/:league/:year',
+app.get('/seasons/playoffs/:league/:year',
   cors(corsOptions),
   (req, res) => {
     let scoreSort = { score: -1 };
@@ -135,7 +135,7 @@ app.get('/playoffs/:league/:year',
   });
 
 // GET total season data (RS + PO) by league and year
-app.get('/seasons/:league/:year',
+app.get('/seasons/overall/:league/:year',
   cors(corsOptions),
   (req, res) => {
     let scoreSort = { total_season_value: -1 };
@@ -154,7 +154,7 @@ app.get('/seasons/:league/:year',
   });
 
 // GET greatest all time player list
-app.get('/playerranking',
+app.get('/rankings/players',
   cors(corsOptions),
   (req, res) => {
     let rankSort = { rank: 1 };
@@ -171,7 +171,7 @@ app.get('/playerranking',
   });
 
 // GET greatest all time team list
-app.get('/teamranking',
+app.get('/rankings/teams',
   cors(corsOptions),
   (req, res) => {
     let rankSort = { rank: 1 };
@@ -188,7 +188,7 @@ app.get('/teamranking',
   });
 
 // GET greatest all time seasons list
-app.get('/seasonranking',
+app.get('/rankings/seasons/overall',
   cors(corsOptions),
   (req, res) => {
     let scoreSort = { total_season_value: -1 };
@@ -204,22 +204,56 @@ app.get('/seasonranking',
       });
   });
 
-// GET request to search for players in search bar
-app.get('/playersearch/:query',
+// GET greatest all time regular seasons list
+app.get('/rankings/seasons/regularseason',
   cors(corsOptions),
   (req, res) => {
-    // {GOOGLE ESCAPING STRING}
-    let string = req.params.query;
-    PlayerLists.find({ name: { $regex: string, $options: 'i' } })
-      .then((players) => {
-        console.log(players);
-        res.status(200).json(players);
+    let RsScoreSort = { regularseason__score: -1 };
+    Players.find()
+      .sort(RsScoreSort)
+      .limit(100)
+      .then((ranking) => {
+        res.status(200).json(ranking);
       })
       .catch((e) => {
         console.error(e);
         res.status(500).send('Error ' + e);
       });
   });
+
+// GET greatest all time playoff season list
+app.get('/rankings/seasons/playoffs',
+  cors(corsOptions),
+  (req, res) => {
+    let playoffScoreSort = { playoff__score: -1 };
+    Players.find()
+      .sort(playoffScoreSort)
+      .limit(100)
+      .then((ranking) => {
+        res.status(200).json(ranking);
+      })
+      .catch((e) => {
+        console.error(e);
+        res.status(500).send('Error ' + e);
+      });
+  });
+
+// GET request to search for players in search bar
+// app.get('/playersearch/:query',
+//   cors(corsOptions),
+//   (req, res) => {
+//     // {GOOGLE ESCAPING STRING}
+//     let string = req.params.query;
+//     PlayerLists.find({ name: { $regex: string, $options: 'i' } })
+//       .then((players) => {
+//         console.log(players);
+//         res.status(200).json(players);
+//       })
+//       .catch((e) => {
+//         console.error(e);
+//         res.status(500).send('Error ' + e);
+//       });
+//   });
 
 // Serve static files
 app.use(express.static('frontend/build'));
