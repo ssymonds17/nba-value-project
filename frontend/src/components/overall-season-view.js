@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 // Need new SCSS file
 
 export class OverallSeasonView extends React.Component {
@@ -20,7 +20,7 @@ export class OverallSeasonView extends React.Component {
     axios.get(`https://nba-value-reference.herokuapp.com${seasonID}`)
       .then((response) => {
         this.setState({
-          team: response.data
+          season: response.data
         });
       })
       .catch(() => {
@@ -34,6 +34,15 @@ export class OverallSeasonView extends React.Component {
     return (
       <div>
         <h1>{season[0].league} {season[0].year} Overall</h1>
+        <div>
+          <Link to={`/seasons/regular/${season[0].league}/${season[0].year}`}><button>Regular Season</button></Link>
+          <Link to={`/seasons/playoffs/${season[0].league}/${season[0].year}`}><button>Playoffs</button></Link>
+        </div>
+        {/* LINK BELOW DOES NOT RELOAD PAGE WIP */}
+        <div>
+          <Link to={`/seasons/overall/${season[0].league}/${season[0].year - 1}`}><button>Previous Season</button></Link>
+          <Link to={`/seasons/overall/${season[0].league}/${season[0].year + 1}`}><button>Next Season</button></Link>
+        </div>
         <table>
           <thead>
             <tr>
