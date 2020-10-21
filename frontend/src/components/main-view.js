@@ -16,7 +16,6 @@ import { PlayoffSeasonView } from './playoff-season-view';
 
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
-import { OverallSeasonView } from './overall-season-view';
 // import Button from 'react-bootstrap/Button';
 
 export default class MainView extends React.Component {
