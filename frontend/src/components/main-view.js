@@ -6,7 +6,7 @@ import { PlayerView } from './player-view';
 import { TeamListView } from './team-list-view';
 import { TeamView } from './team-view';
 import { AllTimePlayerView } from './all-time-player-view';
-import { AllTimeTeamView } from './all-time-player-view';
+import { AllTimeTeamView } from './all-time-team-view';
 
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
