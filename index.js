@@ -12,6 +12,7 @@ const RegularSeasons = Models.RegularSeason;
 const Playoffs = Models.Playoff;
 const AllTimePlayers = Models.AllTimePlayer;
 const AllTimeTeams = Models.AllTimeTeam;
+const FranchiseLists = Models.FranchiseList;
 
 app.use(bodyParser.json());
 app.use(cors());
@@ -45,14 +46,29 @@ app.get('/players/:playerID',
       });
   });
 
-// (TRY MAKE SECOND CALL FOR UNIQUE FRANCHISE ID THEN CALL TEAMS DATABASE)
+// GET franchise code by team abbreviation
+app.get('/franchise/:teamID',
+  cors(corsOptions),
+  (req, res) => {
+    FranchiseLists.find({
+      team_abbreviation: req.params.teamID
+    })
+      .then((franchise) => {
+        res.status(200).json(franchise);
+      })
+      .catch((e) => {
+        console.error(e);
+        res.status(500).send('Error ' + e);
+      });
+  });
+
 // GET team data by team abbreviation and year
-app.get('/teams/:teamAbb/:year',
+app.get('/teams/:franchiseCode/:year',
   cors(corsOptions),
   (req, res) => {
     let nameSort = { name: 1 };
     Teams.find({
-      team_abbreviation: req.params.teamAbb,
+      franchise_code: req.params.franchiseCode,
       year: req.params.year
     })
       .sort(nameSort)

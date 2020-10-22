@@ -7,16 +7,33 @@ export class TeamView extends React.Component {
     super();
     this.state = {
       team: [{}],
+      franchise: {},
     };
   }
 
   componentDidMount() {
-    let teamID = window.location.pathname;
-    this.getTeamData(teamID);
+    let path = window.location.pathname;
+    let teamID = path.slice(7, 10);
+    this.getFranchiseCode(teamID);
+    let year = path.slice(11);
+    let franchiseCode = this.state.franchise.franchise_code;
+    this.getTeamData(franchiseCode, year);
   }
 
-  getTeamData = (teamID) => {
-    axios.get(`https://nba-value-reference.herokuapp.com${teamID}`)
+  getFranchiseCode = (teamID) => {
+    axios.get(`https://nba-value-reference.herokuapp.com/franchise/${teamID}`)
+      .then((response) => {
+        this.setState({
+          franchise: response.data
+        });
+      })
+      .catch(() => {
+        console.log('data has been received');
+      })
+  }
+
+  getTeamData = (franchiseCode, year) => {
+    axios.get(`https://nba-value-reference.herokuapp.com/teams/${franchiseCode}/${year}`)
       .then((response) => {
         this.setState({
           team: response.data

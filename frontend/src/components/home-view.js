@@ -22,9 +22,6 @@ export class HomeView extends React.Component {
       <Link to={`/seasons`}>Seasons</Link>
      </Button>
      <Button>
-      <Link to={`/playoffs`}>Playoffs</Link>
-     </Button>
-     <Button>
       <Link to={`/rankings/players`}>All Time Players</Link>
      </Button>
      <Button>
@@ -32,12 +29,6 @@ export class HomeView extends React.Component {
      </Button>
      <Button>
       <Link to={`/rankings/seasons/overall`}>Greatest Seasons</Link>
-     </Button>
-     <Button>
-      <Link to={`/rankings/seasons.regularseasons`}>Greatest Regular Seasons</Link>
-     </Button>
-     <Button>
-      <Link to={`/rankings/seasons/playoffs`}>Greatest Playoffs</Link>
      </Button>
      <Button>
       <Link to={`/about`}>About</Link>

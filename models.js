@@ -11,8 +11,11 @@ let playerSchema = mongoose.Schema({
  position: String,
  age: Number,
  team_one: { type: String, required: true },
+ franchise_code_team_one: { type: String, required: true },
  team_two: String,
+ franchise_code_team_two: String,
  team_three: String,
+ franchise_code_team_three: String,
  regularseason__score: { type: Number, required: true },
  regularseason__win_shares: Number,
  regularseason__win_shares_48: Number,
@@ -42,6 +45,7 @@ let teamSchema = mongoose.Schema({
  position: String,
  age: Number,
  team_abbreviation: { type: String, required: true },
+ franchise_code: { type: String, required: true },
  regularSeason__score: Number,
  regularSeason__win_shares: Number,
  regularSeason__win_shares_48: Number,
@@ -83,6 +87,7 @@ let regularSeasonSchema = mongoose.Schema({
  position: String,
  age: Number,
  team_abbreviation: { type: String, required: true },
+ franchise_code: String,
  win_shares: Number,
  win_shares_48: Number,
  vorp: Number,
@@ -106,6 +111,7 @@ let playoffSchema = mongoose.Schema({
  position: String,
  age: Number,
  team_abbreviation: { type: String, required: true },
+ franchise_code: { type: String, required: true },
  win_shares: Number,
  win_shares_48: Number,
  vorp: Number,
@@ -136,6 +142,7 @@ let allTimeTeamSchema = mongoose.Schema({
  rank: Number,
  team: String,
  team_abbreviation: String,
+ franchise_code: String,
  year: Number,
  overall: Number,
  regular_season: Number,
@@ -143,6 +150,16 @@ let allTimeTeamSchema = mongoose.Schema({
  record: String,
  result: String
 }, { collection: 'all_time_team' });
+
+let franchiseListSchema = mongoose.Schema({
+ _id: String,
+ team_abbreviation: String,
+ team_name: String,
+ franchise: String,
+ franchise_code: String,
+ first_year: Number,
+ last_year: Number
+}, { collection: 'franchise_index' });
 
 
 let Player = mongoose.model('Player', playerSchema);
@@ -152,6 +169,7 @@ let RegularSeason = mongoose.model('RegularSeason', regularSeasonSchema);
 let Playoff = mongoose.model('Playoff', playoffSchema);
 let AllTimePlayer = mongoose.model('AllTimePlayer', allTimePlayerSchema);
 let AllTimeTeam = mongoose.model('AllTimeTeam', allTimeTeamSchema);
+let FranchiseList = mongoose.model('FranchiseList', franchiseListSchema);
 
 module.exports.Player = Player;
 module.exports.Team = Team;
@@ -160,3 +178,4 @@ module.exports.RegularSeason = RegularSeason;
 module.exports.Playoff = Playoff;
 module.exports.AllTimePlayer = AllTimePlayer;
 module.exports.AllTimeTeam = AllTimeTeam;
+module.exports.FranchiseList = FranchiseList;
