@@ -18,11 +18,8 @@ export class SeasonListView extends React.Component {
             <td>Champions</td>
             <td>Runners Up</td>
             <td>Overall MVP</td>
-            <td>MVP Value</td>
-            <td>RS MVP</td>
-            <td>RS Score</td>
+            <td>Regular Season MVP</td>
             <td>Playoffs MVP</td>
-            <td>Playoffs Score</td>
           </tr>
         </thead>
         <tbody>
@@ -36,12 +33,9 @@ export class SeasonListView extends React.Component {
                   <td>{season.league}</td>
                   <td>{season.champions}</td>
                   <td>{season.runners_up}</td>
-                  <td>{season.overall_mvp}</td>
-                  <td>{season.overall_mvp_score}</td>
-                  <td>{season.rs_mvp}</td>
-                  <td>{season.rs_mvp_score}</td>
-                  <td>{season.playoffs_mvp}</td>
-                  <td>{season.playoffs_mvp_score}</td>
+                  <td>{season.overall_mvp} ({season.overall_mvp_score})</td>
+                  <td>{season.rs_mvp} ({season.rs_mvp_score})</td>
+                  <td>{season.playoffs_mvp} ({season.playoffs_mvp_score})</td>
                 </tr>
               ))}
         </tbody>
