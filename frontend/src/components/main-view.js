@@ -4,6 +4,7 @@ import { PlayerListView } from './player-list-view';
 import { PlayerListByCharView } from './player-list-by-char-view';
 import { PlayerView } from './player-view';
 import { TeamListView } from './team-list-view';
+import { FranchiseHistoryView } from './franchise-history-view';
 import { TeamView } from './team-view';
 import { AllTimePlayerView } from './all-time-player-view';
 import { AllTimeTeamView } from './all-time-team-view';
@@ -29,7 +30,8 @@ export default class MainView extends React.Component {
           <Route exact path="/playerlist/:char" render={() => <PlayerListByCharView />} />
           <Route exact path="/players/:playerID" render={() => <PlayerView />} />
           <Route exact path="/teams" render={() => <TeamListView />} />
-          <Route exact path="/teams/:teamAbb/:year" render={() => <TeamView />} />
+          <Route exact path="/teams/:franchiseCode" render={() => <FranchiseHistoryView />} />
+          <Route exact path="/teams/:franchiseCode/:year" render={() => <TeamView />} />
           <Route exact path="/rankings/players" render={() => <AllTimePlayerView />} />
           <Route exact path="/rankings/teams" render={() => <AllTimeTeamView />} />
           <Route exact path="/rankings/seasons/overall" render={() => <GreatestSeasonsOverallView />} />
