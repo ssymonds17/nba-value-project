@@ -4,9 +4,6 @@ import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
 
 export class Navbar extends React.Component {
- constructor() {
-  super();
- }
 
  render() {
   return (

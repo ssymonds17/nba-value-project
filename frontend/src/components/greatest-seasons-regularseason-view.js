@@ -59,13 +59,13 @@ export class GreatestSeasonsRSView extends React.Component {
             {
               seasonList.map(season => (
                 <tr key={season._id}>
-                  <td>{season.name}</td>
-                  <td>{season.year}</td>
-                  <td>{season.league}</td>
+                  <td><Link to={`/players/${season.player_id}`}>{season.name}</Link></td>
+                  <td><Link to={`/seasons/overall/${season.league}/${season.year}`}>{season.year}</Link></td>
+                  <td><Link to={`/seasons/overall/${season.league}/${season.year}`}>{season.league}</Link></td>
                   <td>{Number(season.regularseason__score).toFixed(2)}</td>
                   <td>{season.position}</td>
                   <td>{season.age}</td>
-                  <td>{season.team_one}</td>
+                  <td><Link to={`/teams/${season.team_one}/${season.year}`}>{season.team_one}</Link></td>
                   <td>{season.regularseason__games}</td>
                   <td>{Number(season.regularseason__mpg).toFixed(1)}</td>
                   <td>{Number(season.regularseason__win_shares_48).toFixed(3)}</td>

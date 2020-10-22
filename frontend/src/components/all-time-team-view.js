@@ -51,10 +51,8 @@ export class AllTimeTeamView extends React.Component {
               teamList.map(team => (
                 <tr className="all-time-team-data" key={team._id}>
                   <td>{team.rank}</td>
-                  <Link to={`/teams/${team.franchise_code}/${team.year}`}>
-                    <td>{team.team}</td>
-                  </Link>
-                  <td>{team.year}</td>
+                  <td><Link to={`/teams/${team.franchise_code}/${team.year}`}>{team.team}</Link></td>
+                  <td><Link to={`/seasons/overall/NBA/${team.year}`}>{team.year}</Link></td>
                   <td>{Number(team.overall).toFixed(2)}</td>
                   <td>{Number(team.regular_season).toFixed(2)}</td>
                   <td>{Number(team.playoffs).toFixed(2)}</td>

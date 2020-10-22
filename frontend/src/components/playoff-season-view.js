@@ -65,11 +65,11 @@ export class PlayoffSeasonView extends React.Component {
             {
               season.map(season => (
                 <tr key={season._id}>
-                  <td>{season.name}</td>
+                  <td><Link to={`/players/${season.player_id}`}>{season.name}</Link></td>
                   <td>{Number(season.score).toFixed(2)}</td>
                   <td>{season.position}</td>
                   <td>{season.age}</td>
-                  <td>{season.team_abbreviation}</td>
+                  <td><Link to={`/teams/${season.team_abbreviation}/${season.year}`}>{season.team_abbreviation}</Link></td>
                   <td>{season.games}</td>
                   <td>{Number(season.mpg).toFixed(1)}</td>
                   <td>{Number(season.win_shares_48).toFixed(3)}</td>

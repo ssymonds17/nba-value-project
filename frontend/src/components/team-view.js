@@ -87,6 +87,7 @@ export class TeamView extends React.Component {
         <div>
           <Link to={`/teams/${team[0].team_abbreviation}/${team[0].year - 1}`}><button>Previous Season</button></Link>
           <Link to={`/teams/${team[0].team_abbreviation}/${team[0].year + 1}`}><button>Next Season</button></Link>
+          <Link to={`/teams/${team[0].franchise_code}`}><button>{team[0].team_full_name} Franchise Index</button></Link>
         </div>
         <table>
           <thead>
@@ -121,8 +122,8 @@ export class TeamView extends React.Component {
             {
               team.map(season => (
                 <tr key={season._id}>
-                  <td>{season.name}</td>
-                  <td>{season.league}</td>
+                  <td><Link to={`/players/${season.player_id}`}>{season.name}</Link></td>
+                  <td><Link to={`/seasons/overall/${season.league}/${season.year}`}>{season.league}</Link></td>
                   <td>{Number((season.regularSeason__score + season.playoff__score)).toFixed(2)}</td>
                   <td>{season.position}</td>
                   <td>{season.age}</td>

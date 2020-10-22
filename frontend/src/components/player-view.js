@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 // Need new SCSS file
 
 export class PlayerView extends React.Component {
@@ -23,7 +24,6 @@ export class PlayerView extends React.Component {
           player: response.data
         });
       })
-      //need to error/fail properly
       .catch(() => {
         console.log('data has not been received');
       })
@@ -109,14 +109,14 @@ export class PlayerView extends React.Component {
             {
               player.map(season => (
                 <tr className="player-name" key={season._id}>
-                  <td>{season.year}</td>
-                  <td>{season.league}</td>
+                  <td><Link to={`/seasons/overall/${season.league}/${season.year}`}>{season.year}</Link></td>
+                  <td><Link to={`/seasons/overall/${season.league}/${season.year}`}>{season.league}</Link></td>
                   <td>{Number(season.total_season_value).toFixed(2)}</td>
                   <td>{season.position}</td>
                   <td>{season.age}</td>
-                  <td>{season.team_one}</td>
-                  <td>{season.team_two}</td>
-                  <td>{season.team_three}</td>
+                  <td><Link to={`/teams/${season.team_one}/${season.year}`}>{season.team_one}</Link></td>
+                  <td><Link to={`/teams/${season.team_two}/${season.year}`}>{season.team_two}</Link></td>
+                  <td><Link to={`/teams/${season.team_three}/${season.year}`}>{season.team_three}</Link></td>
                   <td>{Number(season.regularseason__score).toFixed(2)}</td>
                   <td>{season.regularseason__games}</td>
                   <td>{Number(season.regularseason__mpg).toFixed(1)}</td>

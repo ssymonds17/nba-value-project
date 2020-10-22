@@ -4,9 +4,6 @@ import { Link } from 'react-router-dom';
 
 
 export class TeamListView extends React.Component {
-   constructor() {
-      super();
-   }
 
    render() {
       return (
@@ -16,8 +13,7 @@ export class TeamListView extends React.Component {
                   <td>Team Name</td>
                   <td>League</td>
                   <td>From</td>
-                  <td>Until
-      </td>
+                  <td>Until</td>
                </tr>
             </thead>
             <tbody>
@@ -25,9 +21,7 @@ export class TeamListView extends React.Component {
                   franchiseList.map(
                      (team) => (
                         <tr className="team-list-body" key={team.abbreviation}>
-                           <td>
-                              <Link to={`/teams/${team.abbreviation}`}>{team.team_full_name}</Link>
-                           </td>
+                           <td><Link to={`/teams/${team.abbreviation}`}>{team.team_full_name}</Link></td>
                            <td>{team.league}</td>
                            <td>{team.first_year}</td>
                            <td>{team.last_year}</td>
