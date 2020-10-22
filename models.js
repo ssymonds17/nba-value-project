@@ -161,6 +161,16 @@ let franchiseListSchema = mongoose.Schema({
  last_year: Number
 }, { collection: 'franchise_index' });
 
+let franchiseHistoryListSchema = mongoose.Schema({
+ _id: String,
+ year: Number,
+ league: String,
+ team_full_name: String,
+ abbreviation: String,
+ franchise_code: String,
+ team_record: String,
+ team_result: String
+}, { collection: 'franchise_history_index' });
 
 let Player = mongoose.model('Player', playerSchema);
 let Team = mongoose.model('Team', teamSchema);
@@ -170,6 +180,7 @@ let Playoff = mongoose.model('Playoff', playoffSchema);
 let AllTimePlayer = mongoose.model('AllTimePlayer', allTimePlayerSchema);
 let AllTimeTeam = mongoose.model('AllTimeTeam', allTimeTeamSchema);
 let FranchiseList = mongoose.model('FranchiseList', franchiseListSchema);
+let FranchiseHistoryList = mongoose.model('FranchiseHistoryList', franchiseHistoryListSchema);
 
 module.exports.Player = Player;
 module.exports.Team = Team;
@@ -179,3 +190,4 @@ module.exports.Playoff = Playoff;
 module.exports.AllTimePlayer = AllTimePlayer;
 module.exports.AllTimeTeam = AllTimeTeam;
 module.exports.FranchiseList = FranchiseList;
+module.exports.FranchiseHistoryList = FranchiseHistoryList;

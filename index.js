@@ -13,6 +13,7 @@ const Playoffs = Models.Playoff;
 const AllTimePlayers = Models.AllTimePlayer;
 const AllTimeTeams = Models.AllTimeTeam;
 const FranchiseLists = Models.FranchiseList;
+const FranchiseHistoryLists = Models.FranchiseHistoryList;
 
 app.use(bodyParser.json());
 app.use(cors());
@@ -30,6 +31,37 @@ mongoose.connect('mongodb+srv://ssymonds17:klrGPn2TwoQKpxi5@cluster0.bwlxj.mongo
 
 // PATHS ------------------------------------------------------------
 
+// GET entire player list
+app.get('/players',
+  cors(corsOptions),
+  (req, res) => {
+    let lastNameSort = { last_name: 1 };
+    PlayerLists.find()
+      .sort(lastNameSort)
+      .then((players) => {
+        res.status(200).json(players);
+      })
+      .catch((e) => {
+        console.error(e);
+        res.status(500).send('Error ' + e);
+      });
+  });
+
+// GET player list by letter 
+app.get('/playerlist/:char',
+  cors(corsOptions),
+  (req, res) => {
+    let char = req.params.char;
+    PlayerLists.find({ last_name: { $regex: '^' + char + '.*', $options: 'i' } })
+      .then((players) => {
+        res.status(200).json(players);
+      })
+      .catch((e) => {
+        console.error(e);
+        res.status(500).send('Error ' + e);
+      });
+  });
+
 // GET player data by player ID
 app.get('/players/:playerID',
   cors(corsOptions),
@@ -39,6 +71,24 @@ app.get('/players/:playerID',
       .sort(yearSort)
       .then((player) => {
         res.status(200).json(player);
+      })
+      .catch((e) => {
+        console.error(e);
+        res.status(500).send('Error ' + e);
+      });
+  });
+
+// GET list of franchises seasons by franchise code
+app.get('/teams/:franchiseCode',
+  cors(corsOptions),
+  (req, res) => {
+    let yearSort = { year: -1 };
+    FranchiseHistoryLists.find({
+      franchise_code: req.params.franchiseCode
+    })
+      .sort(yearSort)
+      .then((franchise) => {
+        res.status(200).json(franchise);
       })
       .catch((e) => {
         console.error(e);
@@ -74,37 +124,6 @@ app.get('/teams/:franchiseCode/:year',
       .sort(nameSort)
       .then((team) => {
         res.status(200).json(team);
-      })
-      .catch((e) => {
-        console.error(e);
-        res.status(500).send('Error ' + e);
-      });
-  });
-
-// GET entire player list
-app.get('/players',
-  cors(corsOptions),
-  (req, res) => {
-    let lastNameSort = { last_name: 1 };
-    PlayerLists.find()
-      .sort(lastNameSort)
-      .then((players) => {
-        res.status(200).json(players);
-      })
-      .catch((e) => {
-        console.error(e);
-        res.status(500).send('Error ' + e);
-      });
-  });
-
-// GET player list by letter 
-app.get('/playerlist/:char',
-  cors(corsOptions),
-  (req, res) => {
-    let char = req.params.char;
-    PlayerLists.find({ last_name: { $regex: '^' + char + '.*', $options: 'i' } })
-      .then((players) => {
-        res.status(200).json(players);
       })
       .catch((e) => {
         console.error(e);
