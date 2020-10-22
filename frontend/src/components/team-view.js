@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 // Need new SCSS file
 
 export class TeamView extends React.Component {
@@ -83,6 +84,10 @@ export class TeamView extends React.Component {
         <h3>Season Score: {totalCareerValue}</h3>
         <h3>RS Score: {totalRegularSeasonValue}</h3>
         <h3>Playoffs Score: {totalPlayoffValue}</h3>
+        <div>
+          <Link to={`/teams/${team[0].team_abbreviation}/${team[0].year - 1}`}><button>Previous Season</button></Link>
+          <Link to={`/teams/${team[0].team_abbreviation}/${team[0].year + 1}`}><button>Next Season</button></Link>
+        </div>
         <table>
           <thead>
             <tr>
