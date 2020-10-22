@@ -49,9 +49,9 @@ export class FranchiseHistoryView extends React.Component {
       {
        franchise.map(season => (
         <tr key={season._id}>
-         <td><Link to={`/seasons/overall/${season.league}/${season.year}`}>{season.year}</Link></td>
+         <td><Link to={`/teams/${season.franchise_code}/${season.year}`}>{season.year}</Link></td>
          <td><Link to={`/seasons/overall/${season.league}/${season.year}`}>{season.league}</Link></td>
-         <td>{season.team_full_name}</td>
+         <td><Link to={`/teams/${season.franchise_code}/${season.year}`}>{season.team_full_name}</Link></td>
          <td>{season.team_record}</td>
          <td>{season.team_result}</td>
         </tr>
