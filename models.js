@@ -161,7 +161,7 @@ let franchiseListSchema = mongoose.Schema({
  last_year: Number
 }, { collection: 'franchise_index' });
 
-let franchiseHistoryListSchema = mongoose.Schema({
+let franchiseSeasonSchema = mongoose.Schema({
  _id: String,
  year: Number,
  league: String,
@@ -180,7 +180,7 @@ let Playoff = mongoose.model('Playoff', playoffSchema);
 let AllTimePlayer = mongoose.model('AllTimePlayer', allTimePlayerSchema);
 let AllTimeTeam = mongoose.model('AllTimeTeam', allTimeTeamSchema);
 let FranchiseList = mongoose.model('FranchiseList', franchiseListSchema);
-let FranchiseHistoryList = mongoose.model('FranchiseHistoryList', franchiseHistoryListSchema);
+let FranchiseSeason = mongoose.model('FranchiseSeason', franchiseSeasonSchema);
 
 module.exports.Player = Player;
 module.exports.Team = Team;
@@ -190,4 +190,4 @@ module.exports.Playoff = Playoff;
 module.exports.AllTimePlayer = AllTimePlayer;
 module.exports.AllTimeTeam = AllTimeTeam;
 module.exports.FranchiseList = FranchiseList;
-module.exports.FranchiseHistoryList = FranchiseHistoryList;
+module.exports.FranchiseSeason = FranchiseSeason;

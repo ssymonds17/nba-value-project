@@ -13,7 +13,7 @@ const Playoffs = Models.Playoff;
 const AllTimePlayers = Models.AllTimePlayer;
 const AllTimeTeams = Models.AllTimeTeam;
 const FranchiseLists = Models.FranchiseList;
-const FranchiseHistoryLists = Models.FranchiseHistoryList;
+const FranchiseSeasons = Models.FranchiseSeason;
 
 app.use(bodyParser.json());
 app.use(cors());
@@ -83,7 +83,7 @@ app.get('/teams/:franchiseCode',
   cors(corsOptions),
   (req, res) => {
     let yearSort = { year: -1 };
-    FranchiseHistoryLists.find({
+    FranchiseSeasons.find({
       franchise_code: req.params.franchiseCode
     })
       .sort(yearSort)
