@@ -1,5 +1,5 @@
 import React from 'react';
-import { HomeView } from './home-view';
+import { Navbar } from './navbar';
 import { PlayerListView } from './player-list-view';
 import { PlayerListByCharView } from './player-list-by-char-view';
 import { PlayerView } from './player-view';
@@ -25,7 +25,8 @@ export default class MainView extends React.Component {
     return (
       <Router>
         <Container className="main-view">
-          <Route exact path="/" render={() => <HomeView />} />
+          <Navbar />
+          <Route exact path="/" render={() => <Navbar />} />
           <Route exact path="/players" render={() => <PlayerListView />} />
           <Route exact path="/playerlist/:char" render={() => <PlayerListByCharView />} />
           <Route exact path="/players/:playerID" render={() => <PlayerView />} />

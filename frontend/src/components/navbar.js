@@ -3,7 +3,7 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
 
-export class HomeView extends React.Component {
+export class Navbar extends React.Component {
  constructor() {
   super();
  }
