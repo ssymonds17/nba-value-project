@@ -8,7 +8,8 @@ export class TeamView extends React.Component {
     super();
     this.state = {
       team: [{}],
-      franchise: [{}]
+      franchise: [{}],
+      franchiseCode: ''
     };
   }
 
@@ -23,6 +24,7 @@ export class TeamView extends React.Component {
     axios.get(`https://nba-value-reference.herokuapp.com/franchise/${teamID}`)
       .then((response) => {
         this.setState({
+          franchise: response.data,
           franchiseCode: response.data[0].franchise_code
         }, () => this.getTeamData(this.state.franchiseCode, year)
         );
@@ -68,12 +70,45 @@ export class TeamView extends React.Component {
     return seasonValueArray3.reduce((a, b) => a + b, 0).toFixed(2);
   }
 
+  setPreviousSeasonButtonStyle() {
+    let styles = {}
+    if (this.state.franchise[0].first_year === this.state.team[0].year) {
+      const firstStyle = {
+        display: 'none'
+      }
+      styles = Object.assign(styles, firstStyle)
+    }
+    if (this.state.franchise[0].franchise_code === 'CHO' && this.state.team[0].year === 2005) {
+      const secondStyle = {
+        display: 'none'
+      }
+      styles = Object.assign(styles, secondStyle)
+    }
+    return styles
+  }
+
+  setNextSeasonButtonStyle() {
+    let styles = {}
+    if (this.state.franchise[0].last_year === this.state.team[0].year) {
+      const firstStyle = {
+        display: 'none'
+      }
+      styles = Object.assign(styles, firstStyle)
+    }
+    if (this.state.franchise[0].franchise_code === 'CHO' && this.state.team[0].year === 2002) {
+      const secondStyle = {
+        display: 'none'
+      }
+      styles = Object.assign(styles, secondStyle)
+    }
+    return styles
+  }
+
   render() {
     const { team } = this.state;
     let totalCareerValue = this.getCareerValueTotal(team);
     let totalRegularSeasonValue = this.getRegularSeasonTotal(team);
     let totalPlayoffValue = this.getPlayoffTotal(team);
-
 
     return (
       <div>
@@ -85,8 +120,8 @@ export class TeamView extends React.Component {
         <h3>RS Score: {totalRegularSeasonValue}</h3>
         <h3>Playoffs Score: {totalPlayoffValue}</h3>
         <div>
-          <Link to={`/teams/${team[0].team_abbreviation}/${team[0].year - 1}`}><button>Previous Season</button></Link>
-          <Link to={`/teams/${team[0].team_abbreviation}/${team[0].year + 1}`}><button>Next Season</button></Link>
+          < Link to={`/teams/${team[0].team_abbreviation}/${team[0].year - 1}`}><button style={this.setPreviousSeasonButtonStyle()}>Previous Season</button></Link>
+          <Link to={`/teams/${team[0].team_abbreviation}/${team[0].year + 1}`}><button style={this.setNextSeasonButtonStyle()}>Next Season</button></Link>
           <Link to={`/teams/${team[0].franchise_code}`}><button>{team[0].team_full_name} Franchise Index</button></Link>
         </div>
         <table>
@@ -155,7 +190,7 @@ export class TeamView extends React.Component {
             </tr>
           </tfoot>
         </table>
-      </div>
+      </div >
     );
   }
 }

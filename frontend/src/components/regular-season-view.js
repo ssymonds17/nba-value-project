@@ -28,6 +28,40 @@ export class RegularSeasonView extends React.Component {
       })
   }
 
+  setPreviousSeasonButtonStyle() {
+    let styles = {}
+    if (this.state.season[0].year === 1947 && this.state.season[0].league === 'NBA') {
+      const firstStyle = {
+        display: 'none'
+      }
+      styles = Object.assign(styles, firstStyle)
+    }
+    if (this.state.season[0].year === 1968 && this.state.season[0].league === 'ABA') {
+      const secondStyle = {
+        display: 'none'
+      }
+      styles = Object.assign(styles, secondStyle)
+    }
+    return styles
+  }
+
+  setNextSeasonButtonStyle() {
+    let styles = {}
+    if (this.state.season[0].year === 2020 && this.state.season[0].league === 'NBA') {
+      const firstStyle = {
+        display: 'none'
+      }
+      styles = Object.assign(styles, firstStyle)
+    }
+    if (this.state.season[0].year === 1976 && this.state.season[0].league === 'ABA') {
+      const secondStyle = {
+        display: 'none'
+      }
+      styles = Object.assign(styles, secondStyle)
+    }
+    return styles
+  }
+
   render() {
     const { season } = this.state;
 
@@ -40,8 +74,8 @@ export class RegularSeasonView extends React.Component {
         </div>
         {/* LINK BELOW DOES NOT RELOAD PAGE WIP */}
         <div>
-          <Link to={`/seasons/regular/${season[0].league}/${season[0].year - 1}`}><button>Previous Season</button></Link>
-          <Link to={`/seasons/regular/${season[0].league}/${season[0].year + 1}`}><button>Next Season</button></Link>
+          <Link to={`/seasons/regular/${season[0].league}/${season[0].year - 1}`}><button style={this.setPreviousSeasonButtonStyle()}>Previous Season</button></Link>
+          <Link to={`/seasons/regular/${season[0].league}/${season[0].year + 1}`}><button style={this.setNextSeasonButtonStyle()}>Next Season</button></Link>
         </div>
         <table>
           <thead>
