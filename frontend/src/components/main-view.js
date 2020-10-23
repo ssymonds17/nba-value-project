@@ -16,7 +16,7 @@ import { OverallSeasonView } from './overall-season-view';
 import { RegularSeasonView } from './regular-season-view';
 import { PlayoffSeasonView } from './playoff-season-view';
 
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 // import Button from 'react-bootstrap/Button';
 

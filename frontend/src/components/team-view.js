@@ -17,7 +17,17 @@ export class TeamView extends React.Component {
     let path = window.location.pathname;
     let teamID = path.slice(7, 10);
     let year = path.slice(11);
+    this.props = path;
     this.getFranchiseCode(teamID, year);
+  }
+
+  componentDidUpdate(prevProps) {
+    if (this.props !== prevProps) {
+      let path = window.location.pathname;
+      let teamID = path.slice(7, 10);
+      let year = path.slice(11);
+      this.getFranchiseCode(teamID, year);
+    }
   }
 
   getFranchiseCode = (teamID, year) => {

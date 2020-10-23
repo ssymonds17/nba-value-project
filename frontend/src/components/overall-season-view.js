@@ -13,7 +13,15 @@ export class OverallSeasonView extends React.Component {
 
   componentDidMount() {
     let seasonID = window.location.pathname;
+    this.props = seasonID;
     this.getSeasonData(seasonID);
+  }
+
+  componentDidUpdate(prevProps) {
+    if (this.props !== prevProps) {
+      let seasonID = window.location.pathname;
+      this.getSeasonData(seasonID);
+    }
   }
 
   getSeasonData = (seasonID) => {
