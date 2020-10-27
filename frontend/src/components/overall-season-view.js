@@ -80,7 +80,6 @@ export class OverallSeasonView extends React.Component {
           <Link to={`/seasons/regular/${season[0].league}/${season[0].year}`}><button>Regular Season</button></Link>
           <Link to={`/seasons/playoffs/${season[0].league}/${season[0].year}`}><button>Playoffs</button></Link>
         </div>
-        {/* LINK BELOW DOES NOT RELOAD PAGE WIP */}
         <div>
           <Link to={`/seasons/overall/${season[0].league}/${season[0].year - 1}`}><button style={this.setPreviousSeasonButtonStyle()}>Previous Season</button></Link>
           <Link to={`/seasons/overall/${season[0].league}/${season[0].year + 1}`}><button style={this.setNextSeasonButtonStyle()}>Next Season</button></Link>

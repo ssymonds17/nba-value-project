@@ -195,7 +195,7 @@ app.get('/rankings/players',
     let rankSort = { rank: 1 };
     AllTimePlayers.find()
       .sort(rankSort)
-      .limit(100)
+      .limit(250)
       .then((ranking) => {
         res.status(200).json(ranking);
       })
@@ -263,6 +263,25 @@ app.get('/rankings/seasons/playoffs',
     let playoffScoreSort = { playoff__score: -1 };
     Players.find()
       .sort(playoffScoreSort)
+      .limit(100)
+      .then((ranking) => {
+        res.status(200).json(ranking);
+      })
+      .catch((e) => {
+        console.error(e);
+        res.status(500).send('Error ' + e);
+      });
+  });
+
+// GET greatest season by age
+app.get('/rankings/seasons/age/:age',
+  cors(corsOptions),
+  (req, res) => {
+    let scoreSort = { total_season_value: -1 };
+    Players.find({
+      age: req.params.age
+    })
+      .sort(scoreSort)
       .limit(100)
       .then((ranking) => {
         res.status(200).json(ranking);

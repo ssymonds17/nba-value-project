@@ -64,11 +64,11 @@ export class PlayerListView extends React.Component {
                                  <Link to={`/players/${player.player_id}`}>{player.name}</Link>
                               </td>
                               <td>
-                                 TBD
-                           </td>
+                                 {player.first_year}
+                              </td>
                               <td>
-                                 TBD
-                           </td>
+                                 {player.last_year}
+                              </td>
                            </tr>
                         ))}
                </tbody>
