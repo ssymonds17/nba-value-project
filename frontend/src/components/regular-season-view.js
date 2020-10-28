@@ -113,7 +113,13 @@ export class RegularSeasonView extends React.Component {
                   <td>{Number(season.score).toFixed(2)}</td>
                   <td>{season.position}</td>
                   <td>{season.age}</td>
-                  <td><Link to={`/teams/${season.team_abbreviation}/${season.year}`}>{season.team_abbreviation}</Link></td>
+                  <td>
+                    {
+                      season.team_abbreviation === 'TOT'
+                        ? season.team_abbreviation :
+                        <Link to={`/teams/${season.team_abbreviation}/${season.year}`}>{season.team_abbreviation}</Link>
+                    }
+                  </td>
                   <td>{season.games}</td>
                   <td>{Number(season.mpg).toFixed(1)}</td>
                   <td>{Number(season.win_shares_48).toFixed(3)}</td>

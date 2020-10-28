@@ -130,7 +130,13 @@ export class OverallSeasonView extends React.Component {
                   <td>{season.age}</td>
                   <td><Link to={`/teams/${season.team_one}/${season.year}`}>{season.team_one}</Link></td>
                   <td><Link to={`/teams/${season.team_two}/${season.year}`}>{season.team_two}</Link></td>
-                  <td><Link to={`/teams/${season.team_three}/${season.year}`}>{season.team_three}</Link></td>
+                  <td>
+                    {
+                      season.team_three === '2TM' || season.team_three === '3TM'
+                        ? season.team_three :
+                        <Link to={`/teams/${season.team_three}/${season.year}`}>{season.team_three}</Link>
+                    }
+                  </td>
                   <td>{Number(season.regularseason__score).toFixed(2)}</td>
                   <td>{season.regularseason__games}</td>
                   <td>{Number(season.regularseason__mpg).toFixed(1)}</td>
