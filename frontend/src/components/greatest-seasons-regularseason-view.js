@@ -29,6 +29,7 @@ export class GreatestSeasonsRSView extends React.Component {
 
   render() {
     const { seasonList } = this.state;
+    let rank = 0;
 
     return (
       <div>
@@ -38,6 +39,7 @@ export class GreatestSeasonsRSView extends React.Component {
         <table>
           <thead>
             <tr>
+              <th>Rank</th>
               <th>Name</th>
               <th>Year</th>
               <th>Lg</th>
@@ -59,6 +61,7 @@ export class GreatestSeasonsRSView extends React.Component {
             {
               seasonList.map(season => (
                 <tr key={season._id}>
+                  <td>{rank += 1}</td>
                   <td><Link to={`/players/${season.player_id}`}>{season.name}</Link></td>
                   <td><Link to={`/seasons/overall/${season.league}/${season.year}`}>{season.year}</Link></td>
                   <td><Link to={`/seasons/overall/${season.league}/${season.year}`}>{season.league}</Link></td>

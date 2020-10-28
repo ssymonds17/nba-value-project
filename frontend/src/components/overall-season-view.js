@@ -72,6 +72,7 @@ export class OverallSeasonView extends React.Component {
 
   render() {
     const { season } = this.state;
+    let rank = 0;
 
     return (
       <div>
@@ -92,6 +93,7 @@ export class OverallSeasonView extends React.Component {
               <th colSpan="7">Playoffs</th>
             </tr>
             <tr>
+              <th>Rank</th>
               <th>Name</th>
               <th>Season Value</th>
               <th>Pos</th>
@@ -121,6 +123,7 @@ export class OverallSeasonView extends React.Component {
             {
               season.map(season => (
                 <tr key={season._id}>
+                  <td>{rank += 1}</td>
                   <td><Link to={`/players/${season.player_id}`}>{season.name}</Link></td>
                   <td>{Number(season.total_season_value).toFixed(2)}</td>
                   <td>{season.position}</td>
