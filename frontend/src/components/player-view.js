@@ -111,7 +111,7 @@ export class PlayerView extends React.Component {
                 <tr className="player-name" key={season._id}>
                   <td><Link to={`/seasons/overall/${season.league}/${season.year}`}>{season.year}</Link></td>
                   <td><Link to={`/seasons/overall/${season.league}/${season.year}`}>{season.league}</Link></td>
-                  <td>{Number(season.total_season_value).toFixed(2)}</td>
+                  <td><strong>{Number(season.total_season_value).toFixed(2)}</strong></td>
                   <td>{season.position}</td>
                   <td>{season.age}</td>
                   <td><Link to={`/teams/${season.team_one}/${season.year}`}>{season.team_one}</Link></td>
@@ -123,14 +123,14 @@ export class PlayerView extends React.Component {
                         <Link to={`/teams/${season.team_three}/${season.year}`}>{season.team_three}</Link>
                     }
                   </td>
-                  <td>{Number(season.regularseason__score).toFixed(2)}</td>
+                  <td><strong>{Number(season.regularseason__score).toFixed(2)}</strong></td>
                   <td>{season.regularseason__games}</td>
                   <td>{Number(season.regularseason__mpg).toFixed(1)}</td>
                   <td>{Number(season.regularseason__win_shares_48).toFixed(3)}</td>
                   <td>{Number(season.regularseason__win_shares).toFixed(1)}</td>
                   <td>{Number(season.regularseason__bpm).toFixed(1)}</td>
                   <td>{Number(season.regularseason__vorp).toFixed(1)}</td>
-                  <td>{season.playoff__score ? Number(season.playoff__score).toFixed(2) : Number(0).toFixed(2)}</td>
+                  <td><strong>{season.playoff__score ? Number(season.playoff__score).toFixed(2) : Number(0).toFixed(2)}</strong></td>
                   <td>{season.playoff__games ? season.playoff__games : Number(0)}</td>
                   <td>{season.playoff__mpg ? Number(season.playoff__mpg).toFixed(1) : Number(0).toFixed(1)}</td>
                   <td>{season.playoff__win_shares_48 ? Number(season.playoff__win_shares_48).toFixed(3) : Number(0).toFixed(3)}</td>

@@ -1,37 +1,28 @@
 import React from 'react';
+import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
+import Navbar from 'react-bootstrap/Navbar';
 import { Link } from 'react-router-dom';
+import '../styles/components/navbar.scss';
 
-export class Navbar extends React.Component {
+export class NavBar extends React.Component {
 
  render() {
   return (
-   <div>
-    <Card>
-     <Button>
-      <Link to={`/players`}>Players</Link>
-     </Button>
-     <Button>
-      <Link to={`/teams`}>Teams</Link>
-     </Button>
-     <Button>
-      <Link to={`/seasons`}>Seasons</Link>
-     </Button>
-     <Button>
-      <Link to={`/rankings/players`}>All Time Players</Link>
-     </Button>
-     <Button>
-      <Link to={`/rankings/teams`}>All Time Teams</Link>
-     </Button>
-     <Button>
-      <Link to={`/rankings/seasons/overall`}>Greatest Seasons</Link>
-     </Button>
-     <Button>
-      <Link to={`/about`}>About</Link>
-     </Button>
-    </Card>
-   </div>
+   <Container className="navbar-container">
+    <div>
+     <Navbar className="navbar" fixed="top">
+      <Link to={`/`}><Button className="nav-btn">Home</Button></Link>
+      <Link to={`/players`}><Button className="nav-btn">Players</Button></Link>
+      <Link to={`/teams`}><Button className="nav-btn">Teams</Button></Link>
+      <Link to={`/seasons`}><Button className="nav-btn">Seasons</Button></Link>
+      <Link to={`/rankings/players`}><Button className="nav-btn">Greatest Players</Button></Link>
+      <Link to={`/rankings/teams`}><Button className="nav-btn">Greatest Teams</Button></Link>
+      <Link to={`/rankings/seasons/overall`}><Button className="nav-btn">Greatest Seasons</Button></Link>
+      <Link to={`/about`}><Button className="nav-btn">About</Button></Link>
+     </Navbar>
+    </div>
+   </Container>
   )
  }
 }

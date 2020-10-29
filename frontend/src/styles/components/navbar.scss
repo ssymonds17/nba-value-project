@@ -1,0 +1,48 @@
+
+.navbar-container {
+ margin-bottom: 80px;
+}
+
+.navbar {
+ height: 65px;
+ padding: 0px;
+ background-color: #46a04a;
+ align-items: flex-start;
+}
+
+.nav-btn:active {
+ background-color: #46a04a;
+ border-color: #46a04a;
+}
+
+.nav-btn {
+ top: 0;
+ height: 60px;
+ border-radius: 0px;
+ width: 11.25rem;
+ font-weight: 450;
+ color: black;
+ background-color: #f2f2f2;
+ border-color: #f2f2f2;
+ outline: none;
+}
+
+.nav-btn:hover {
+ background-color: #46a04a;
+ border-color: #46a04a;
+ color: white;
+}
+
+.nav-btn:focus {
+ background-color: #46a04a;
+ border-color: #46a04a;
+ color: white;
+ box-shadow: none;
+}
+
+.nav-btn:active {
+ background-color: #46a04a;
+ border-color: #46a04a;
+ color: white;
+ box-shadow: none;
+}

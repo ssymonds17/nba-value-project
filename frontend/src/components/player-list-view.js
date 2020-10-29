@@ -49,30 +49,32 @@ export class PlayerListView extends React.Component {
                   </ul>
                </div>
             </div>
-            <table className="player-list-table">
-               <tbody>
-                  <tr>
-                     <th>Name</th>
-                     <th>From</th>
-                     <th>To</th>
-                  </tr>
-                  {
-                     playerList.map(
-                        (player) => (
-                           <tr className="player-list" key={player.player_id}>
-                              <td className="player-list-first-name">
-                                 <Link to={`/players/${player.player_id}`}>{player.name}</Link>
-                              </td>
-                              <td>
-                                 {player.first_year}
-                              </td>
-                              <td>
-                                 {player.last_year}
-                              </td>
-                           </tr>
-                        ))}
-               </tbody>
-            </table >
+            <div className="table-responsive">
+               <table>
+                  <tbody>
+                     <tr>
+                        <th>Name</th>
+                        <th>From</th>
+                        <th>To</th>
+                     </tr>
+                     {
+                        playerList.map(
+                           (player) => (
+                              <tr className="player-list" key={player.player_id}>
+                                 <td className="player-list-first-name">
+                                    <Link to={`/players/${player.player_id}`}>{player.name}</Link>
+                                 </td>
+                                 <td>
+                                    {player.first_year}
+                                 </td>
+                                 <td>
+                                    {player.last_year}
+                                 </td>
+                              </tr>
+                           ))}
+                  </tbody>
+               </table >
+            </div>
          </div>
       )
    }

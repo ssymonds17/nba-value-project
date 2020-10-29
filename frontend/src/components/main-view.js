@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navbar } from './navbar';
+import { NavBar } from './navbar';
 import { PlayerListView } from './player-list-view';
 import { PlayerListByCharView } from './player-list-by-char-view';
 import { PlayerView } from './player-view';
@@ -16,7 +16,7 @@ import { OverallSeasonView } from './overall-season-view';
 import { RegularSeasonView } from './regular-season-view';
 import { PlayoffSeasonView } from './playoff-season-view';
 
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 // import Button from 'react-bootstrap/Button';
 
@@ -25,8 +25,8 @@ export default class MainView extends React.Component {
     return (
       <Router>
         <Container className="main-view">
-          <Navbar />
-          <Route exact path="/" render={() => <Navbar />} />
+          <NavBar />
+          <Route exact path="/" render={() => <NavBar />} />
           <Route exact path="/players" render={() => <PlayerListView />} />
           <Route exact path="/playerlist/:char" render={() => <PlayerListByCharView />} />
           <Route exact path="/players/:playerID" render={() => <PlayerView />} />

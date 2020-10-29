@@ -1,7 +1,9 @@
 import React from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-// Need new SCSS file
+import Table from 'react-bootstrap/Table';
+import '../styles/components/index.scss';
+import '../styles/components/tables.scss';
 
 export class AllTimePlayerView extends React.Component {
   constructor() {
@@ -33,7 +35,7 @@ export class AllTimePlayerView extends React.Component {
     return (
       <div>
         <h1>All Time Player Value Ranking</h1>
-        <table>
+        <Table bordered responsive>
           <thead>
             <tr>
               <th>Rank</th>
@@ -51,7 +53,7 @@ export class AllTimePlayerView extends React.Component {
                 <tr className="player-name" key={player._id}>
                   <td>{player.rank}</td>
                   <td><Link to={`/players/${player.player_id}`}>{player.name}</Link></td>
-                  <td>{Number(player.career_value).toFixed(2)}</td>
+                  <td className="score-column">{Number(player.career_value).toFixed(2)}</td>
                   <td>{Number(player.career_total).toFixed(2)}</td>
                   <td>{Number(player.peak_avg).toFixed(2)}</td>
                   <td>{player.year_from}</td>
@@ -59,7 +61,7 @@ export class AllTimePlayerView extends React.Component {
                 </tr>
               ))}
           </tbody>
-        </table>
+        </Table>
       </div>
     );
   }
