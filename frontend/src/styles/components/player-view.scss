@@ -1,0 +1,15 @@
+.player-value-header {
+ display: flex;
+}
+
+h1 {
+ margin: 15px 0;
+}
+
+h3 {
+ margin-bottom: 20px;
+}
+
+h3 + h3 {
+ margin-right: 50px;
+}

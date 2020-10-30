@@ -52,7 +52,8 @@ tr:hover {
  margin: 0 150px;
 }
 
-// Column widths by view
+//Styles by view
+
 // Greatest Players
 .greatest-players table {
  height: 461px;
@@ -125,12 +126,23 @@ tr:hover {
 .team-table td {
  width: 5%;
 }
+.empty-row {
+ border-left: none !important;
+ border-bottom: none !important;
+}
+.empty-row:last-child {
+ border-right: none !important;
+}
 // Player View
+.player-view-container {
+ margin-left: -20px;
+ margin-right: -20px;
+}
 .player-table table {
  height: auto;
 }
 .player-table td {
- width: 10%;
+ width: auto;
 }
 // Player list 
 .player-list table {

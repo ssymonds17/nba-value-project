@@ -1,8 +1,10 @@
 import React from 'react';
 import axios from 'axios';
 import Table from 'react-bootstrap/Table';
+import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
 import '../styles/components/tables.scss';
+import '../styles/components/buttons.scss';
 import '../styles/components/index.scss';
 
 export class RegularSeasonView extends React.Component {
@@ -80,12 +82,12 @@ export class RegularSeasonView extends React.Component {
       <div>
         <h1>{season[0].league} {season[0].year} Regular Season</h1>
         <div>
-          <Link to={`/seasons/overall/${season[0].league}/${season[0].year}`}><button>Overall</button></Link>
-          <Link to={`/seasons/playoffs/${season[0].league}/${season[0].year}`}><button>Playoffs</button></Link>
+          <Link to={`/seasons/overall/${season[0].league}/${season[0].year}`}><Button className="custom-btn">Overall</Button></Link>
+          <Link to={`/seasons/playoffs/${season[0].league}/${season[0].year}`}><Button className="custom-btn">Playoffs</Button></Link>
         </div>
         <div>
-          <Link to={`/seasons/regular/${season[0].league}/${season[0].year - 1}`}><button style={this.setPreviousSeasonButtonStyle()}>{`<<`} {season[0].year - 1} Season</button></Link>
-          <Link to={`/seasons/regular/${season[0].league}/${season[0].year + 1}`}><button style={this.setNextSeasonButtonStyle()}>{season[0].year + 1} Season {`>>`}</button></Link>
+          <Link to={`/seasons/regular/${season[0].league}/${season[0].year - 1}`}><Button className="custom-btn" style={this.setPreviousSeasonButtonStyle()}>{`<<`} {season[0].year - 1} Season</Button></Link>
+          <Link to={`/seasons/regular/${season[0].league}/${season[0].year + 1}`}><Button className="custom-btn" style={this.setNextSeasonButtonStyle()}>{season[0].year + 1} Season {`>>`}</Button></Link>
         </div>
         <div className="season-rsp table-container">
           <Table bordered responsive>

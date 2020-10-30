@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import Table from 'react-bootstrap/Table';
 import '../styles/components/index.scss';
 import '../styles/components/tables.scss';
+import '../styles/components/player-view.scss';
 
 export class PlayerView extends React.Component {
   constructor() {
@@ -60,19 +61,38 @@ export class PlayerView extends React.Component {
     return (totalCareerValue * peakMultiplier).toFixed(2);
   }
 
+  getRegularSeasonTotal = (player) => {
+    let seasonValueArray3 = [];
+    player.forEach(season => {
+      seasonValueArray3.push(season.regularseason__score);
+    })
+    return seasonValueArray3.reduce((a, b) => a + b, 0).toFixed(2);
+  }
+
+  getPlayoffTotal = (player) => {
+    let seasonValueArray4 = [];
+    player.forEach(season => {
+      seasonValueArray4.push(season.playoff__score);
+    })
+    return seasonValueArray4.reduce((a, b) => a + b, 0).toFixed(2);
+  }
+
   render() {
     const { player } = this.state;
     let totalCareerValue = this.getCareerValueTotal(player);
     let careerPeakValue = this.getCareerPeakValue(player);
     let peakMultiplier = this.getPeakMultiplier(careerPeakValue);
     let allTimeValue = this.getAllTimeValue(totalCareerValue, peakMultiplier);
+    let totalRegularSeasonValue = this.getRegularSeasonTotal(player);
+    let totalPlayoffValue = this.getPlayoffTotal(player);
 
     return (
-      <div>
+      <div className="player-view-container">
         <h1>{player[0].name}</h1>
-        <h3>All Time Value: {allTimeValue}</h3>
-        <h3>Peak Value: {careerPeakValue}</h3>
-        <h3>Seasons Value Total: {totalCareerValue}</h3>
+        <div className="player-value-header">
+          <h3>Career Value: {allTimeValue}</h3>
+          <h3>Peak Avg: {careerPeakValue}</h3>
+        </div>
         <div className="player-table table-container">
           <Table bordered responsive>
             <thead>
@@ -146,6 +166,18 @@ export class PlayerView extends React.Component {
                   </tr>
                 ))}
             </tbody>
+            <tfoot>
+              <tr>
+                <td>Total</td>
+                <td className="empty-row" colSpan="1"></td>
+                <td className="score-column">{totalCareerValue}</td>
+                <td className="empty-row" colSpan="5"></td>
+                <td className="score-column">{totalRegularSeasonValue}</td>
+                <td className="empty-row" colSpan="6"></td>
+                <td className="score-column">{totalPlayoffValue}</td>
+                <td className="empty-row" colSpan="8"></td>
+              </tr>
+            </tfoot>
           </Table>
         </div>
       </div>
