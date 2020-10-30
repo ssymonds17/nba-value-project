@@ -14,7 +14,7 @@ export class SeasonListView extends React.Component {
         <div className="seasons-list table-container">
           <Table bordered responsive>
             <thead>
-              <tr>
+              <tr className="first-row">
                 <th>Year</th>
                 <th>League</th>
                 <th>Champions</th>
@@ -33,9 +33,9 @@ export class SeasonListView extends React.Component {
                       <td><Link to={`/seasons/overall/${season.league}/${season.year}`}>{season.league}</Link></td>
                       <td><Link to={`/teams/${season.champions_franchise_code}/${season.year}`}>{season.champions}</Link></td>
                       <td><Link to={`/teams/${season.runners_up_franchise_code}/${season.year}`}>{season.runners_up}</Link></td>
-                      <td><Link to={`/players/${season.overall_mvp_player_id}`}>{season.overall_mvp}</Link> ({season.overall_mvp_score})</td>
-                      <td><Link to={`/players/${season.rs_mvp_player_id}`}>{season.rs_mvp}</Link> ({season.rs_mvp_score})</td>
-                      <td><Link to={`/players/${season.playoffs_mvp_player_id}`}>{season.playoffs_mvp}</Link> ({season.playoffs_mvp_score})</td>
+                      <td><Link to={`/players/${season.overall_mvp_player_id}`}>{season.overall_mvp}</Link> ({Number(season.overall_mvp_score).toFixed(2)})</td>
+                      <td><Link to={`/players/${season.rs_mvp_player_id}`}>{season.rs_mvp}</Link> ({Number(season.rs_mvp_score).toFixed(2)})</td>
+                      <td><Link to={`/players/${season.playoffs_mvp_player_id}`}>{season.playoffs_mvp}</Link> ({Number(season.playoffs_mvp_score).toFixed(2)})</td>
                     </tr>
                   ))}
             </tbody>

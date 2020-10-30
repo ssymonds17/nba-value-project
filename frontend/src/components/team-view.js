@@ -129,19 +129,19 @@ export class TeamView extends React.Component {
         <h3>Overall: {totalCareerValue}</h3>
         <h3>Regular Season: {totalRegularSeasonValue} Playoffs: {totalPlayoffValue}</h3>
         <div>
-          <Link to={`/teams/${team[0].team_abbreviation}/${team[0].year - 1}`}><button style={this.setPreviousSeasonButtonStyle()}>Previous Season</button></Link>
-          <Link to={`/teams/${team[0].team_abbreviation}/${team[0].year + 1}`}><button style={this.setNextSeasonButtonStyle()}>Next Season</button></Link>
+          <Link to={`/teams/${team[0].team_abbreviation}/${team[0].year - 1}`}><button style={this.setPreviousSeasonButtonStyle()}>{`<<`} {team[0].year - 1} Season</button></Link>
+          <Link to={`/teams/${team[0].team_abbreviation}/${team[0].year + 1}`}><button style={this.setNextSeasonButtonStyle()}>{team[0].year + 1} Season {`>>`}</button></Link>
           <Link to={`/teams/${team[0].franchise_code}`}><button>{team[0].team_full_name} Franchise Index</button></Link>
         </div>
         <div className="team-table table-container">
           <Table reponsive bordered>
             <thead>
-              <tr>
+              <tr className="first-row">
                 <th colSpan="5"></th>
                 <th colSpan="7">Regular Season</th>
                 <th colSpan="7">Playoffs</th>
               </tr>
-              <tr>
+              <tr className="second-row">
                 <th>Name</th>
                 <th>Lg</th>
                 <th>Value</th>

@@ -34,7 +34,7 @@ export class GreatestSeasonsOverallView extends React.Component {
     let rank = 0;
 
     return (
-      <div>
+      <div className="greatest-seasons-overall-container">
         <h1>Greatest Seasons All Time</h1>
         <small>Combination of both regular season and playoffs</small>
         <div>
@@ -44,13 +44,13 @@ export class GreatestSeasonsOverallView extends React.Component {
         <div className="greatest-seasons-overall table-container">
           <Table responsive bordered>
             <thead>
-              <tr>
+              <tr className="first-row">
                 <th colSpan="8"></th>
                 <th colSpan="7">Regular Season</th>
                 <th colSpan="7">Playoffs</th>
                 <th colSpan="2"></th>
               </tr>
-              <tr>
+              <tr className="second-row">
                 <th>Rank</th>
                 <th>Name</th>
                 <th>Year</th>

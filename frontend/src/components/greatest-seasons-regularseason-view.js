@@ -41,7 +41,7 @@ export class GreatestSeasonsRSView extends React.Component {
         <div className="greatest-seasons-rsp table-container">
           <Table responsive bordered>
             <thead>
-              <tr>
+              <tr className="first-row">
                 <th>Rank</th>
                 <th>Name</th>
                 <th>Year</th>

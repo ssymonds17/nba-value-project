@@ -1,7 +1,12 @@
 
-.table-container thead th {
+.table-container thead tr.first-row th {
  position: sticky; 
  top: 0;
+}
+
+.table-container thead tr.second-row th {
+ position: sticky; 
+ top: 26.5px;
 }
 
 table {
@@ -69,6 +74,11 @@ tr:hover {
 .greatest-seasons-overall td {
  width: 20%;
 }
+.greatest-seasons-overall-container {
+ margin-left: -100px;
+ margin-right: -100px;
+}
+
 // Greatest seasons RS and PO
 .greatest-seasons-rsp table {
  height: 461px;
@@ -84,6 +94,10 @@ tr:hover {
  width: 5%;
 }
 // Overall season
+.overall-season-container {
+ margin-left: -100px;
+ margin-right: -100px;
+}
 .season-overall table {
  height: 462px;
 }
@@ -106,14 +120,14 @@ tr:hover {
 }
 // Team View
 .team-table table {
- height: 500px;
+ height: auto;
 }
 .team-table td {
  width: 5%;
 }
 // Player View
 .player-table table {
- height: 408px;
+ height: auto;
 }
 .player-table td {
  width: 10%;

@@ -64,7 +64,7 @@ export class PlayerListByCharView extends React.Component {
         <div className="player-list table-container">
           <Table bordered responsive>
             <thead>
-              <tr>
+              <tr className="first-row">
                 <th>Player</th>
                 <th>From</th>
                 <th>To</th>

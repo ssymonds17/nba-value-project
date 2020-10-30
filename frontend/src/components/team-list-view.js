@@ -37,7 +37,7 @@ export class TeamListView extends React.Component {
                <h2>Active Franchises</h2>
                <Table bordered responsive>
                   <thead>
-                     <tr className="team-list-header">
+                     <tr className="team-list-header first-row">
                         <th>Team Name</th>
                         <th>League</th>
                         <th>From</th>

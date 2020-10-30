@@ -55,7 +55,7 @@ export class PlayerListView extends React.Component {
             <div className="player-list table-container">
                <Table responsive bordered>
                   <thead>
-                     <tr>
+                     <tr className="first-row">
                         <th>Player</th>
                         <th>From</th>
                         <th>To</th>

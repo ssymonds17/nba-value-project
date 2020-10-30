@@ -76,13 +76,13 @@ export class PlayerView extends React.Component {
         <div className="player-table table-container">
           <Table bordered responsive>
             <thead>
-              <tr>
+              <tr className="first-row">
                 <th colSpan="8"></th>
                 <th colSpan="7">Regular Season</th>
                 <th colSpan="7">Playoffs</th>
                 <th colSpan="2"></th>
               </tr>
-              <tr>
+              <tr className="second-row">
                 <th>Year</th>
                 <th>Lg</th>
                 <th>Value</th>

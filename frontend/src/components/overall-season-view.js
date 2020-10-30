@@ -77,26 +77,26 @@ export class OverallSeasonView extends React.Component {
     let rank = 0;
 
     return (
-      <div>
+      <div className="overall-season-container">
         <h1>{season[0].league} {season[0].year} Overall</h1>
         <div>
           <Link to={`/seasons/regular/${season[0].league}/${season[0].year}`}><button>Regular Season</button></Link>
           <Link to={`/seasons/playoffs/${season[0].league}/${season[0].year}`}><button>Playoffs</button></Link>
         </div>
         <div>
-          <Link to={`/seasons/overall/${season[0].league}/${season[0].year - 1}`}><button style={this.setPreviousSeasonButtonStyle()}>Previous Season</button></Link>
-          <Link to={`/seasons/overall/${season[0].league}/${season[0].year + 1}`}><button style={this.setNextSeasonButtonStyle()}>Next Season</button></Link>
+          <Link to={`/seasons/overall/${season[0].league}/${season[0].year - 1}`}><button style={this.setPreviousSeasonButtonStyle()}>{`<<`} {season[0].year - 1} Season</button></Link>
+          <Link to={`/seasons/overall/${season[0].league}/${season[0].year + 1}`}><button style={this.setNextSeasonButtonStyle()}>{season[0].year + 1} Season {`>>`}</button></Link>
         </div>
         <div className="season-overall table-container">
           <Table responsive bordered>
             <thead>
-              <tr>
+              <tr className="first-row">
                 <th colSpan="8"></th>
                 <th colSpan="7">Regular Season</th>
                 <th colSpan="7">Playoffs</th>
                 <th colSpan="2"></th>
               </tr>
-              <tr>
+              <tr className="second-row">
                 <th>Rank</th>
                 <th>Name</th>
                 <th>Value</th>

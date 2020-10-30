@@ -40,7 +40,7 @@ export class FranchiseHistoryView extends React.Component {
         <div className="franchise-history table-container">
           <Table responsive bordered>
             <thead>
-              <tr>
+              <tr className="first-row">
                 <th>Year</th>
                 <th>League</th>
                 <th>Team</th>

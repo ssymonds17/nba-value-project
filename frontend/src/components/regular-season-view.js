@@ -84,13 +84,13 @@ export class RegularSeasonView extends React.Component {
           <Link to={`/seasons/playoffs/${season[0].league}/${season[0].year}`}><button>Playoffs</button></Link>
         </div>
         <div>
-          <Link to={`/seasons/regular/${season[0].league}/${season[0].year - 1}`}><button style={this.setPreviousSeasonButtonStyle()}>Previous Season</button></Link>
-          <Link to={`/seasons/regular/${season[0].league}/${season[0].year + 1}`}><button style={this.setNextSeasonButtonStyle()}>Next Season</button></Link>
+          <Link to={`/seasons/regular/${season[0].league}/${season[0].year - 1}`}><button style={this.setPreviousSeasonButtonStyle()}>{`<<`} {season[0].year - 1} Season</button></Link>
+          <Link to={`/seasons/regular/${season[0].league}/${season[0].year + 1}`}><button style={this.setNextSeasonButtonStyle()}>{season[0].year + 1} Season {`>>`}</button></Link>
         </div>
         <div className="season-rsp table-container">
           <Table bordered responsive>
             <thead>
-              <tr>
+              <tr className="first-row">
                 <th>Rank</th>
                 <th>Name</th>
                 <th>Value</th>
