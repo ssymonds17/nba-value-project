@@ -1,7 +1,9 @@
 import React from 'react';
 import franchiseList from '../data/franchiseList';
 import { Link } from 'react-router-dom';
-
+import Table from 'react-bootstrap/Table';
+import '../styles/components/index.scss';
+import '../styles/components/tables.scss';
 
 export class TeamListView extends React.Component {
 
@@ -31,15 +33,15 @@ export class TeamListView extends React.Component {
 
       return (
          <div className="franchise-list-container">
-            <div className="active-franchises">
+            <div className="active-franchises table-container">
                <h2>Active Franchises</h2>
-               <table>
+               <Table bordered responsive>
                   <thead>
                      <tr className="team-list-header">
-                        <td>Team Name</td>
-                        <td>League</td>
-                        <td>From</td>
-                        <td>Until</td>
+                        <th>Team Name</th>
+                        <th>League</th>
+                        <th>From</th>
+                        <th>Until</th>
                      </tr>
                   </thead>
                   <tbody>
@@ -54,17 +56,17 @@ export class TeamListView extends React.Component {
                               </tr>
                            ))}
                   </tbody>
-               </table>
+               </Table>
             </div>
-            <div className="defunct-franchises">
+            <div className="defunct-franchises table-container">
                <h2>Defunct Franchises</h2>
-               <table>
+               <Table bordered responsive>
                   <thead>
                      <tr className="team-list-header">
-                        <td>Team Name</td>
-                        <td>League</td>
-                        <td>From</td>
-                        <td>Until</td>
+                        <th>Team Name</th>
+                        <th>League</th>
+                        <th>From</th>
+                        <th>Until</th>
                      </tr>
                   </thead>
                   <tbody>
@@ -79,7 +81,7 @@ export class TeamListView extends React.Component {
                               </tr>
                            ))}
                   </tbody>
-               </table>
+               </Table>
             </div>
          </div>
       )

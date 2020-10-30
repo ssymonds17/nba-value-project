@@ -1,7 +1,9 @@
 import React from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-// Need new SCSS file
+import Table from 'react-bootstrap/Table';
+import '../styles/components/index.scss';
+import '../styles/components/tables.scss';
 
 export class TeamView extends React.Component {
   constructor() {
@@ -122,84 +124,73 @@ export class TeamView extends React.Component {
 
     return (
       <div>
-        <h1>{team[0].team_full_name}</h1>
-        <h1>{team[0].year}</h1>
-        <h3>{team[0].team_record}</h3>
-        <h3>{team[0].team_result}</h3>
-        <h3>Season Score: {totalCareerValue}</h3>
-        <h3>RS Score: {totalRegularSeasonValue}</h3>
-        <h3>Playoffs Score: {totalPlayoffValue}</h3>
+        <h1>{team[0].year} {team[0].team_full_name}</h1>
+        <h3>{team[0].team_result} ({team[0].team_record})</h3>
+        <h3>Overall: {totalCareerValue}</h3>
+        <h3>Regular Season: {totalRegularSeasonValue} Playoffs: {totalPlayoffValue}</h3>
         <div>
-          < Link to={`/teams/${team[0].team_abbreviation}/${team[0].year - 1}`}><button style={this.setPreviousSeasonButtonStyle()}>Previous Season</button></Link>
+          <Link to={`/teams/${team[0].team_abbreviation}/${team[0].year - 1}`}><button style={this.setPreviousSeasonButtonStyle()}>Previous Season</button></Link>
           <Link to={`/teams/${team[0].team_abbreviation}/${team[0].year + 1}`}><button style={this.setNextSeasonButtonStyle()}>Next Season</button></Link>
           <Link to={`/teams/${team[0].franchise_code}`}><button>{team[0].team_full_name} Franchise Index</button></Link>
         </div>
-        <table>
-          <thead>
-            <tr>
-              <th colSpan="5"></th>
-              <th colSpan="7">Regular Season</th>
-              <th colSpan="7">Playoffs</th>
-            </tr>
-            <tr>
-              <th>Name</th>
-              <th>Lg</th>
-              <th>Value</th>
-              <th>Pos</th>
-              <th>Age</th>
-              <th>Score</th>
-              <th>G</th>
-              <th>MPG</th>
-              <th>WS/48</th>
-              <th>WS</th>
-              <th>BPM</th>
-              <th>VORP</th>
-              <th>Score</th>
-              <th>G</th>
-              <th>MPG</th>
-              <th>WS/48</th>
-              <th>WS</th>
-              <th>BPM</th>
-              <th>VORP</th>
-            </tr>
-          </thead>
-          <tbody>
-            {
-              team.map(season => (
-                <tr key={season._id}>
-                  <td><Link to={`/players/${season.player_id}`}>{season.name}</Link></td>
-                  <td><Link to={`/seasons/overall/${season.league}/${season.year}`}>{season.league}</Link></td>
-                  <td>{Number((season.regularSeason__score + season.playoff__score)).toFixed(2)}</td>
-                  <td>{season.position}</td>
-                  <td>{season.age}</td>
-                  <td>{Number(season.regularSeason__score).toFixed(2)}</td>
-                  <td>{season.regularSeason__games}</td>
-                  <td>{Number(season.regularSeason__mpg).toFixed(1)}</td>
-                  <td>{Number(season.regularSeason__win_shares_48).toFixed(3)}</td>
-                  <td>{Number(season.regularSeason__win_shares).toFixed(1)}</td>
-                  <td>{Number(season.regularSeason__bpm).toFixed(1)}</td>
-                  <td>{Number(season.regularSeason__vorp).toFixed(1)}</td>
-                  <td>{season.playoff__score ? Number(season.playoff__score).toFixed(2) : Number(0).toFixed(2)}</td>
-                  <td>{season.playoff__games ? season.playoff__games : Number(0)}</td>
-                  <td>{season.playoff__mpg ? Number(season.playoff__mpg).toFixed(1) : Number(0).toFixed(1)}</td>
-                  <td>{season.playoff__win_shares_48 ? Number(season.playoff__win_shares_48).toFixed(3) : Number(0).toFixed(3)}</td>
-                  <td>{season.playoff__win_shares ? Number(season.playoff__win_shares).toFixed(1) : Number(0).toFixed(1)}</td>
-                  <td>{season.playoff__bpm ? Number(season.playoff__bpm).toFixed(1) : Number(0).toFixed(1)}</td>
-                  <td>{season.playoff__vorp ? Number(season.playoff__vorp).toFixed(1) : Number(0).toFixed(1)}</td>
-                </tr>
-              ))}
-          </tbody>
-          <tfoot>
-            <tr>
-              <td colSpan="2">Total</td>
-              <td>{totalCareerValue}</td>
-              <td colSpan="2">Regular Season: </td>
-              <td>{totalRegularSeasonValue}</td>
-              <td colSpan="2">Playoffs: </td>
-              <td>{totalPlayoffValue}</td>
-            </tr>
-          </tfoot>
-        </table>
+        <div className="team-table table-container">
+          <Table reponsive bordered>
+            <thead>
+              <tr>
+                <th colSpan="5"></th>
+                <th colSpan="7">Regular Season</th>
+                <th colSpan="7">Playoffs</th>
+              </tr>
+              <tr>
+                <th>Name</th>
+                <th>Lg</th>
+                <th>Value</th>
+                <th>Pos</th>
+                <th>Age</th>
+                <th>Score</th>
+                <th>G</th>
+                <th>MPG</th>
+                <th>WS/48</th>
+                <th>WS</th>
+                <th>BPM</th>
+                <th>VORP</th>
+                <th>Score</th>
+                <th>G</th>
+                <th>MPG</th>
+                <th>WS/48</th>
+                <th>WS</th>
+                <th>BPM</th>
+                <th>VORP</th>
+              </tr>
+            </thead>
+            <tbody>
+              {
+                team.map(season => (
+                  <tr key={season._id}>
+                    <td><Link to={`/players/${season.player_id}`}>{season.name}</Link></td>
+                    <td><Link to={`/seasons/overall/${season.league}/${season.year}`}>{season.league}</Link></td>
+                    <td>{Number((season.regularSeason__score + season.playoff__score)).toFixed(2)}</td>
+                    <td>{season.position}</td>
+                    <td>{season.age}</td>
+                    <td>{Number(season.regularSeason__score).toFixed(2)}</td>
+                    <td>{season.regularSeason__games}</td>
+                    <td>{Number(season.regularSeason__mpg).toFixed(1)}</td>
+                    <td>{Number(season.regularSeason__win_shares_48).toFixed(3)}</td>
+                    <td>{Number(season.regularSeason__win_shares).toFixed(1)}</td>
+                    <td>{Number(season.regularSeason__bpm).toFixed(1)}</td>
+                    <td>{Number(season.regularSeason__vorp).toFixed(1)}</td>
+                    <td>{season.playoff__score ? Number(season.playoff__score).toFixed(2) : Number(0).toFixed(2)}</td>
+                    <td>{season.playoff__games ? season.playoff__games : Number(0)}</td>
+                    <td>{season.playoff__mpg ? Number(season.playoff__mpg).toFixed(1) : Number(0).toFixed(1)}</td>
+                    <td>{season.playoff__win_shares_48 ? Number(season.playoff__win_shares_48).toFixed(3) : Number(0).toFixed(3)}</td>
+                    <td>{season.playoff__win_shares ? Number(season.playoff__win_shares).toFixed(1) : Number(0).toFixed(1)}</td>
+                    <td>{season.playoff__bpm ? Number(season.playoff__bpm).toFixed(1) : Number(0).toFixed(1)}</td>
+                    <td>{season.playoff__vorp ? Number(season.playoff__vorp).toFixed(1) : Number(0).toFixed(1)}</td>
+                  </tr>
+                ))}
+            </tbody>
+          </Table>
+        </div>
       </div >
     );
   }

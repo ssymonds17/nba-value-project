@@ -1,19 +1,12 @@
 .alphabet-container {
- display: flex;
  font-size: 30px;
-}
-
-.alphabet-list {
- margin: 50px;
 }
 
 ul {
  display: grid;
  grid-template-columns: 1fr repeat(25, 1fr);
- grid-gap: 5px;
  list-style-type: none;
- position: absolute;
- width: 95%;
+ width: 100%;
  margin: 5px auto 0;
  padding: 10px;
 }

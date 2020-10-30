@@ -35,33 +35,35 @@ export class AllTimePlayerView extends React.Component {
     return (
       <div>
         <h1>All Time Player Value Ranking</h1>
-        <Table bordered responsive>
-          <thead>
-            <tr>
-              <th>Rank</th>
-              <th>Name</th>
-              <th>Career Value</th>
-              <th>Career Total</th>
-              <th>Peak Average</th>
-              <th>Year From</th>
-              <th>Year To</th>
-            </tr>
-          </thead>
-          <tbody>
-            {
-              playerList.map(player => (
-                <tr className="player-name" key={player._id}>
-                  <td>{player.rank}</td>
-                  <td><Link to={`/players/${player.player_id}`}>{player.name}</Link></td>
-                  <td className="score-column">{Number(player.career_value).toFixed(2)}</td>
-                  <td>{Number(player.career_total).toFixed(2)}</td>
-                  <td>{Number(player.peak_avg).toFixed(2)}</td>
-                  <td>{player.year_from}</td>
-                  <td>{player.year_to}</td>
-                </tr>
-              ))}
-          </tbody>
-        </Table>
+        <div className="greatest-players table-container">
+          <Table bordered responsive>
+            <thead>
+              <tr>
+                <th>Rank</th>
+                <th>Name</th>
+                <th>Career Value</th>
+                <th>Career Total</th>
+                <th>Peak Average</th>
+                <th>Year From</th>
+                <th>Year To</th>
+              </tr>
+            </thead>
+            <tbody>
+              {
+                playerList.map(player => (
+                  <tr className="player-name" key={player._id}>
+                    <td>{player.rank}</td>
+                    <td><Link to={`/players/${player.player_id}`}>{player.name}</Link></td>
+                    <td className="score-column">{Number(player.career_value).toFixed(2)}</td>
+                    <td>{Number(player.career_total).toFixed(2)}</td>
+                    <td>{Number(player.peak_avg).toFixed(2)}</td>
+                    <td>{player.year_from}</td>
+                    <td>{player.year_to}</td>
+                  </tr>
+                ))}
+            </tbody>
+          </Table>
+        </div>
       </div>
     );
   }

@@ -1,7 +1,9 @@
 import React from 'react';
 import axios from 'axios';
+import Table from 'react-bootstrap/Table';
 import { Link } from 'react-router-dom';
-// Need new SCSS file
+import '../styles/components/tables.scss';
+import '../styles/components/index.scss';
 
 export class AllTimeTeamView extends React.Component {
   constructor() {
@@ -33,35 +35,37 @@ export class AllTimeTeamView extends React.Component {
     return (
       <div>
         <h1>All Time Team Value Ranking</h1>
-        <table>
-          <thead>
-            <tr>
-              <th>Rank</th>
-              <th>Team</th>
-              <th>Year</th>
-              <th>Overall</th>
-              <th>Regular Season</th>
-              <th>Playoffs</th>
-              <th>Record</th>
-              <th>Result</th>
-            </tr>
-          </thead>
-          <tbody>
-            {
-              teamList.map(team => (
-                <tr className="all-time-team-data" key={team._id}>
-                  <td>{team.rank}</td>
-                  <td><Link to={`/teams/${team.franchise_code}/${team.year}`}>{team.team}</Link></td>
-                  <td><Link to={`/seasons/overall/NBA/${team.year}`}>{team.year}</Link></td>
-                  <td>{Number(team.overall).toFixed(2)}</td>
-                  <td>{Number(team.regular_season).toFixed(2)}</td>
-                  <td>{Number(team.playoffs).toFixed(2)}</td>
-                  <td>{team.record}</td>
-                  <td>{team.result}</td>
-                </tr>
-              ))}
-          </tbody>
-        </table>
+        <div className="greatest-teams table-container">
+          <Table responsive bordered>
+            <thead>
+              <tr>
+                <th>Rank</th>
+                <th>Team</th>
+                <th>Year</th>
+                <th>Overall</th>
+                <th>Regular Season</th>
+                <th>Playoffs</th>
+                <th>Record</th>
+                <th>Result</th>
+              </tr>
+            </thead>
+            <tbody>
+              {
+                teamList.map(team => (
+                  <tr className="all-time-team-data" key={team._id}>
+                    <td>{team.rank}</td>
+                    <td><Link to={`/teams/${team.franchise_code}/${team.year}`}>{team.team}</Link></td>
+                    <td><Link to={`/seasons/overall/NBA/${team.year}`}>{team.year}</Link></td>
+                    <td className="score-column">{Number(team.overall).toFixed(2)}</td>
+                    <td>{Number(team.regular_season).toFixed(2)}</td>
+                    <td>{Number(team.playoffs).toFixed(2)}</td>
+                    <td>{team.record}</td>
+                    <td>{team.result}</td>
+                  </tr>
+                ))}
+            </tbody>
+          </Table>
+        </div>
       </div>
     );
   }

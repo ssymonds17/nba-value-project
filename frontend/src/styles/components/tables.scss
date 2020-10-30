@@ -1,36 +1,129 @@
 
-table {
- position: relative;
- border-collapse: collapse;
- margin: 0 auto;
- margin-top: 50px;
- margin-bottom: 50px;
- width: 30%;
+.table-container thead th {
+ position: sticky; 
+ top: 0;
 }
 
-th {
- background-color: #f2f2f2;
- color: black;
- font-weight: 450;
- position: sticky;
- top: 0;
+table {
+ height: 500px;
+ display: block;
+ overflow-y: auto;
 }
 
 th, td {
  text-align: center;
- padding: 8px;
+ font-size: 12px;
+ white-space: nowrap;
+ padding: 4px 3px !important;
 }
 
-// tr:nth-child(even){background-color: #f2f2f2}
+th {
+ background-color: #46a04a;
+ color: white;
+ font-weight: bold;
+}
+
 tr:hover {
  background-color: #a2f6a7;
 }
 
-a {
- // choose blue colour for links and move to index.scss
- color: rgb(3, 3, 207);
-}
-
 .score-column {
  font-weight: bold;
+}
+
+.season-range-left {
+ border-left: 1px solid black !important;
+}
+
+.season-range-right {
+ border-right: 1px solid black;
+}
+
+// MOVE to team-list CSS file
+.franchise-list-container {
+ display: flex;
+}
+.active-franchises {
+ margin: 0 150px;
+}
+
+// Column widths by view
+// Greatest Players
+.greatest-players table {
+ height: 461px;
+}
+.greatest-players td {
+ width: 2%;
+}
+// // Greatest teams
+.greatest-teams table {
+ height: 488px;
+}
+.greatest-teams td {
+ width: 10%;
+}
+// // Greatest seasons overall
+.greatest-seasons-overall table {
+ height: 462px;
+}
+.greatest-seasons-overall td {
+ width: 20%;
+}
+// Greatest seasons RS and PO
+.greatest-seasons-rsp table {
+ height: 461px;
+}
+.greatest-seasons-rsp td {
+ width: 10%;
+}
+// Seasons list
+.seasons-list table {
+ height: 488px;
+}
+.seasons-list td {
+ width: 5%;
+}
+// Overall season
+.season-overall table {
+ height: 462px;
+}
+.season-overall td {
+ width: 1%;
+}
+// RS and PO seasons
+.season-rsp table {
+ height: 462px;
+}
+.season-rsp td {
+ width: 5%;
+}
+//Franchise history
+.franchise-history table {
+ height: 462px;
+}
+.franchise-history td {
+ width: 1%;
+}
+// Team View
+.team-table table {
+ height: 500px;
+}
+.team-table td {
+ width: 5%;
+}
+// Player View
+.player-table table {
+ height: 408px;
+}
+.player-table td {
+ width: 10%;
+}
+// Player list 
+.player-list table {
+ height: 488px;
+ width: 50%;
+ margin-left: 25%;
+}
+.player-list td {
+ width: 10%;
 }

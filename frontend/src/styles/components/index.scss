@@ -1,3 +1,13 @@
+
+@font-face {
+ font-family: 'Montserrat';
+ src: url(../../fonts/Montserrat-Regular.ttf);
+}
+
+html, body {
+ font-family: Montserrat, sans-serif !important;
+}
+
 a {
  // choose blue colour for links and move to index.scss
  color: rgb(3, 3, 207);

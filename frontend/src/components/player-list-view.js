@@ -1,7 +1,10 @@
 import React from 'react';
 import axios from 'axios';
-import '../styles/components/player-list-view.scss';
 import { Link } from 'react-router-dom';
+import Table from 'react-bootstrap/Table';
+import '../styles/components/index.scss';
+import '../styles/components/tables.scss';
+import '../styles/components/player-list-view.scss';
 
 export class PlayerListView extends React.Component {
    constructor() {
@@ -49,14 +52,16 @@ export class PlayerListView extends React.Component {
                   </ul>
                </div>
             </div>
-            <div className="table-responsive">
-               <table>
-                  <tbody>
+            <div className="player-list table-container">
+               <Table responsive bordered>
+                  <thead>
                      <tr>
-                        <th>Name</th>
+                        <th>Player</th>
                         <th>From</th>
                         <th>To</th>
                      </tr>
+                  </thead>
+                  <tbody>
                      {
                         playerList.map(
                            (player) => (
@@ -73,7 +78,7 @@ export class PlayerListView extends React.Component {
                               </tr>
                            ))}
                   </tbody>
-               </table >
+               </Table >
             </div>
          </div>
       )
