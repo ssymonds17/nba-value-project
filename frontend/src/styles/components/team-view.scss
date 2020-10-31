@@ -3,13 +3,22 @@
  align-content: space-between;
 }
 
+.team-value-header {
+ width: 60%;
+}
+
+.team-value-header h3 {
+ margin-left: 0px;
+}
+
 .team-btn-container {
- width: 380px;
+ width: 40%;
 }
 
 .season-change-btn-container {
  float: right;
  margin-top: 20px;
+ padding-top: 30px;
 }
 
 .index-btn-container {

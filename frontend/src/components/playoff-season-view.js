@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import '../styles/components/index.scss';
 import '../styles/components/tables.scss';
 import '../styles/components/buttons.scss';
+import '../styles/components/season-view.scss';
 
 export class PlayoffSeasonView extends React.Component {
   constructor() {
@@ -80,14 +81,18 @@ export class PlayoffSeasonView extends React.Component {
 
     return (
       <div>
-        <h1>{season[0].league} {season[0].year} Playoffs</h1>
-        <div>
-          <Link to={`/seasons/overall/${season[0].league}/${season[0].year}`}><Button className="custom-btn">Overall</Button></Link>
-          <Link to={`/seasons/regular/${season[0].league}/${season[0].year}`}><Button className="custom-btn">Regular Season</Button></Link>
-        </div>
-        <div>
-          <Link to={`/seasons/playoffs/${season[0].league}/${season[0].year - 1}`}><Button className="custom-btn" style={this.setPreviousSeasonButtonStyle()}>{`<<`} {season[0].year - 1} Season</Button></Link>
-          <Link to={`/seasons/playoffs/${season[0].league}/${season[0].year + 1}`}><Button className="custom-btn" style={this.setNextSeasonButtonStyle()}>{season[0].year + 1} Season {`>>`}</Button></Link>
+        <div className="season-view-header-container">
+          <h1>{season[0].league} {season[0].year} Playoffs</h1>
+          <div className="season-view-btn-container">
+            <div className="change-btn-container">
+              <Link to={`/seasons/overall/${season[0].league}/${season[0].year}`}><Button className="custom-btn season-btn">Overall</Button></Link>
+              <Link to={`/seasons/regular/${season[0].league}/${season[0].year}`}><Button className="custom-btn season-btn">Regular Season</Button></Link>
+            </div>
+            <div className="change-btn-container">
+              <Link to={`/seasons/playoffs/${season[0].league}/${season[0].year - 1}`}><Button className="custom-btn season-btn" style={this.setPreviousSeasonButtonStyle()}>{`<<`} {season[0].year - 1} Season</Button></Link>
+              <Link to={`/seasons/playoffs/${season[0].league}/${season[0].year + 1}`}><Button className="custom-btn season-btn" style={this.setNextSeasonButtonStyle()}>{season[0].year + 1} Season {`>>`}</Button></Link>
+            </div>
+          </div>
         </div>
         <div className="season-rsp table-container">
           <Table bordered responsive>

@@ -1,9 +1,12 @@
 import React from 'react';
 import axios from 'axios';
 import Table from 'react-bootstrap/Table';
+import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
 import '../styles/components/tables.scss';
 import '../styles/components/index.scss';
+import '../styles/components/buttons.scss';
+import '../styles/components/season-view.scss';
 
 export class GreatestSeasonsOverallView extends React.Component {
   constructor() {
@@ -35,11 +38,13 @@ export class GreatestSeasonsOverallView extends React.Component {
 
     return (
       <div className="greatest-seasons-overall-container">
-        <h1>Greatest Seasons All Time</h1>
-        <small>Combination of both regular season and playoffs</small>
-        <div>
-          <Link to={`/rankings/seasons/regularseason`}><button>Greatest Regular Seasons</button></Link>
-          <Link to={`/rankings/seasons/playoffs`}><button>Greatest Playoff Seasons</button></Link>
+        <div className="season-view-header-container">
+          <h1>Greatest Seasons All Time</h1>
+          <small>Combination of both regular season and playoffs</small>
+          <div className="greatest-seasons-btn-container">
+            <Link to={`/rankings/seasons/regularseason`}><Button className="custom-btn greatest-seasons-btn">Greatest Regular Seasons</Button></Link>
+            <Link to={`/rankings/seasons/playoffs`}><Button className="custom-btn greatest-seasons-btn">Greatest Playoff Seasons</Button></Link>
+          </div>
         </div>
         <div className="greatest-seasons-overall table-container">
           <Table responsive bordered>

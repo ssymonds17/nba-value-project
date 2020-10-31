@@ -36,7 +36,7 @@ export class FranchiseHistoryView extends React.Component {
 
     return (
       <div>
-        <h1>{franchise[0].team_full_name}</h1>
+        <h1>{franchise[0].team_full_name} Franchise Index</h1>
         <div className="franchise-history table-container">
           <Table responsive bordered>
             <thead>
