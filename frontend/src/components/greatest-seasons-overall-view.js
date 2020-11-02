@@ -39,8 +39,10 @@ export class GreatestSeasonsOverallView extends React.Component {
     return (
       <div className="greatest-seasons-overall-container">
         <div className="season-view-header-container">
-          <h1>Greatest Seasons All Time</h1>
-          <small>Combination of both regular season and playoffs</small>
+          <div className="season-view-title-container">
+            <h1>Greatest Seasons All Time</h1>
+            <small>Combination of both regular season and playoffs</small>
+          </div>
           <div className="greatest-seasons-btn-container">
             <Link to={`/rankings/seasons/regularseason`}><Button className="custom-btn greatest-seasons-btn">Greatest Regular Seasons</Button></Link>
             <Link to={`/rankings/seasons/playoffs`}><Button className="custom-btn greatest-seasons-btn">Greatest Playoff Seasons</Button></Link>
@@ -94,21 +96,21 @@ export class GreatestSeasonsOverallView extends React.Component {
                     <td>{season.position}</td>
                     <td>{season.age}</td>
                     <td><Link to={`/teams/${season.team_one}/${season.year}`}>{season.team_one}</Link></td>
-                    <td className="season-range-left">{Number(season.regularseason__score).toFixed(2)}</td>
+                    <td className="score-column">{Number(season.regularseason__score).toFixed(2)}</td>
                     <td>{season.regularseason__games}</td>
                     <td>{Number(season.regularseason__mpg).toFixed(1)}</td>
                     <td>{Number(season.regularseason__win_shares_48).toFixed(3)}</td>
                     <td>{Number(season.regularseason__win_shares).toFixed(1)}</td>
                     <td>{Number(season.regularseason__bpm).toFixed(1)}</td>
                     <td>{Number(season.regularseason__vorp).toFixed(1)}</td>
-                    <td className="season-range-left">{season.playoff__score ? Number(season.playoff__score).toFixed(2) : Number(0).toFixed(2)}</td>
+                    <td className="score-column">{season.playoff__score ? Number(season.playoff__score).toFixed(2) : Number(0).toFixed(2)}</td>
                     <td>{season.playoff__games ? season.playoff__games : Number(0)}</td>
                     <td>{season.playoff__mpg ? Number(season.playoff__mpg).toFixed(1) : Number(0).toFixed(1)}</td>
                     <td>{season.playoff__win_shares_48 ? Number(season.playoff__win_shares_48).toFixed(3) : Number(0).toFixed(3)}</td>
                     <td>{season.playoff__win_shares ? Number(season.playoff__win_shares).toFixed(1) : Number(0).toFixed(1)}</td>
                     <td>{season.playoff__bpm ? Number(season.playoff__bpm).toFixed(1) : Number(0).toFixed(1)}</td>
                     <td>{season.playoff__vorp ? Number(season.playoff__vorp).toFixed(1) : Number(0).toFixed(1)}</td>
-                    <td className="season-range-left">{season.team_record}</td>
+                    <td>{season.team_record}</td>
                     <td>{season.team_result}</td>
                   </tr>
                 ))}

@@ -1,9 +1,12 @@
 import React from 'react';
 import axios from 'axios';
 import Table from 'react-bootstrap/Table';
+import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
 import '../styles/components/tables.scss';
 import '../styles/components/index.scss';
+import '../styles/components/buttons.scss';
+import '../styles/components/season-view.scss';
 
 export class GreatestSeasonsRSView extends React.Component {
   constructor() {
@@ -36,8 +39,8 @@ export class GreatestSeasonsRSView extends React.Component {
     return (
       <div>
         <h1>Greatest Regular Seasons All Time</h1>
-        <Link to={`/rankings/seasons/overall`}><button>Greatest Seasons Overall</button></Link>
-        <Link to={`/rankings/seasons/playoffs`}><button>Greatest Playoff Seasons</button></Link>
+        <Link to={`/rankings/seasons/overall`}><Button className="custom-btn greatest-seasons-btn">Greatest Seasons Overall</Button></Link>
+        <Link to={`/rankings/seasons/playoffs`}><Button className="custom-btn greatest-seasons-btn">Greatest Playoff Seasons</Button></Link>
         <div className="greatest-seasons-rsp table-container">
           <Table responsive bordered>
             <thead>
