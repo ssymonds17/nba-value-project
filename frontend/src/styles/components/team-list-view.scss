@@ -1,0 +1,26 @@
+// MOVE to team-list CSS file
+.franchise-list-container {
+ display: flex;
+}
+.active-franchises {
+ margin: 0 150px;
+}
+
+.active-franchise-header {
+ margin-left: 152px;
+}
+
+@media screen and (max-width: 991px) {
+ .franchise-list-container {
+  display: block;
+ }
+ .active-franchises {
+  margin-bottom: 50px;
+ }
+ .defunct-franchises {
+  margin: 0 150px;
+ }
+ .defunct-franchise-header {
+  margin-left: 152px;
+ }
+}

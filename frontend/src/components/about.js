@@ -1,6 +1,4 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
-import Table from 'react-bootstrap/Table';
 import '../styles/components/index.scss';
 import '../styles/components/tables.scss';
 import { AboutHeader } from './about-header';
@@ -42,4 +40,3 @@ export class AboutView extends React.Component {
   )
  }
 }
-{/* <button onClick={scrollToTop}><span>Top</span></button> */ }

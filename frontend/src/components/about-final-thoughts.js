@@ -6,7 +6,7 @@ export class AboutFinalThoughts extends React.Component {
 
  render() {
   return (
-   <sections id="final-thoughts">
+   <section id="final-thoughts">
     <h2>9. Final Thoughts</h2>
     <br />
     <p>
@@ -16,7 +16,7 @@ export class AboutFinalThoughts extends React.Component {
      I am merely intending that this website be used as a resource, among many, and perhaps as a starting point in a more robust and transparent debate regarding historical player valuations. Everybody has their own criteria and different things that they value when evaluating players and here I am outlining my criteria and presenting how I came to my final conclusions as clearly as I possibly can.
     </p>
     <div style={{ height: '100px' }}></div>
-   </sections>
+   </section>
   )
  }
 }

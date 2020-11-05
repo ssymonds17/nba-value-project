@@ -6,15 +6,15 @@ export class AboutDisclaimers extends React.Component {
 
  render() {
   return (
-   <sections id="disclaimers">
+   <section id="disclaimers">
     <h2>8. Disclaimers</h2>
     <br />
     <h4>VORP and BPM as metrics</h4>
     <p>
-     The VORP and BPM metrics were created with the idea of being able to compare across eras in mind. For this reason they are less granular than competing metrics, and to an extent, less accurate. Whilst I could have used other publicly available metrics such as Goldstein’s <a href="https://www.bball-index.com/player-impact-plus-minus/" target="_blank">Player Impact Plus-Minus</a> (PIPM), ESPN’s <a href="http://www.espn.com/nba/statistics/rpm" target="_blank"></a>Real Plus-Minus (RPM) or FiveThirtyEight’s <a href="https://fivethirtyeight.com/features/how-our-raptor-metric-works/" target="_blank">RAPTOR</a> to make valuations for current players more accurate, many of these metrics are either not available beyond a few seasons ago, or are not publicly available. In an effort to be as consistent as possible across eras, I chose to stick as closely to VORP and BPM as possible. However, I will concede that this does have the drawback of making the valuations for current players slightly less accurate than they could otherwise be.
+     The VORP and BPM metrics were created with the idea of being able to compare across eras in mind. For this reason they are less granular than competing metrics, and to an extent, less accurate. Whilst I could have used other publicly available metrics such as Goldstein’s <a href="https://www.bball-index.com/player-impact-plus-minus/" target="_blank" rel="noopener noreferrer">Player Impact Plus-Minus</a> (PIPM), ESPN’s <a href="http://www.espn.com/nba/statistics/rpm" target="_blank" rel="noopener noreferrer">Real Plus-Minus</a> (RPM) or FiveThirtyEight’s <a href="https://fivethirtyeight.com/features/how-our-raptor-metric-works/" target="_blank" rel="noopener noreferrer">RAPTOR</a> to make valuations for current players more accurate, many of these metrics are either not available beyond a few seasons ago, or are not publicly available. In an effort to be as consistent as possible across eras, I chose to stick as closely to VORP and BPM as possible. However, I will concede that this does have the drawback of making the valuations for current players slightly less accurate than they could otherwise be.
     </p>
     <p>
-     The VORP and BPM metrics themselves also have flaws. Ben Taylor discusses the updates to the metric on his podcast (<a href="https://podcasts.apple.com/us/podcast/48-tatum-vs-giannis-bpm-2-0-inside-basketball-references/id1428290303?i=1000467090821" target="_blank">Thinking Basketball #48</a>) and highlights the tendency to undervalue big man defense and overvalue perimeter defense, especially in regards to players with gaudy steal totals.
+     The VORP and BPM metrics themselves also have flaws. Ben Taylor discusses the updates to the metric on his podcast (<a href="https://podcasts.apple.com/us/podcast/48-tatum-vs-giannis-bpm-2-0-inside-basketball-references/id1428290303?i=1000467090821" target="_blank" rel="noopener noreferrer">Thinking Basketball #48</a>) and highlights the tendency to undervalue big man defense and overvalue perimeter defense, especially in regards to players with gaudy steal totals.
     </p>
     <p>
      Looking at the final rankings there does seem to be a few notable players who are undervalued, and a few that may be overvalued. Examples of players who probably are undervalued are Moses Malone (#50), Steve Nash (#62), Dennis Rodman (#213) or Klay Thompson (#214). I don’t see these rankings as outrageously low, but they are low nonetheless and are examples of the BPM metric perhaps not accurately valuing what these players did on the court.
@@ -28,7 +28,7 @@ export class AboutDisclaimers extends React.Component {
     </p>
     <h4>Issues with Playoff Scores Before 1974</h4>
     <p>
-     I am slightly unsatisfied with the playoff scores for the seasons before 1974, as they are based on Win Shares instead of VORP. The explanation behind Win Shares can be seen <a href="https://www.basketball-reference.com/about/ws.html" target="_blank">here</a>. I find Win Shares too egalitarian when distributing credit across the players of a team, deflating the impact that the best players had. It also can overvalue big men, especially those that were merely role players.
+     I am slightly unsatisfied with the playoff scores for the seasons before 1974, as they are based on Win Shares instead of VORP. The explanation behind Win Shares can be seen <a href="https://www.basketball-reference.com/about/ws.html" target="_blank" rel="noopener noreferrer">here</a>. I find Win Shares too egalitarian when distributing credit across the players of a team, deflating the impact that the best players had. It also can overvalue big men, especially those that were merely role players.
     </p>
     <p>
      The best example of this would be the scores for the Boston Celtics teams of the 1960s. During the regular season, outside of his rookie season in 1957, Bill Russell is clearly the most valuable player on the team. There never was a year where his value was roughly equivalent to the second or third most valuable on his team like the proximity of value for LeBron James and Anthony Davis on the 2020 Los Angeles Lakers or Kevin Durant and Stephen Curry on the 2017 and 2018 Golden State Warriors.
@@ -40,7 +40,7 @@ export class AboutDisclaimers extends React.Component {
     <p>
      This issue specifically concerns the valuation of the MVP candidates during the 2020 regular season. Giannis Antetokounmpo won the real MVP award conclusively however this metric sees him being edged out slightly by James Harden. I think an argument can be made that James Harden has unfairly missed out on a number of MVP awards due to general dislike over his style of play, but for this specific season I think the award went to the right player. However, the issue the metric has is in identifying when a player has a lower VORP value due to being consistently rested during the fourth quarter of blowout wins, as happened to Giannis on multiple occasions during this season. Being rested in these scenarios is decidedly different to “load management” or general injury, as it is predicated on playing so well in the first three quarters that it is not required for that player to play in the final quarter. Unfortunately, this metric is unable to see the difference, and not playing is seen as not playing, missing this key element of context. Earlier examples where this might have had an effect is during Stephen Curry’s outstanding 2016 campaign, but it wasn’t enough to stop his regular season from being viewed as one of the greatest ever (currently #4).
     </p>
-   </sections>
+   </section>
   )
  }
 }

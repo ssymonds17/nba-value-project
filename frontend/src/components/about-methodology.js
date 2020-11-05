@@ -61,7 +61,7 @@ export class AboutMethodology extends React.Component {
         <br />
         <h4>The Advanced Metrics</h4>
         <p>
-          The main ingredients in calculating a player’s seasonal value are Value Over Replacement Player (VORP) and Box Plus-Minus (BPM). There are several other publically available metrics at the moment, but as far as I’m aware VORP and BPM are the only ones designed so that they can be applied, to a reasonable measure, across multiple eras. At Basketball Reference these metrics can be found up until the 1974 season. More information regarding both metrics can be found <a href="https://www.basketball-reference.com/about/bpm2.html" target="_blank">here</a>.
+          The main ingredients in calculating a player’s seasonal value are Value Over Replacement Player (VORP) and Box Plus-Minus (BPM). There are several other publically available metrics at the moment, but as far as I’m aware VORP and BPM are the only ones designed so that they can be applied, to a reasonable measure, across multiple eras. At Basketball Reference these metrics can be found up until the 1974 season. More information regarding both metrics can be found <a href="https://www.basketball-reference.com/about/bpm2.html" target="_blank" rel="noopener noreferrer">here</a>.
    </p>
         <br />
         <h4>Regular Season</h4>
@@ -79,13 +79,15 @@ export class AboutMethodology extends React.Component {
         <div className="table-container" style={{ height: '100px' }}>
           <Table bordered responsive>
             <thead>
-              <th>Name</th>
-              <th>Pos</th>
-              <th>Age</th>
-              <th>G</th>
-              <th>MPG</th>
-              <th>VORP</th>
-              <th>Tm VORP</th>
+              <tr>
+                <th>Name</th>
+                <th>Pos</th>
+                <th>Age</th>
+                <th>G</th>
+                <th>MPG</th>
+                <th>VORP</th>
+                <th>Tm VORP</th>
+              </tr>
             </thead>
             <tbody>
               <tr>
@@ -107,14 +109,16 @@ export class AboutMethodology extends React.Component {
         <div className="table-container" style={{ height: '100px' }}>
           <Table bordered responsive>
             <thead>
-              <th>Name</th>
-              <th>Pos</th>
-              <th>Age</th>
-              <th>G</th>
-              <th>MPG</th>
-              <th>VORP</th>
-              <th>Tm VORP</th>
-              <th>VORP %</th>
+              <tr>
+                <th>Name</th>
+                <th>Pos</th>
+                <th>Age</th>
+                <th>G</th>
+                <th>MPG</th>
+                <th>VORP</th>
+                <th>Tm VORP</th>
+                <th>VORP %</th>
+              </tr>
             </thead>
             <tbody>
               <tr>
@@ -140,15 +144,17 @@ export class AboutMethodology extends React.Component {
         <div className="table-container" style={{ height: '100px' }}>
           <Table bordered responsive>
             <thead>
-              <th>Name</th>
-              <th>Pos</th>
-              <th>Age</th>
-              <th>G</th>
-              <th>MPG</th>
-              <th>VORP %</th>
-              <th>Tm Wins</th>
-              <th>Adj. Tm Wins</th>
-              <th>Season Value</th>
+              <tr>
+                <th>Name</th>
+                <th>Pos</th>
+                <th>Age</th>
+                <th>G</th>
+                <th>MPG</th>
+                <th>VORP %</th>
+                <th>Tm Wins</th>
+                <th>Adj. Tm Wins</th>
+                <th>Season Value</th>
+              </tr>
             </thead>
             <tbody>
               <tr>
@@ -172,14 +178,16 @@ export class AboutMethodology extends React.Component {
         <div className="table-container" style={{ height: '100px' }}>
           <Table bordered responsive>
             <thead>
-              <th>Name</th>
-              <th>Pos</th>
-              <th>Age</th>
-              <th>G</th>
-              <th>MPG</th>
-              <th>Tm Seed</th>
-              <th>Season Value Before Adj.</th>
-              <th>Season Value After Adj.</th>
+              <tr>
+                <th>Name</th>
+                <th>Pos</th>
+                <th>Age</th>
+                <th>G</th>
+                <th>MPG</th>
+                <th>Tm Seed</th>
+                <th>Season Value Before Adj.</th>
+                <th>Season Value After Adj.</th>
+              </tr>
             </thead>
             <tbody>
               <tr>
@@ -205,14 +213,16 @@ export class AboutMethodology extends React.Component {
         <div className="table-container" style={{ height: '100px' }}>
           <Table bordered responsive>
             <thead>
-              <th>Name</th>
-              <th>Pos</th>
-              <th>Age</th>
-              <th>G</th>
-              <th>MPG</th>
-              <th>BPM</th>
-              <th>Season Value Before Adj.</th>
-              <th>Season Value After Adj.</th>
+              <tr>
+                <th>Name</th>
+                <th>Pos</th>
+                <th>Age</th>
+                <th>G</th>
+                <th>MPG</th>
+                <th>BPM</th>
+                <th>Season Value Before Adj.</th>
+                <th>Season Value After Adj.</th>
+              </tr>
             </thead>
             <tbody>
               <tr>
@@ -236,13 +246,15 @@ export class AboutMethodology extends React.Component {
         <div className="table-container" style={{ height: '100px' }}>
           <Table bordered responsive>
             <thead>
-              <th>Name</th>
-              <th>Pos</th>
-              <th>Age</th>
-              <th>G</th>
-              <th>MPG</th>
-              <th>Season Value Before Adj.</th>
-              <th>Season Value After Adj.</th>
+              <tr>
+                <th>Name</th>
+                <th>Pos</th>
+                <th>Age</th>
+                <th>G</th>
+                <th>MPG</th>
+                <th>Season Value Before Adj.</th>
+                <th>Season Value After Adj.</th>
+              </tr>
             </thead>
             <tbody>
               <tr>
@@ -264,13 +276,15 @@ export class AboutMethodology extends React.Component {
         <div className="table-container" style={{ height: '100px' }}>
           <Table bordered responsive>
             <thead>
-              <th>Name</th>
-              <th>Pos</th>
-              <th>Age</th>
-              <th>G</th>
-              <th>MPG</th>
-              <th>Season Value Before Adj.</th>
-              <th>Season Value After Adj.</th>
+              <tr>
+                <th>Name</th>
+                <th>Pos</th>
+                <th>Age</th>
+                <th>G</th>
+                <th>MPG</th>
+                <th>Season Value Before Adj.</th>
+                <th>Season Value After Adj.</th>
+              </tr>
             </thead>
             <tbody>
               <tr>
@@ -307,13 +321,15 @@ export class AboutMethodology extends React.Component {
         <div className="table-container" style={{ height: '100px' }}>
           <Table bordered responsive>
             <thead>
-              <th>Name</th>
-              <th>Pos</th>
-              <th>Age</th>
-              <th>G</th>
-              <th>MPG</th>
-              <th>VORP</th>
-              <th>Tm VORP</th>
+              <tr>
+                <th>Name</th>
+                <th>Pos</th>
+                <th>Age</th>
+                <th>G</th>
+                <th>MPG</th>
+                <th>VORP</th>
+                <th>Tm VORP</th>
+              </tr>
             </thead>
             <tbody>
               <tr>
@@ -335,14 +351,16 @@ export class AboutMethodology extends React.Component {
         <div className="table-container" style={{ height: '100px' }}>
           <Table bordered responsive>
             <thead>
-              <th>Name</th>
-              <th>Pos</th>
-              <th>Age</th>
-              <th>G</th>
-              <th>MPG</th>
-              <th>VORP</th>
-              <th>Tm VORP</th>
-              <th>VORP %</th>
+              <tr>
+                <th>Name</th>
+                <th>Pos</th>
+                <th>Age</th>
+                <th>G</th>
+                <th>MPG</th>
+                <th>VORP</th>
+                <th>Tm VORP</th>
+                <th>VORP %</th>
+              </tr>
             </thead>
             <tbody>
               <tr>
@@ -374,14 +392,16 @@ export class AboutMethodology extends React.Component {
         <div className="table-container" style={{ height: '100px' }}>
           <Table bordered responsive>
             <thead>
-              <th>Name</th>
-              <th>Pos</th>
-              <th>Age</th>
-              <th>G</th>
-              <th>MPG</th>
-              <th>VORP %</th>
-              <th>Tm Wins</th>
-              <th>Playoff Value</th>
+              <tr>
+                <th>Name</th>
+                <th>Pos</th>
+                <th>Age</th>
+                <th>G</th>
+                <th>MPG</th>
+                <th>VORP %</th>
+                <th>Tm Wins</th>
+                <th>Playoff Value</th>
+              </tr>
             </thead>
             <tbody>
               <tr>
@@ -411,14 +431,16 @@ export class AboutMethodology extends React.Component {
         <div className="table-container" style={{ height: '100px' }}>
           <Table bordered responsive>
             <thead>
-              <th>Name</th>
-              <th>Pos</th>
-              <th>Age</th>
-              <th>G</th>
-              <th>MPG</th>
-              <th>BPM</th>
-              <th>Playoff Value Before Adj.</th>
-              <th>Playoff Value After Adj.</th>
+              <tr>
+                <th>Name</th>
+                <th>Pos</th>
+                <th>Age</th>
+                <th>G</th>
+                <th>MPG</th>
+                <th>BPM</th>
+                <th>Playoff Value Before Adj.</th>
+                <th>Playoff Value After Adj.</th>
+              </tr>
             </thead>
             <tbody>
               <tr>
@@ -441,12 +463,14 @@ export class AboutMethodology extends React.Component {
         <div className="table-container" style={{ height: '100px' }}>
           <Table bordered responsive>
             <thead>
-              <th>Name</th>
-              <th>Pos</th>
-              <th>Age</th>
-              <th>MPG</th>
-              <th>Playoff Value Before Adj.</th>
-              <th>Playoff Value After Adj.</th>
+              <tr>
+                <th>Name</th>
+                <th>Pos</th>
+                <th>Age</th>
+                <th>MPG</th>
+                <th>Playoff Value Before Adj.</th>
+                <th>Playoff Value After Adj.</th>
+              </tr>
             </thead>
             <tbody>
               <tr>
@@ -470,13 +494,15 @@ export class AboutMethodology extends React.Component {
         <div className="table-container" style={{ height: '100px' }}>
           <Table bordered responsive>
             <thead>
-              <th>Name</th>
-              <th>Pos</th>
-              <th>Age</th>
-              <th>Total Opp. SRS</th>
-              <th>Adjustment</th>
-              <th>Playoff Value Before Adj.</th>
-              <th>Playoff Value After Adj.</th>
+              <tr>
+                <th>Name</th>
+                <th>Pos</th>
+                <th>Age</th>
+                <th>Total Opp. SRS</th>
+                <th>Adjustment</th>
+                <th>Playoff Value Before Adj.</th>
+                <th>Playoff Value After Adj.</th>
+              </tr>
             </thead>
             <tbody>
               <tr>
@@ -498,11 +524,13 @@ export class AboutMethodology extends React.Component {
         <div className="table-container" style={{ height: '100px' }}>
           <Table bordered responsive>
             <thead>
-              <th>Name</th>
-              <th>Pos</th>
-              <th>Age</th>
-              <th>Playoff Value Before Adj.</th>
-              <th>Playoff Value After Adj.</th>
+              <tr>
+                <th>Name</th>
+                <th>Pos</th>
+                <th>Age</th>
+                <th>Playoff Value Before Adj.</th>
+                <th>Playoff Value After Adj.</th>
+              </tr>
             </thead>
             <tbody>
               <tr>

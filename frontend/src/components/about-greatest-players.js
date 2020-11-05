@@ -6,7 +6,7 @@ export class AboutGreatestPlayers extends React.Component {
 
  render() {
   return (
-   <sections id="greatest-players">
+   <section id="greatest-players">
     <h2>6. Greatest Players</h2>
     <br />
     <p>
@@ -30,7 +30,7 @@ export class AboutGreatestPlayers extends React.Component {
     <p>
      On each player’s page, both the career total (found in the table footer) and peak average, are displayed. These are combined to generate the player’s career value.
     </p>
-   </sections>
+   </section>
   )
  }
 }

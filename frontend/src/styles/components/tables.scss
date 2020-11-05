@@ -44,14 +44,6 @@ tr:hover {
  border-right: 1px solid black;
 }
 
-// MOVE to team-list CSS file
-.franchise-list-container {
- display: flex;
-}
-.active-franchises {
- margin: 0 150px;
-}
-
 //Styles by view
 
 // Greatest Players
@@ -157,7 +149,4 @@ tr:hover {
 // Team list
 .active-franchises, .defunct-franchises {
  height: 435px;
-}
-.active-franchise-header {
- margin-left: 152px;
 }

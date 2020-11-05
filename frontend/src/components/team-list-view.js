@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import Table from 'react-bootstrap/Table';
 import '../styles/components/index.scss';
 import '../styles/components/tables.scss';
+import '../styles/components/team-list-view.scss';
 
 export class TeamListView extends React.Component {
 
@@ -63,7 +64,7 @@ export class TeamListView extends React.Component {
                   </Table>
                </div>
                <div className="table-container">
-                  <h2>Defunct Franchises</h2>
+                  <h2 className="defunct-franchise-header">Defunct Franchises</h2>
                   <Table className="defunct-franchises" bordered responsive>
                      <thead>
                         <tr className="team-list-header">

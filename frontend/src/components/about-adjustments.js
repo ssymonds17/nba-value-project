@@ -24,8 +24,10 @@ export class AboutAdjustments extends React.Component {
         <div className="table-container" style={{ height: '470px' }}>
           <Table bordered responsive>
             <thead>
-              <th>Team Wins</th>
-              <th>Adjusted Wins</th>
+              <tr>
+                <th>Team Wins</th>
+                <th>Adjusted Wins</th>
+              </tr>
             </thead>
             <tbody>
               <tr>
@@ -101,9 +103,11 @@ export class AboutAdjustments extends React.Component {
         <div className="table-container" style={{ height: '310px' }}>
           <Table bordered responsive>
             <thead>
-              <th>Round</th>
-              <th>Losing Wins</th>
-              <th>Win Total</th>
+              <tr>
+                <th>Round</th>
+                <th>Losing Wins</th>
+                <th>Win Total</th>
+              </tr>
             </thead>
             <tbody>
               <tr>
@@ -164,12 +168,14 @@ export class AboutAdjustments extends React.Component {
         <div className="table-container" style={{ height: '330px' }}>
           <Table bordered responsive>
             <thead>
-              <th>Team</th>
-              <th>Year</th>
-              <th>Round</th>
-              <th>Win Total (Rounds)</th>
-              <th>Win %</th>
-              <th>Adj. Win Total</th>
+              <tr>
+                <th>Team</th>
+                <th>Year</th>
+                <th>Round</th>
+                <th>Win Total (Rounds)</th>
+                <th>Win %</th>
+                <th>Adj. Win Total</th>
+              </tr>
             </thead>
             <tbody>
               <tr>
@@ -265,7 +271,7 @@ export class AboutAdjustments extends React.Component {
           <strong>Minutes Adjustment</strong>: Minutes per game is the average number of minutes a player played relative to the total number of minutes in a season (Total minutes divided by the team’s total number of games). This means that it factors in game time missed due to injury as well. This accounts for any discrepancies between this the value shown on this website and that on a site like Basketball Reference. This adjustment slightly penalises players for being bit part players. The main reason for this statistic are reserves who post extremely high rate statistics but in limited minutes. Without this adjustment, the most valuable players in the league would end up being impact 6th men (think Manu Ginobili). This mostly impacts the playoffs (due to the smaller sample size) and in previous iterations of the metric without this adjustment a player like 2013 Miami Heat’s Chris Anderson (15.2 MPG, 5.5 BPM) or 1996 Indiana Pacer’s Reggie Miller (1 GP, 18.2 BPM) would be the playoff’s 5th most valuable player.
         </p>
         <p id="opposition-strength">
-          <strong>Opposition Strength Adjustment</strong>: This adjustment is based on Basketball Reference’s <a href="https://www.basketball-reference.com/about/glossary.html" target="_blank">SRS</a> metric (that factors point differential and schedule strength) and gives a boost or penalty to the playoff score based upon the strength of that team’s opponents. For example, beating a .500 team results in no adjustment, however beating a 70 win team will net a substantial positive adjustment. The teams that best resemble the importance of this adjustment are the 2001 Los Angeles Lakers (who beat four 50+ win teams) and the 1995 Houston Rockets (whose opponent win totals were 60, 59, 62 and 57).
+          <strong>Opposition Strength Adjustment</strong>: This adjustment is based on Basketball Reference’s <a href="https://www.basketball-reference.com/about/glossary.html" target="_blank" rel="noopener noreferrer">SRS</a> metric (that factors point differential and schedule strength) and gives a boost or penalty to the playoff score based upon the strength of that team’s opponents. For example, beating a .500 team results in no adjustment, however beating a 70 win team will net a substantial positive adjustment. The teams that best resemble the importance of this adjustment are the 2001 Los Angeles Lakers (who beat four 50+ win teams) and the 1995 Houston Rockets (whose opponent win totals were 60, 59, 62 and 57).
         </p>
         <p id="year">
           <strong>Year Adjustment</strong>: The final adjustment is based on a league’s competitive makeup for that season. Having looked into the matter it seems that the seasons most widely cited as being the least competitive (or weakest), were those with a high number of new expansion teams or historically bad teams. Usually this would be 1996-1998 (often brought up as a negative against the 1996 Chicago Bulls) or 1970-1973 (often brought up as a negative against the 1972 Los Angeles Lakers) or during a fallow period talent wise (mid to late 1970s). In order to determine which seasons are weak and which are strong we just need to look at the spread of teams. If there are a large pool of bad teams and a large pool of bad teams but no “middle-class” that would be a weak season (large pool of bad teams inflate the win totals of the good teams). If all the teams are hovering around .500 that also indicates a weak league (talent level league wise is generally average without enough stars to push their teams to higher win totals).
