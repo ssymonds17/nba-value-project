@@ -15,7 +15,7 @@ import { SeasonListView } from './season-list-view';
 import { OverallSeasonView } from './overall-season-view';
 import { RegularSeasonView } from './regular-season-view';
 import { PlayoffSeasonView } from './playoff-season-view';
-import { About } from './about';
+import { AboutView } from './about';
 
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
@@ -42,7 +42,7 @@ export default class MainView extends React.Component {
           <Route exact path="/seasons/overall/:league/:year" render={() => <OverallSeasonView />} />
           <Route exact path="/seasons/regular/:league/:year" render={() => <RegularSeasonView />} />
           <Route exact path="/seasons/playoffs/:league/:year" render={() => <PlayoffSeasonView />} />
-          <Route exact path="/about" render={() => <About />} />
+          <Route exact path="/about" render={() => <AboutView />} />
         </Container>
       </Router>
     );
