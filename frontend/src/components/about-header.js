@@ -1,6 +1,7 @@
 import React from 'react';
 import '../styles/components/index.scss';
 import '../styles/components/tables.scss';
+import '../styles/components/about.scss';
 
 export class AboutHeader extends React.Component {
 
@@ -48,15 +49,15 @@ export class AboutHeader extends React.Component {
     <br />
     <h4>Contents</h4>
     <ol>
-     <li><a onClick={this.scrollToConcept}>Concept</a></li>
-     <li><a onClick={this.scrollToScale}>Scale</a></li>
-     <li><a onClick={this.scrollToMethodology}>Methodology</a></li>
-     <li><a onClick={this.scrollToAdjustments}>Adjustments</a></li>
-     <li><a onClick={this.scrollToExceptions}>Exceptions</a></li>
-     <li><a onClick={this.scrollToGreatestPlayers}>Greatest Players</a></li>
-     <li><a onClick={this.scrollToObservations}>Observations</a></li>
-     <li><a onClick={this.scrollToDisclaimers}>Disclaimers</a></li>
-     <li><a onClick={this.scrollToFinalThoughts}>Final Thoughts</a></li>
+     <li><a className="content-scroll" onClick={this.scrollToConcept}>Concept</a></li>
+     <li><a className="content-scroll" onClick={this.scrollToScale}>Scale</a></li>
+     <li><a className="content-scroll" onClick={this.scrollToMethodology}>Methodology</a></li>
+     <li><a className="content-scroll" onClick={this.scrollToAdjustments}>Adjustments</a></li>
+     <li><a className="content-scroll" onClick={this.scrollToExceptions}>Exceptions</a></li>
+     <li><a className="content-scroll" onClick={this.scrollToGreatestPlayers}>Greatest Players</a></li>
+     <li><a className="content-scroll" onClick={this.scrollToObservations}>Observations</a></li>
+     <li><a className="content-scroll" onClick={this.scrollToDisclaimers}>Disclaimers</a></li>
+     <li><a className="content-scroll" onClick={this.scrollToFinalThoughts}>Final Thoughts</a></li>
     </ol>
    </section>
   )
