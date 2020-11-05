@@ -32,58 +32,63 @@ export class TeamListView extends React.Component {
       let activeFranchises = this.getActive();
 
       return (
-         <div className="franchise-list-container">
-            <div className="active-franchises table-container">
-               <h2>Active Franchises</h2>
-               <Table bordered responsive>
-                  <thead>
-                     <tr className="team-list-header first-row">
-                        <th>Team Name</th>
-                        <th>League</th>
-                        <th>From</th>
-                        <th>Until</th>
-                     </tr>
-                  </thead>
-                  <tbody>
-                     {
-                        activeFranchises.map(
-                           (team) => (
-                              <tr className="team-list-body" key={team.abbreviation}>
-                                 <td><Link to={`/teams/${team.abbreviation}`}>{team.team_full_name}</Link></td>
-                                 <td>{team.league}</td>
-                                 <td>{team.first_year}</td>
-                                 <td>{team.last_year}</td>
-                              </tr>
-                           ))}
-                  </tbody>
-               </Table>
+         <div>
+            <div style={{ marginLeft: '100px', marginBottom: '25px' }} className="franchise-list-header">
+               <h1>NBA and ABA Franchise Index</h1>
             </div>
-            <div className="defunct-franchises table-container">
-               <h2>Defunct Franchises</h2>
-               <Table bordered responsive>
-                  <thead>
-                     <tr className="team-list-header">
-                        <th>Team Name</th>
-                        <th>League</th>
-                        <th>From</th>
-                        <th>Until</th>
-                     </tr>
-                  </thead>
-                  <tbody>
-                     {
-                        defunctFranchises.map(
-                           (team) => (
-                              <tr className="team-list-body" key={team.abbreviation}>
-                                 <td><Link to={`/teams/${team.abbreviation}`}>{team.team_full_name}</Link></td>
-                                 <td>{team.league}</td>
-                                 <td>{team.first_year}</td>
-                                 <td>{team.last_year}</td>
-                              </tr>
-                           ))}
-                  </tbody>
-               </Table>
+            <div className="franchise-list-container">
+               <div className="table-container">
+                  <h2 className="active-franchise-header">Active Franchises</h2>
+                  <Table className="active-franchises" bordered responsive>
+                     <thead>
+                        <tr className="team-list-header first-row">
+                           <th>Team Name</th>
+                           <th>League</th>
+                           <th>From</th>
+                           <th>Until</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        {
+                           activeFranchises.map(
+                              (team) => (
+                                 <tr className="team-list-body" key={team.abbreviation}>
+                                    <td><Link to={`/teams/${team.abbreviation}`}>{team.team_full_name}</Link></td>
+                                    <td>{team.league}</td>
+                                    <td>{team.first_year}</td>
+                                    <td>{team.last_year}</td>
+                                 </tr>
+                              ))}
+                     </tbody>
+                  </Table>
+               </div>
+               <div className="table-container">
+                  <h2>Defunct Franchises</h2>
+                  <Table className="defunct-franchises" bordered responsive>
+                     <thead>
+                        <tr className="team-list-header">
+                           <th>Team Name</th>
+                           <th>League</th>
+                           <th>From</th>
+                           <th>Until</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        {
+                           defunctFranchises.map(
+                              (team) => (
+                                 <tr className="team-list-body" key={team.abbreviation}>
+                                    <td><Link to={`/teams/${team.abbreviation}`}>{team.team_full_name}</Link></td>
+                                    <td>{team.league}</td>
+                                    <td>{team.first_year}</td>
+                                    <td>{team.last_year}</td>
+                                 </tr>
+                              ))}
+                     </tbody>
+                  </Table>
+               </div>
             </div>
-         </div>
+         </div >
       )
    }
 }

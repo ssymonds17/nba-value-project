@@ -34,7 +34,7 @@ export class AllTimePlayerView extends React.Component {
 
     return (
       <div>
-        <h1>All Time Player Value Ranking</h1>
+        <h1>Greatest Players All Time</h1>
         <div className="greatest-players table-container">
           <Table bordered responsive>
             <thead>
