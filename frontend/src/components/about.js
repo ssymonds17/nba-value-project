@@ -4,7 +4,7 @@ import React from 'react';
 import '../styles/components/index.scss';
 import '../styles/components/tables.scss';
 
-const About = () => {
+export default About = () => {
 
  function scrollToTop() {
   const headerElement = document.getElementById('header');
@@ -17,5 +17,3 @@ const About = () => {
   </div>
  )
 }
-
-export default About
