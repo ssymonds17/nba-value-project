@@ -18,4 +18,4 @@ const About = () => {
  )
 }
 
-export default App
+export default About
