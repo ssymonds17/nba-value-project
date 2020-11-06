@@ -23,7 +23,7 @@ th, td {
 }
 
 th {
- background-color: #46a04a;
+ background-color: #3A8340;
  color: white;
  font-weight: bold;
  z-index: 0;
@@ -84,6 +84,14 @@ tr:hover {
  margin-left: -100px;
  margin-right: -100px;
 }
+
+@media screen and (max-width: 1311px) {
+ .overall-season-container, .greatest-seasons-overall-container {
+  margin-left: auto;
+  margin-right: auto;
+ }
+}
+
 .season-overall table {
  height: 408px;
 }
@@ -132,11 +140,9 @@ tr:hover {
 // Player list 
 .player-list table {
  height: 488px;
- width: 50%;
- margin-left: 25%;
 }
 .player-list td {
- width: 10%;
+ width: 33vw;
 }
 
 // Team list

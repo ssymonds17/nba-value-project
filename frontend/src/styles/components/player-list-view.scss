@@ -3,10 +3,27 @@
 }
 
 ul {
- display: grid;
- grid-template-columns: 1fr repeat(25, 1fr);
+ display: flex;
  list-style-type: none;
- width: 100%;
- margin: 5px auto 0;
- padding: 10px;
+ padding-left: 0;
+}
+
+ul li {
+ width: 3.8vw;
+}
+
+@media screen and (max-width: 775px) {
+ ul {
+  display: grid;
+  grid-template-columns: 1fr repeat(12, 2fr);
+  column-gap: 15px;
+ }
+}
+
+@media screen and (max-width: 400px) {
+ ul {
+  display: grid;
+  grid-template-columns: 1fr repeat(8, 3fr);
+  column-gap: 25px;
+ }
 }

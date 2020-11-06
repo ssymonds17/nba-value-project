@@ -9,7 +9,7 @@
  justify-content: space-between;
  height: 65px;
  padding: 0px;
- background-color: #46a04a;
+ background-color: #3A8340;
  align-items: flex-start;
 }
 
@@ -26,21 +26,21 @@
 }
 
 .nav-btn:hover {
- background-color: #46a04a;
- border-color: #46a04a;
+ background-color: #3A8340;
+ border-color: #3A8340;
  color: white;
 }
 
 .nav-btn:focus {
- background-color: #46a04a;
- border-color: #46a04a;
+ background-color: #3A8340;
+ border-color: #3A8340;
  color: white;
  box-shadow: none;
 }
 
 .nav-btn:active {
- background-color: #46a04a;
- border-color: #46a04a;
+ background-color: #3A8340;
+ border-color: #3A8340;
  color: white;
  box-shadow: none;
 }
@@ -67,7 +67,7 @@
   background-color: #f2f2f2;
   width: 100%;
   border-bottom: solid 5px;
-  border-bottom-color: #46a04a;
+  border-bottom-color: #3A8340;
   z-index: 1;
  }
 
@@ -109,21 +109,21 @@
  }
  
  .nav-btn-drop:hover {
-  background-color: #46a04a;
-  border-color: #46a04a;
+  background-color: #3A8340;
+  border-color: #3A8340;
   color: white;
  }
  
  .nav-btn-drop:focus {
-  background-color: #46a04a;
-  border-color: #46a04a;
+  background-color: #3A8340;
+  border-color: #3A8340;
   color: white;
   box-shadow: none;
  }
  
  .nav-btn-drop:active {
-  background-color: #46a04a;
-  border-color: #46a04a;
+  background-color: #3A8340;
+  border-color: #3A8340;
   color: white;
   box-shadow: none;
  }
@@ -135,31 +135,37 @@
   left: 0;
   height: 67.5px;
   border-radius: 0px;
-  width: 77%;
-  background-color: #46a04a;
-  border-color: #46a04a;
+  width: 82%;
+  background-color: #3A8340;
+  border-color: #3A8340;
   box-shadow: none;
   text-align: center;
  }
  
  .home-brand:hover {
-  background-color: #46a04a;
-  border-color: #46a04a;
+  background-color: #3A8340;
+  border-color: #3A8340;
   color: white;
  }
  
  .home-brand:focus {
-  background-color: #46a04a;
-  border-color: #46a04a;
+  background-color: #3A8340;
+  border-color: #3A8340;
   color: white;
   box-shadow: none;
  }
  
  .home-brand:active {
-  background-color: #46a04a;
-  border-color: #46a04a;
+  background-color: #3A8340;
+  border-color: #3A8340;
   color: white;
   box-shadow: none;
  } 
+}
+
+@media screen and (max-width: 480px) {
+ .hamburger {
+  margin-right: 2.25vw;
+ }
 }
 
