@@ -33,3 +33,29 @@
  border-color: black;
  color: white;
 }
+
+.scroll-btn {
+ background: inherit;
+ box-shadow: none;
+ border: none;
+ margin: none;
+ padding: 0 !important;
+ color: blue;
+}
+
+.scroll-btn:hover {
+ text-decoration: underline;
+}
+
+.contents-btn {
+ background: inherit;
+ box-shadow: none;
+ border: none;
+ margin: none;
+ padding: 0 !important;
+}
+
+.contents-btn:hover {
+ font-weight: bold;
+ text-decoration: underline;
+}

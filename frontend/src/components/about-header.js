@@ -2,6 +2,7 @@ import React from 'react';
 import '../styles/components/index.scss';
 import '../styles/components/tables.scss';
 import '../styles/components/about.scss';
+import '../styles/components/buttons.scss';
 
 export class AboutHeader extends React.Component {
 
@@ -49,15 +50,15 @@ export class AboutHeader extends React.Component {
     <br />
     <h4>Contents</h4>
     <ol>
-     <li><a className="content-scroll" onClick={this.scrollToConcept}>Concept</a></li>
-     <li><a className="content-scroll" onClick={this.scrollToScale}>Scale</a></li>
-     <li><a className="content-scroll" onClick={this.scrollToMethodology}>Methodology</a></li>
-     <li><a className="content-scroll" onClick={this.scrollToAdjustments}>Adjustments</a></li>
-     <li><a className="content-scroll" onClick={this.scrollToExceptions}>Exceptions</a></li>
-     <li><a className="content-scroll" onClick={this.scrollToGreatestPlayers}>Greatest Players</a></li>
-     <li><a className="content-scroll" onClick={this.scrollToObservations}>Observations</a></li>
-     <li><a className="content-scroll" onClick={this.scrollToDisclaimers}>Disclaimers</a></li>
-     <li><a className="content-scroll" onClick={this.scrollToFinalThoughts}>Final Thoughts</a></li>
+     <li><button className="contents-btn" onClick={this.scrollToConcept}>Concept</button></li>
+     <li><button className="contents-btn" onClick={this.scrollToScale}>Scale</button></li>
+     <li><button className="contents-btn" onClick={this.scrollToMethodology}>Methodology</button></li>
+     <li><button className="contents-btn" onClick={this.scrollToAdjustments}>Adjustments</button></li>
+     <li><button className="contents-btn" onClick={this.scrollToExceptions}>Exceptions</button></li>
+     <li><button className="contents-btn" onClick={this.scrollToGreatestPlayers}>Greatest Players</button></li>
+     <li><button className="contents-btn" onClick={this.scrollToObservations}>Observations</button></li>
+     <li><button className="contents-btn" onClick={this.scrollToDisclaimers}>Disclaimers</button></li>
+     <li><button className="contents-btn" onClick={this.scrollToFinalThoughts}>Final Thoughts</button></li>
     </ol>
    </section>
   )
