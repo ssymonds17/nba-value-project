@@ -1,26 +1,33 @@
-// MOVE to team-list CSS file
+
 .franchise-list-container {
  display: flex;
+ justify-content: space-around;
+ align-items: center;
 }
-.active-franchises {
- margin: 0 150px;
-}
+// @media screen and (max-width: 991px) {
+//  .franchise-list-container {
+//   display: block;
+//  }
+//  .active-franchises {
+//   margin-bottom: 50px;
+//  }
+//  .defunct-franchises {
+//   margin: 0 150px;
+//  }
+//  .defunct-franchise-header {
+//   margin-left: 152px;
+//  }
+// }
 
-.active-franchise-header {
- margin-left: 152px;
-}
+@media screen and (max-width: 767px) {
 
-@media screen and (max-width: 991px) {
  .franchise-list-container {
   display: block;
  }
- .active-franchises {
-  margin-bottom: 50px;
- }
- .defunct-franchises {
-  margin: 0 150px;
- }
- .defunct-franchise-header {
-  margin-left: 152px;
+ .active-franchises-container, .defunct-franchises-container {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
  }
 }

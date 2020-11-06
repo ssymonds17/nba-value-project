@@ -1,25 +1,23 @@
 
 .navbar-container {
  margin-bottom: 80px;
+ z-index: 1;
 }
 
 .navbar {
+ display: flex;
+ justify-content: space-between;
  height: 65px;
  padding: 0px;
  background-color: #46a04a;
  align-items: flex-start;
 }
 
-.nav-btn:active {
- background-color: #46a04a;
- border-color: #46a04a;
-}
-
 .nav-btn {
  top: 0;
  height: 60px;
  border-radius: 0px;
- width: 11.25rem;
+ width: 12.5vw;
  font-weight: 450;
  color: black;
  background-color: #f2f2f2;
@@ -46,3 +44,122 @@
  color: white;
  box-shadow: none;
 }
+
+#menu-toggle, .hamburger, .nav-links, .home-brand {
+ display: none;
+}
+
+@media screen and (max-width: 650px) {
+
+ .navbar {
+  display: none;
+ }
+
+ nav {
+  position: fixed;
+  flex: 1;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-direction: column;
+  background-color: #f2f2f2;
+  width: 100%;
+  border-bottom: solid 5px;
+  border-bottom-color: #46a04a;
+  z-index: 1;
+ }
+
+ .nav-links {
+   display: none;
+ }
+
+ .hamburger {
+   display: flex;
+   transform: rotate(90deg);
+   font-size: 45px;
+   margin-right: 5vw;
+   margin-bottom: 0;
+ }
+
+ .hamburger:hover {
+  cursor: pointer;
+ }
+
+ #menu-toggle:checked~.nav-links {
+   display: flex;
+   flex-direction: column;
+   position: relative;
+   background: #f2f2f2;
+   button {
+    width: 650px;
+   }
+ }
+
+ .nav-btn-drop {
+  display: block;
+  padding-left: 5vw;
+  height: 50px;
+  border-radius: 0px;
+  font-weight: 450;
+  color: black;
+  background-color: #f2f2f2;
+  border-color: #f2f2f2;
+ }
+ 
+ .nav-btn-drop:hover {
+  background-color: #46a04a;
+  border-color: #46a04a;
+  color: white;
+ }
+ 
+ .nav-btn-drop:focus {
+  background-color: #46a04a;
+  border-color: #46a04a;
+  color: white;
+  box-shadow: none;
+ }
+ 
+ .nav-btn-drop:active {
+  background-color: #46a04a;
+  border-color: #46a04a;
+  color: white;
+  box-shadow: none;
+ }
+
+ .home-brand {
+  display: block;
+  font-size: 4.8vw;
+  position: absolute;
+  left: 0;
+  height: 67.5px;
+  border-radius: 0px;
+  width: 77%;
+  background-color: #46a04a;
+  border-color: #46a04a;
+  box-shadow: none;
+  text-align: center;
+ }
+ 
+ .home-brand:hover {
+  background-color: #46a04a;
+  border-color: #46a04a;
+  color: white;
+ }
+ 
+ .home-brand:focus {
+  background-color: #46a04a;
+  border-color: #46a04a;
+  color: white;
+  box-shadow: none;
+ }
+ 
+ .home-brand:active {
+  background-color: #46a04a;
+  border-color: #46a04a;
+  color: white;
+  box-shadow: none;
+ } 
+}
+

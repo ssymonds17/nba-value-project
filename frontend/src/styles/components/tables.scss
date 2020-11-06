@@ -26,6 +26,7 @@ th {
  background-color: #46a04a;
  color: white;
  font-weight: bold;
+ z-index: 0;
 }
 
 tr:hover {
@@ -34,14 +35,6 @@ tr:hover {
 
 .score-column {
  font-weight: bold;
-}
-
-.season-range-left {
- border-left: 1px solid black !important;
-}
-
-.season-range-right {
- border-right: 1px solid black;
 }
 
 //Styles by view
@@ -149,4 +142,16 @@ tr:hover {
 // Team list
 .active-franchises, .defunct-franchises {
  height: 435px;
+ -ms-overflow-style: none;  // IE and Edge
+  scrollbar-width: none; // Firefox
+}
+.active-franchises::-webkit-scrollbar, .defunct-franchises::-webkit-scrollbar {
+ display: none;
+}
+
+@media screen and (max-width: 767px) {
+
+ .active-franchises, .defunct-franchises {
+  padding-left: 100px;
+ }
 }
