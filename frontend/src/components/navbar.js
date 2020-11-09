@@ -8,7 +8,7 @@ import '../styles/components/navbar.scss';
 export class NavBar extends React.Component {
 
  resetNavbar = () => {
-  document.getElementById('menu-toggle').click();
+  document.getElementById('menu-toggle').checked = false;
  }
 
  render() {
