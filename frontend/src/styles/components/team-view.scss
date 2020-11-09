@@ -29,10 +29,13 @@
 .team-header-container {
  display: block;
 }
+.team-value-header, .team-btn-container {
+ width: 100%;
+}
 .season-change-btn-container {
  float: none;
- margin-top: auto;
- padding-top: auto;
+ margin-top: 0;
+ padding-top: 0;
 }
 .index-btn-container {
  float: none;
