@@ -2,18 +2,18 @@
  font-size: 30px;
 }
 
-ul {
+.alphabet-container ul {
  display: flex;
  list-style-type: none;
  padding-left: 0;
 }
 
-ul li {
+.alphabet-container ul li {
  width: 3.8vw;
 }
 
 @media screen and (max-width: 775px) {
- ul {
+ .alphabet-container ul {
   display: grid;
   grid-template-columns: 1fr repeat(12, 2fr);
   column-gap: 15px;
@@ -21,7 +21,7 @@ ul li {
 }
 
 @media screen and (max-width: 400px) {
- ul {
+ .alphabet-container ul {
   display: grid;
   grid-template-columns: 1fr repeat(8, 3fr);
   column-gap: 25px;

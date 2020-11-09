@@ -16,6 +16,8 @@ import { OverallSeasonView } from './overall-season-view';
 import { RegularSeasonView } from './regular-season-view';
 import { PlayoffSeasonView } from './playoff-season-view';
 import { AboutView } from './about';
+import { Footer } from './footer';
+import { HomeView } from './home-view';
 
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
@@ -26,7 +28,7 @@ export default class MainView extends React.Component {
       <Router>
         <Container className="main-view">
           <NavBar />
-          <Route exact path="/" render={() => <NavBar />} />
+          <Route exact path="/" render={() => <HomeView />} />
           <Route exact path="/players" render={() => <PlayerListView />} />
           <Route exact path="/playerlist/:char" render={() => <PlayerListByCharView />} />
           <Route exact path="/players/:playerID" render={() => <PlayerView />} />
@@ -44,6 +46,7 @@ export default class MainView extends React.Component {
           <Route exact path="/seasons/playoffs/:league/:year" render={() => <PlayoffSeasonView />} />
           <Route exact path="/about" render={() => <AboutView />} />
         </Container>
+        <Footer />
       </Router>
     );
   }

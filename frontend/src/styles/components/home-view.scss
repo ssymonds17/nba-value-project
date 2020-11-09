@@ -1,0 +1,22 @@
+.home-header {
+ display: flex;
+ justify-content: center;
+ flex-direction: column;
+ height: 560px;
+ text-align: center;
+ h1 {
+  font-size: 50px;
+ }
+ h3 {
+  font-size: 35px;
+ }
+}
+
+@media screen and (max-width: 450px) {
+ h1 {
+  font-size: 2.5rem;
+ }
+ h3 {
+  font-size: 20px;
+ }
+}

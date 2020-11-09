@@ -1,7 +1,7 @@
 .custom-btn {
  border-radius: 5px;
  color: black;
- background-color: #f2f2f2;
+ background-color: #fdfdfd;
  border-color: black;
  outline: none;
  margin: 3px;
@@ -14,14 +14,14 @@
 }
 
 .custom-btn:focus {
- background-color: #f2f2f2;
+ background-color: #fdfdfd;
  border-color: black;
  color: black;
  box-shadow: none;
 }
 
 .custom-btn:active {
- background-color: #f2f2f2 !important;
+ background-color: #fdfdfd !important;
  border-color: black !important;
  color: black !important;
  box-shadow: none;

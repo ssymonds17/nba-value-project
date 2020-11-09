@@ -162,7 +162,7 @@ export class AboutAdjustments extends React.Component {
           <strong>Playoff win total (Step B - Win Percentage</strong>: The second step in calculating the win total is by factoring in the team’s win percentage. As a flat 20 wins are awarded per series win, taking into account win percentage awards the teams who won those series in 4 or 5 games instead of 7 games, and at the top end, the teams who won the title with minimal losses (2017 Golden State  Warriors, 2001 Los Angeles Lakers, 1991 Chicago Bulls or 1983 Philadelphia 76ers). This also highlights and penalises those teams who may have won the title, but struggled on their way to victory (2008 Boston Celtics).
    </p>
         <p>
-          The table below shows how the win total from Step A is adjusted by win percentage for various NBA Champions.
+          The table below shows how the win total determined by rounds (Step A) is adjusted by win percentage (Step B) for various NBA Champions.
    </p>
         <br />
         <div className="table-container" style={{ height: '330px' }}>
@@ -172,9 +172,9 @@ export class AboutAdjustments extends React.Component {
                 <th>Team</th>
                 <th>Year</th>
                 <th>Round</th>
-                <th>Win Total (Rounds)</th>
+                <th>Win Total (Step A)</th>
                 <th>Win %</th>
-                <th>Adj. Win Total</th>
+                <th>Win Total (Step B)</th>
               </tr>
             </thead>
             <tbody>

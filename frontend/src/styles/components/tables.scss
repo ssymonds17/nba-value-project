@@ -30,7 +30,11 @@ th {
 }
 
 tr:hover {
- background-color: #a2f6a7;
+ background-color: #3A8340;
+ color: white;
+ a {
+  color: white;
+ }
 }
 
 .score-column {
@@ -152,12 +156,14 @@ tr:hover {
   scrollbar-width: none; // Firefox
 }
 .active-franchises::-webkit-scrollbar, .defunct-franchises::-webkit-scrollbar {
- display: none;
+ display: none; // Chrome
 }
 
 @media screen and (max-width: 767px) {
 
  .active-franchises, .defunct-franchises {
-  padding-left: 100px;
+  th {
+    width: 25%;
+  }
  }
 }
