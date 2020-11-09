@@ -29,6 +29,7 @@ mongoose.connect(process.env.CONNECTION_URI, {
   useUnifiedTopology: true
 });
 
+
 // PATHS ------------------------------------------------------------
 
 // GET entire player list

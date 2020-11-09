@@ -24,3 +24,15 @@
 .index-btn-container {
  float: right;
 }
+
+@media screen and (max-width: 500px) {
+ h1 {
+  font-size: 30px;
+ }
+ h3 {
+  font-size: 20px;
+ }
+ .team-button-container {
+  font-size: 15px;
+ }
+}
