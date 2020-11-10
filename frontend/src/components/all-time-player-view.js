@@ -53,7 +53,7 @@ export class AllTimePlayerView extends React.Component {
                 playerList.map(player => (
                   <tr className="player-name" key={player._id}>
                     <td>{player.rank}</td>
-                    <td><Link to={`/players/${player.player_id}`}>{player.name}</Link></td>
+                    <td className="sticky-col"><Link to={`/players/${player.player_id}`}>{player.name}</Link></td>
                     <td className="score-column">{Number(player.career_value).toFixed(2)}</td>
                     <td>{Number(player.career_total).toFixed(2)}</td>
                     <td>{Number(player.peak_avg).toFixed(2)}</td>
