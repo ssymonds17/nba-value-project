@@ -40,7 +40,7 @@ export class AllTimePlayerView extends React.Component {
             <thead>
               <tr className="first-row">
                 <th>Rank</th>
-                <th>Name</th>
+                <th className="sticky-col">Name</th>
                 <th>Career Value</th>
                 <th>Career Total</th>
                 <th>Peak Average</th>
