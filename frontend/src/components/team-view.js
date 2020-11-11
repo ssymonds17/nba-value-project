@@ -132,7 +132,6 @@ export class TeamView extends React.Component {
             <h1>{team[0].year} {team[0].team_full_name}</h1>
             <div>
               <h3>{team[0].team_result} ({team[0].team_record})</h3>
-              <h3>Team Total: {totalCareerValue}</h3>
             </div>
           </div>
           <div className="team-btn-container">
