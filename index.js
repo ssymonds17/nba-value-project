@@ -19,7 +19,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 const corsOptions = {
-  origin: 'https://nba-value-reference.herokuapp.com/',
+  origin: ['https://nba-value-reference.herokuapp.com/', 'http://nba-value-reference.herokuapp.com/', 'http://localhost:3000'],
   optionsSuccessStatus: 200
 }
 
@@ -28,7 +28,6 @@ mongoose.connect(process.env.CONNECTION_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
-
 
 // PATHS ------------------------------------------------------------
 
