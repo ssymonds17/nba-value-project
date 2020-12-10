@@ -18,6 +18,7 @@ export class RegularSeasonView extends React.Component {
 
   componentDidMount() {
     let seasonID = window.location.pathname;
+    console.log(seasonID);
     this.props = seasonID;
     this.getSeasonData(seasonID);
   }

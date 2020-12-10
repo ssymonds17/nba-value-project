@@ -36,7 +36,7 @@ mongoose.connect(process.env.CONNECTION_URI, {
 // PATHS ------------------------------------------------------------
 
 // GET entire player list
-app.get("/players", cors(corsOptions), (req, res) => {
+app.get("v0/players", cors(corsOptions), (req, res) => {
   let lastNameSort = { last_name: 1 };
   PlayerLists.find()
     .sort(lastNameSort)
