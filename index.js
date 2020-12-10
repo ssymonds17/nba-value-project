@@ -124,7 +124,7 @@ app.get("v0/teams/:franchiseCode/:year", cors(corsOptions), (req, res) => {
 });
 
 // GET regular season data by year and league
-app.get("v0/seasons/regular/:league/:year", cors(corsOptions), (req, res) => {
+app.get("/v0/seasons/regular/:league/:year", cors(corsOptions), (req, res) => {
   let scoreSort = { score: -1 };
   RegularSeasons.find({
     league: req.params.league,
