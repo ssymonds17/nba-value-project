@@ -22,7 +22,9 @@ export class GreatestSeasonsPlayoffsView extends React.Component {
 
   getSeasonList = () => {
     axios
-      .get(`v0/rankings/seasons/playoffs`)
+      .get(
+        `https://nba-value-reference.herokuapp.com/v0/rankings/seasons/playoffs`
+      )
       .then(response => {
         this.setState({
           seasonList: response.data

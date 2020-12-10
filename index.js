@@ -36,7 +36,7 @@ mongoose.connect(process.env.CONNECTION_URI, {
 // PATHS ------------------------------------------------------------
 
 // GET entire player list
-app.get("v0/players", cors(corsOptions), (req, res) => {
+app.get("/v0/players", cors(corsOptions), (req, res) => {
   let lastNameSort = { last_name: 1 };
   PlayerLists.find()
     .sort(lastNameSort)
@@ -50,7 +50,7 @@ app.get("v0/players", cors(corsOptions), (req, res) => {
 });
 
 // GET player list by letter
-app.get("v0/playerlist/:char", cors(corsOptions), (req, res) => {
+app.get("/v0/playerlist/:char", cors(corsOptions), (req, res) => {
   let char = req.params.char;
   PlayerLists.find({ last_name: { $regex: "^" + char + ".*", $options: "i" } })
     .then(players => {
@@ -63,7 +63,7 @@ app.get("v0/playerlist/:char", cors(corsOptions), (req, res) => {
 });
 
 // GET player data by player ID
-app.get("v0/players/:playerID", cors(corsOptions), (req, res) => {
+app.get("/v0/players/:playerID", cors(corsOptions), (req, res) => {
   let yearSort = { year: 1 };
   Players.find({ player_id: req.params.playerID })
     .sort(yearSort)
@@ -77,7 +77,7 @@ app.get("v0/players/:playerID", cors(corsOptions), (req, res) => {
 });
 
 // GET list of franchises seasons by franchise code
-app.get("v0/teams/:franchiseCode", cors(corsOptions), (req, res) => {
+app.get(/"/v0/teams/:franchiseCode", cors(corsOptions), (req, res) => {
   let yearSort = { year: -1 };
   FranchiseSeasons.find({
     franchise_code: req.params.franchiseCode
@@ -93,7 +93,7 @@ app.get("v0/teams/:franchiseCode", cors(corsOptions), (req, res) => {
 });
 
 // GET franchise code by team abbreviation
-app.get("v0/franchise/:teamID", cors(corsOptions), (req, res) => {
+app.get("/v0/franchise/:teamID", cors(corsOptions), (req, res) => {
   FranchiseLists.find({
     team_abbreviation: req.params.teamID
   })
@@ -107,7 +107,7 @@ app.get("v0/franchise/:teamID", cors(corsOptions), (req, res) => {
 });
 
 // GET team data by team abbreviation and year
-app.get("v0/teams/:franchiseCode/:year", cors(corsOptions), (req, res) => {
+app.get("/v0/teams/:franchiseCode/:year", cors(corsOptions), (req, res) => {
   let nameSort = { name: 1 };
   Teams.find({
     franchise_code: req.params.franchiseCode,
@@ -141,7 +141,7 @@ app.get("/v0/seasons/regular/:league/:year", cors(corsOptions), (req, res) => {
 });
 
 // GET playoff data by league and year
-app.get("v0/seasons/playoffs/:league/:year", cors(corsOptions), (req, res) => {
+app.get("//v0/seasons/playoffs/:league/:year", cors(corsOptions), (req, res) => {
   let scoreSort = { score: -1 };
   Playoffs.find({
     league: req.params.league,
@@ -158,7 +158,7 @@ app.get("v0/seasons/playoffs/:league/:year", cors(corsOptions), (req, res) => {
 });
 
 // GET total season data (RS + PO) by league and year
-app.get("v0/seasons/overall/:league/:year", cors(corsOptions), (req, res) => {
+app.get("/v0/seasons/overall/:league/:year", cors(corsOptions), (req, res) => {
   let scoreSort = { total_season_value: -1 };
   Players.find({
     league: req.params.league,
@@ -175,7 +175,7 @@ app.get("v0/seasons/overall/:league/:year", cors(corsOptions), (req, res) => {
 });
 
 // GET greatest all time player list
-app.get("v0/rankings/players", cors(corsOptions), (req, res) => {
+app.get("/v0/rankings/players", cors(corsOptions), (req, res) => {
   let rankSort = { rank: 1 };
   AllTimePlayers.find()
     .sort(rankSort)
@@ -190,7 +190,7 @@ app.get("v0/rankings/players", cors(corsOptions), (req, res) => {
 });
 
 // GET greatest all time team list
-app.get("v0/rankings/teams", cors(corsOptions), (req, res) => {
+app.get("/v0/rankings/teams", cors(corsOptions), (req, res) => {
   let rankSort = { rank: 1 };
   AllTimeTeams.find()
     .sort(rankSort)
@@ -205,7 +205,7 @@ app.get("v0/rankings/teams", cors(corsOptions), (req, res) => {
 });
 
 // GET greatest all time seasons list
-app.get("v0/rankings/seasons/overall", cors(corsOptions), (req, res) => {
+app.get("/v0/rankings/seasons/overall", cors(corsOptions), (req, res) => {
   let scoreSort = { total_season_value: -1 };
   Players.find()
     .sort(scoreSort)
@@ -220,7 +220,7 @@ app.get("v0/rankings/seasons/overall", cors(corsOptions), (req, res) => {
 });
 
 // GET greatest all time regular seasons list
-app.get("v0/rankings/seasons/regularseason", cors(corsOptions), (req, res) => {
+app.get("/v0/rankings/seasons/regularseason", cors(corsOptions), (req, res) => {
   let RsScoreSort = { regularseason__score: -1 };
   Players.find()
     .sort(RsScoreSort)
@@ -235,7 +235,7 @@ app.get("v0/rankings/seasons/regularseason", cors(corsOptions), (req, res) => {
 });
 
 // GET greatest all time playoff season list
-app.get("v0/rankings/seasons/playoffs", cors(corsOptions), (req, res) => {
+app.get("/v0/rankings/seasons/playoffs", cors(corsOptions), (req, res) => {
   let playoffScoreSort = { playoff__score: -1 };
   Players.find()
     .sort(playoffScoreSort)
@@ -250,7 +250,7 @@ app.get("v0/rankings/seasons/playoffs", cors(corsOptions), (req, res) => {
 });
 
 // GET greatest season by age
-app.get("v0/rankings/seasons/age/:age", cors(corsOptions), (req, res) => {
+app.get("/v0/rankings/seasons/age/:age", cors(corsOptions), (req, res) => {
   let scoreSort = { total_season_value: -1 };
   Players.find({
     age: req.params.age

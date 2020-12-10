@@ -22,7 +22,9 @@ export class GreatestSeasonsRSView extends React.Component {
 
   getSeasonList = () => {
     axios
-      .get(`v0/rankings/seasons/regularseason`)
+      .get(
+        `https://nba-value-reference.herokuapp.com/v0/rankings/seasons/regularseason`
+      )
       .then(response => {
         this.setState({
           seasonList: response.data

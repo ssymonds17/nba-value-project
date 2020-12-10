@@ -21,7 +21,7 @@ export class PlayerView extends React.Component {
 
   getPlayerData = playerID => {
     axios
-      .get(`v0${playerID}`)
+      .get(`https://nba-value-reference.herokuapp.com/v0${playerID}`)
       .then(response => {
         response.data.sort((a, b) => a.year - b.year);
         this.setState({

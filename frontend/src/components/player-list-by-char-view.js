@@ -29,7 +29,7 @@ export class PlayerListByCharView extends React.Component {
 
   getPlayerList = char => {
     axios
-      .get(`v0${char}`)
+      .get(`https://nba-value-reference.herokuapp.com/v0${char}`)
       .then(response => {
         this.setState({
           playerList: response.data
