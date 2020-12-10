@@ -18,7 +18,6 @@ export class RegularSeasonView extends React.Component {
 
   componentDidMount() {
     let seasonID = window.location.pathname;
-    console.log(seasonID);
     this.props = seasonID;
     this.getSeasonData(seasonID);
   }
@@ -32,7 +31,7 @@ export class RegularSeasonView extends React.Component {
 
   getSeasonData = seasonID => {
     axios
-      .get(`v0${seasonID}`)
+      .get(`https://nba-value-reference.herokuapp.com/v0${seasonID}`)
       .then(response => {
         this.setState({
           season: response.data
