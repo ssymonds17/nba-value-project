@@ -21,7 +21,9 @@ export class FranchiseHistoryView extends React.Component {
 
   getFranchiseHistory = franchiseCode => {
     axios
-      .get(`https://nba-value-reference.herokuapp.com/v0${franchiseCode}`)
+      .get(
+        `https://nba-value-reference.herokuapp.com/v0/teams/${franchiseCode}`
+      )
       .then(response => {
         this.setState({
           franchise: response.data
