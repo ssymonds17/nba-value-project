@@ -1,18 +1,18 @@
-import React from 'react';
-import axios from 'axios';
-import Table from 'react-bootstrap/Table';
-import Button from 'react-bootstrap/Button';
-import { Link } from 'react-router-dom';
-import '../styles/components/index.scss';
-import '../styles/components/tables.scss';
-import '../styles/components/buttons.scss';
-import '../styles/components/season-view.scss';
+import React from "react";
+import axios from "axios";
+import Table from "react-bootstrap/Table";
+import Button from "react-bootstrap/Button";
+import { Link } from "react-router-dom";
+import "../styles/components/index.scss";
+import "../styles/components/tables.scss";
+import "../styles/components/buttons.scss";
+import "../styles/components/season-view.scss";
 
 export class PlayoffSeasonView extends React.Component {
   constructor() {
     super();
     this.state = {
-      season: [{}],
+      season: [{}]
     };
   }
 
@@ -29,50 +29,63 @@ export class PlayoffSeasonView extends React.Component {
     }
   }
 
-  getSeasonData = (seasonID) => {
-    axios.get(`https://nba-value-reference.herokuapp.com${seasonID}`)
-      .then((response) => {
+  getSeasonData = seasonID => {
+    axios
+      .get(`v0${seasonID}`)
+      .then(response => {
         this.setState({
           season: response.data
         });
       })
       .catch(() => {
-        console.log('data has not been received');
-      })
-  }
+        console.log("data has not been received");
+      });
+  };
 
   setPreviousSeasonButtonStyle() {
-    let styles = {}
-    if (this.state.season[0].year === 1947 && this.state.season[0].league === 'NBA') {
+    let styles = {};
+    if (
+      this.state.season[0].year === 1947 &&
+      this.state.season[0].league === "NBA"
+    ) {
       const firstStyle = {
-        display: 'none'
-      }
-      styles = Object.assign(styles, firstStyle)
+        display: "none"
+      };
+      styles = Object.assign(styles, firstStyle);
     }
-    if (this.state.season[0].year === 1968 && this.state.season[0].league === 'ABA') {
+    if (
+      this.state.season[0].year === 1968 &&
+      this.state.season[0].league === "ABA"
+    ) {
       const secondStyle = {
-        display: 'none'
-      }
-      styles = Object.assign(styles, secondStyle)
+        display: "none"
+      };
+      styles = Object.assign(styles, secondStyle);
     }
-    return styles
+    return styles;
   }
 
   setNextSeasonButtonStyle() {
-    let styles = {}
-    if (this.state.season[0].year === 2020 && this.state.season[0].league === 'NBA') {
+    let styles = {};
+    if (
+      this.state.season[0].year === 2020 &&
+      this.state.season[0].league === "NBA"
+    ) {
       const firstStyle = {
-        display: 'none'
-      }
-      styles = Object.assign(styles, firstStyle)
+        display: "none"
+      };
+      styles = Object.assign(styles, firstStyle);
     }
-    if (this.state.season[0].year === 1976 && this.state.season[0].league === 'ABA') {
+    if (
+      this.state.season[0].year === 1976 &&
+      this.state.season[0].league === "ABA"
+    ) {
       const secondStyle = {
-        display: 'none'
-      }
-      styles = Object.assign(styles, secondStyle)
+        display: "none"
+      };
+      styles = Object.assign(styles, secondStyle);
     }
-    return styles
+    return styles;
   }
 
   render() {
@@ -82,15 +95,47 @@ export class PlayoffSeasonView extends React.Component {
     return (
       <div>
         <div className="season-view-header-container">
-          <h1>{season[0].league} {season[0].year} Playoffs</h1>
+          <h1>
+            {season[0].league} {season[0].year} Playoffs
+          </h1>
           <div className="season-view-btn-container">
             <div className="change-btn-container">
-              <Link to={`/seasons/overall/${season[0].league}/${season[0].year}`}><Button className="custom-btn season-btn">Overall</Button></Link>
-              <Link to={`/seasons/regular/${season[0].league}/${season[0].year}`}><Button className="custom-btn season-btn">Regular Season</Button></Link>
+              <Link
+                to={`/seasons/overall/${season[0].league}/${season[0].year}`}
+              >
+                <Button className="custom-btn season-btn">Overall</Button>
+              </Link>
+              <Link
+                to={`/seasons/regular/${season[0].league}/${season[0].year}`}
+              >
+                <Button className="custom-btn season-btn">
+                  Regular Season
+                </Button>
+              </Link>
             </div>
             <div className="change-btn-container">
-              <Link to={`/seasons/playoffs/${season[0].league}/${season[0].year - 1}`}><Button className="custom-btn season-btn" style={this.setPreviousSeasonButtonStyle()}>{`<<`} {season[0].year - 1} Season</Button></Link>
-              <Link to={`/seasons/playoffs/${season[0].league}/${season[0].year + 1}`}><Button className="custom-btn season-btn" style={this.setNextSeasonButtonStyle()}>{season[0].year + 1} Season {`>>`}</Button></Link>
+              <Link
+                to={`/seasons/playoffs/${season[0].league}/${season[0].year -
+                  1}`}
+              >
+                <Button
+                  className="custom-btn season-btn"
+                  style={this.setPreviousSeasonButtonStyle()}
+                >
+                  {`<<`} {season[0].year - 1} Season
+                </Button>
+              </Link>
+              <Link
+                to={`/seasons/playoffs/${season[0].league}/${season[0].year +
+                  1}`}
+              >
+                <Button
+                  className="custom-btn season-btn"
+                  style={this.setNextSeasonButtonStyle()}
+                >
+                  {season[0].year + 1} Season {`>>`}
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
@@ -115,25 +160,36 @@ export class PlayoffSeasonView extends React.Component {
               </tr>
             </thead>
             <tbody>
-              {
-                season.map(season => (
-                  <tr key={season._id}>
-                    <td>{rank += 1}</td>
-                    <td><Link to={`/players/${season.player_id}`}>{season.name}</Link></td>
-                    <td className="score-column">{Number(season.score).toFixed(2)}</td>
-                    <td>{season.position}</td>
-                    <td>{season.age}</td>
-                    <td><Link to={`/teams/${season.team_abbreviation}/${season.year}`}>{season.team_abbreviation}</Link></td>
-                    <td>{season.games}</td>
-                    <td>{Number(season.mpg).toFixed(1)}</td>
-                    <td>{Number(season.win_shares_48).toFixed(3)}</td>
-                    <td>{Number(season.win_shares).toFixed(1)}</td>
-                    <td>{Number(season.bpm).toFixed(1)}</td>
-                    <td>{Number(season.vorp).toFixed(1)}</td>
-                    <td>{season.team_record}</td>
-                    <td>{season.team_result}</td>
-                  </tr>
-                ))}
+              {season.map(season => (
+                <tr key={season._id}>
+                  <td>{(rank += 1)}</td>
+                  <td>
+                    <Link to={`/players/${season.player_id}`}>
+                      {season.name}
+                    </Link>
+                  </td>
+                  <td className="score-column">
+                    {Number(season.score).toFixed(2)}
+                  </td>
+                  <td>{season.position}</td>
+                  <td>{season.age}</td>
+                  <td>
+                    <Link
+                      to={`/teams/${season.team_abbreviation}/${season.year}`}
+                    >
+                      {season.team_abbreviation}
+                    </Link>
+                  </td>
+                  <td>{season.games}</td>
+                  <td>{Number(season.mpg).toFixed(1)}</td>
+                  <td>{Number(season.win_shares_48).toFixed(3)}</td>
+                  <td>{Number(season.win_shares).toFixed(1)}</td>
+                  <td>{Number(season.bpm).toFixed(1)}</td>
+                  <td>{Number(season.vorp).toFixed(1)}</td>
+                  <td>{season.team_record}</td>
+                  <td>{season.team_result}</td>
+                </tr>
+              ))}
             </tbody>
           </Table>
         </div>

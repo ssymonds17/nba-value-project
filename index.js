@@ -1,10 +1,10 @@
-const express = require('express');
+const express = require("express");
 const app = express();
-const bodyParser = require('body-parser');
-const mongoose = require('mongoose');
-const cors = require('cors');
-const path = require('path');
-const Models = require('./models.js');
+const bodyParser = require("body-parser");
+const mongoose = require("mongoose");
+const cors = require("cors");
+const path = require("path");
+const Models = require("./models.js");
 const Players = Models.Player;
 const Teams = Models.Team;
 const PlayerLists = Models.PlayerList;
@@ -19,9 +19,13 @@ app.use(bodyParser.json());
 app.use(cors());
 
 const corsOptions = {
-  origin: ['https://nba-value-reference.herokuapp.com/', 'http://nba-value-reference.herokuapp.com/', 'http://localhost:3000'],
+  origin: [
+    "https://nba-value-reference.herokuapp.com/",
+    "http://nba-value-reference.herokuapp.com/",
+    "http://localhost:3000"
+  ],
   optionsSuccessStatus: 200
-}
+};
 
 // Connection with MongoDB. CONNECTION_URI variable established in Heroku to protect database security
 mongoose.connect(process.env.CONNECTION_URI, {
@@ -32,265 +36,235 @@ mongoose.connect(process.env.CONNECTION_URI, {
 // PATHS ------------------------------------------------------------
 
 // GET entire player list
-app.get('/players',
-  cors(corsOptions),
-  (req, res) => {
-    let lastNameSort = { last_name: 1 };
-    PlayerLists.find()
-      .sort(lastNameSort)
-      .then((players) => {
-        res.status(200).json(players);
-      })
-      .catch((e) => {
-        console.error(e);
-        res.status(500).send('Error ' + e);
-      });
-  });
+app.get("/players", cors(corsOptions), (req, res) => {
+  let lastNameSort = { last_name: 1 };
+  PlayerLists.find()
+    .sort(lastNameSort)
+    .then(players => {
+      res.status(200).json(players);
+    })
+    .catch(e => {
+      console.error(e);
+      res.status(500).send("Error " + e);
+    });
+});
 
-// GET player list by letter 
-app.get('/playerlist/:char',
-  cors(corsOptions),
-  (req, res) => {
-    let char = req.params.char;
-    PlayerLists.find({ last_name: { $regex: '^' + char + '.*', $options: 'i' } })
-      .then((players) => {
-        res.status(200).json(players);
-      })
-      .catch((e) => {
-        console.error(e);
-        res.status(500).send('Error ' + e);
-      });
-  });
+// GET player list by letter
+app.get("v0/playerlist/:char", cors(corsOptions), (req, res) => {
+  let char = req.params.char;
+  PlayerLists.find({ last_name: { $regex: "^" + char + ".*", $options: "i" } })
+    .then(players => {
+      res.status(200).json(players);
+    })
+    .catch(e => {
+      console.error(e);
+      res.status(500).send("Error " + e);
+    });
+});
 
 // GET player data by player ID
-app.get('/players/:playerID',
-  cors(corsOptions),
-  (req, res) => {
-    let yearSort = { year: 1 };
-    Players.find({ player_id: req.params.playerID })
-      .sort(yearSort)
-      .then((player) => {
-        res.status(200).json(player);
-      })
-      .catch((e) => {
-        console.error(e);
-        res.status(500).send('Error ' + e);
-      });
-  });
+app.get("v0/players/:playerID", cors(corsOptions), (req, res) => {
+  let yearSort = { year: 1 };
+  Players.find({ player_id: req.params.playerID })
+    .sort(yearSort)
+    .then(player => {
+      res.status(200).json(player);
+    })
+    .catch(e => {
+      console.error(e);
+      res.status(500).send("Error " + e);
+    });
+});
 
 // GET list of franchises seasons by franchise code
-app.get('/teams/:franchiseCode',
-  cors(corsOptions),
-  (req, res) => {
-    let yearSort = { year: -1 };
-    FranchiseSeasons.find({
-      franchise_code: req.params.franchiseCode
+app.get("v0/teams/:franchiseCode", cors(corsOptions), (req, res) => {
+  let yearSort = { year: -1 };
+  FranchiseSeasons.find({
+    franchise_code: req.params.franchiseCode
+  })
+    .sort(yearSort)
+    .then(franchise => {
+      res.status(200).json(franchise);
     })
-      .sort(yearSort)
-      .then((franchise) => {
-        res.status(200).json(franchise);
-      })
-      .catch((e) => {
-        console.error(e);
-        res.status(500).send('Error ' + e);
-      });
-  });
+    .catch(e => {
+      console.error(e);
+      res.status(500).send("Error " + e);
+    });
+});
 
 // GET franchise code by team abbreviation
-app.get('/franchise/:teamID',
-  cors(corsOptions),
-  (req, res) => {
-    FranchiseLists.find({
-      team_abbreviation: req.params.teamID
+app.get("v0/franchise/:teamID", cors(corsOptions), (req, res) => {
+  FranchiseLists.find({
+    team_abbreviation: req.params.teamID
+  })
+    .then(franchise => {
+      res.status(200).json(franchise);
     })
-      .then((franchise) => {
-        res.status(200).json(franchise);
-      })
-      .catch((e) => {
-        console.error(e);
-        res.status(500).send('Error ' + e);
-      });
-  });
+    .catch(e => {
+      console.error(e);
+      res.status(500).send("Error " + e);
+    });
+});
 
 // GET team data by team abbreviation and year
-app.get('/teams/:franchiseCode/:year',
-  cors(corsOptions),
-  (req, res) => {
-    let nameSort = { name: 1 };
-    Teams.find({
-      franchise_code: req.params.franchiseCode,
-      year: req.params.year
+app.get("v0/teams/:franchiseCode/:year", cors(corsOptions), (req, res) => {
+  let nameSort = { name: 1 };
+  Teams.find({
+    franchise_code: req.params.franchiseCode,
+    year: req.params.year
+  })
+    .sort(nameSort)
+    .then(team => {
+      res.status(200).json(team);
     })
-      .sort(nameSort)
-      .then((team) => {
-        res.status(200).json(team);
-      })
-      .catch((e) => {
-        console.error(e);
-        res.status(500).send('Error ' + e);
-      });
-  });
+    .catch(e => {
+      console.error(e);
+      res.status(500).send("Error " + e);
+    });
+});
 
 // GET regular season data by year and league
-app.get('/seasons/regular/:league/:year',
-  cors(corsOptions),
-  (req, res) => {
-    let scoreSort = { score: -1 };
-    RegularSeasons.find({
-      league: req.params.league,
-      year: req.params.year
+app.get("v0/seasons/regular/:league/:year", cors(corsOptions), (req, res) => {
+  let scoreSort = { score: -1 };
+  RegularSeasons.find({
+    league: req.params.league,
+    year: req.params.year
+  })
+    .sort(scoreSort)
+    .then(regularseason => {
+      res.status(200).json(regularseason);
     })
-      .sort(scoreSort)
-      .then((regularseason) => {
-        res.status(200).json(regularseason);
-      })
-      .catch((e) => {
-        console.error(e);
-        res.status(500).send('Error ' + e);
-      });
-  });
+    .catch(e => {
+      console.error(e);
+      res.status(500).send("Error " + e);
+    });
+});
 
 // GET playoff data by league and year
-app.get('/seasons/playoffs/:league/:year',
-  cors(corsOptions),
-  (req, res) => {
-    let scoreSort = { score: -1 };
-    Playoffs.find({
-      league: req.params.league,
-      year: req.params.year
+app.get("v0/seasons/playoffs/:league/:year", cors(corsOptions), (req, res) => {
+  let scoreSort = { score: -1 };
+  Playoffs.find({
+    league: req.params.league,
+    year: req.params.year
+  })
+    .sort(scoreSort)
+    .then(playoff => {
+      res.status(200).json(playoff);
     })
-      .sort(scoreSort)
-      .then((playoff) => {
-        res.status(200).json(playoff);
-      })
-      .catch((e) => {
-        console.error(e);
-        res.status(500).send('Error ' + e);
-      });
-  });
+    .catch(e => {
+      console.error(e);
+      res.status(500).send("Error " + e);
+    });
+});
 
 // GET total season data (RS + PO) by league and year
-app.get('/seasons/overall/:league/:year',
-  cors(corsOptions),
-  (req, res) => {
-    let scoreSort = { total_season_value: -1 };
-    Players.find({
-      league: req.params.league,
-      year: req.params.year
+app.get("v0/seasons/overall/:league/:year", cors(corsOptions), (req, res) => {
+  let scoreSort = { total_season_value: -1 };
+  Players.find({
+    league: req.params.league,
+    year: req.params.year
+  })
+    .sort(scoreSort)
+    .then(season => {
+      res.status(200).json(season);
     })
-      .sort(scoreSort)
-      .then((season) => {
-        res.status(200).json(season);
-      })
-      .catch((e) => {
-        console.error(e);
-        res.status(500).send('Error ' + e);
-      });
-  });
+    .catch(e => {
+      console.error(e);
+      res.status(500).send("Error " + e);
+    });
+});
 
 // GET greatest all time player list
-app.get('/rankings/players',
-  cors(corsOptions),
-  (req, res) => {
-    let rankSort = { rank: 1 };
-    AllTimePlayers.find()
-      .sort(rankSort)
-      .limit(250)
-      .then((ranking) => {
-        res.status(200).json(ranking);
-      })
-      .catch((e) => {
-        console.error(e);
-        res.status(500).send('Error ' + e);
-      });
-  });
+app.get("v0/rankings/players", cors(corsOptions), (req, res) => {
+  let rankSort = { rank: 1 };
+  AllTimePlayers.find()
+    .sort(rankSort)
+    .limit(250)
+    .then(ranking => {
+      res.status(200).json(ranking);
+    })
+    .catch(e => {
+      console.error(e);
+      res.status(500).send("Error " + e);
+    });
+});
 
 // GET greatest all time team list
-app.get('/rankings/teams',
-  cors(corsOptions),
-  (req, res) => {
-    let rankSort = { rank: 1 };
-    AllTimeTeams.find()
-      .sort(rankSort)
-      .limit(100)
-      .then((ranking) => {
-        res.status(200).json(ranking);
-      })
-      .catch((e) => {
-        console.error(e);
-        res.status(500).send('Error ' + e);
-      });
-  });
+app.get("v0/rankings/teams", cors(corsOptions), (req, res) => {
+  let rankSort = { rank: 1 };
+  AllTimeTeams.find()
+    .sort(rankSort)
+    .limit(100)
+    .then(ranking => {
+      res.status(200).json(ranking);
+    })
+    .catch(e => {
+      console.error(e);
+      res.status(500).send("Error " + e);
+    });
+});
 
 // GET greatest all time seasons list
-app.get('/rankings/seasons/overall',
-  cors(corsOptions),
-  (req, res) => {
-    let scoreSort = { total_season_value: -1 };
-    Players.find()
-      .sort(scoreSort)
-      .limit(100)
-      .then((ranking) => {
-        res.status(200).json(ranking);
-      })
-      .catch((e) => {
-        console.error(e);
-        res.status(500).send('Error ' + e);
-      });
-  });
+app.get("v0/rankings/seasons/overall", cors(corsOptions), (req, res) => {
+  let scoreSort = { total_season_value: -1 };
+  Players.find()
+    .sort(scoreSort)
+    .limit(100)
+    .then(ranking => {
+      res.status(200).json(ranking);
+    })
+    .catch(e => {
+      console.error(e);
+      res.status(500).send("Error " + e);
+    });
+});
 
 // GET greatest all time regular seasons list
-app.get('/rankings/seasons/regularseason',
-  cors(corsOptions),
-  (req, res) => {
-    let RsScoreSort = { regularseason__score: -1 };
-    Players.find()
-      .sort(RsScoreSort)
-      .limit(100)
-      .then((ranking) => {
-        res.status(200).json(ranking);
-      })
-      .catch((e) => {
-        console.error(e);
-        res.status(500).send('Error ' + e);
-      });
-  });
+app.get("v0/rankings/seasons/regularseason", cors(corsOptions), (req, res) => {
+  let RsScoreSort = { regularseason__score: -1 };
+  Players.find()
+    .sort(RsScoreSort)
+    .limit(100)
+    .then(ranking => {
+      res.status(200).json(ranking);
+    })
+    .catch(e => {
+      console.error(e);
+      res.status(500).send("Error " + e);
+    });
+});
 
 // GET greatest all time playoff season list
-app.get('/rankings/seasons/playoffs',
-  cors(corsOptions),
-  (req, res) => {
-    let playoffScoreSort = { playoff__score: -1 };
-    Players.find()
-      .sort(playoffScoreSort)
-      .limit(100)
-      .then((ranking) => {
-        res.status(200).json(ranking);
-      })
-      .catch((e) => {
-        console.error(e);
-        res.status(500).send('Error ' + e);
-      });
-  });
+app.get("v0/rankings/seasons/playoffs", cors(corsOptions), (req, res) => {
+  let playoffScoreSort = { playoff__score: -1 };
+  Players.find()
+    .sort(playoffScoreSort)
+    .limit(100)
+    .then(ranking => {
+      res.status(200).json(ranking);
+    })
+    .catch(e => {
+      console.error(e);
+      res.status(500).send("Error " + e);
+    });
+});
 
 // GET greatest season by age
-app.get('/rankings/seasons/age/:age',
-  cors(corsOptions),
-  (req, res) => {
-    let scoreSort = { total_season_value: -1 };
-    Players.find({
-      age: req.params.age
+app.get("v0/rankings/seasons/age/:age", cors(corsOptions), (req, res) => {
+  let scoreSort = { total_season_value: -1 };
+  Players.find({
+    age: req.params.age
+  })
+    .sort(scoreSort)
+    .limit(100)
+    .then(ranking => {
+      res.status(200).json(ranking);
     })
-      .sort(scoreSort)
-      .limit(100)
-      .then((ranking) => {
-        res.status(200).json(ranking);
-      })
-      .catch((e) => {
-        console.error(e);
-        res.status(500).send('Error ' + e);
-      });
-  });
+    .catch(e => {
+      console.error(e);
+      res.status(500).send("Error " + e);
+    });
+});
 
 // GET request to search for players in search bar
 // app.get('/playersearch/:query',
@@ -310,21 +284,19 @@ app.get('/rankings/seasons/age/:age',
 //   });
 
 // Serve static files
-app.use(express.static('frontend/build'));
-app.get('/*',
-  cors(corsOptions),
-  function (req, res) {
-    res.sendFile(path.join(__dirname, 'frontend', 'build', 'index.html'));
-  });
+app.use(express.static("frontend/build"));
+app.get("/*", cors(corsOptions), function(req, res) {
+  res.sendFile(path.join(__dirname, "frontend", "build", "index.html"));
+});
 
 // Server
 const port = process.env.PORT || 8080;
-app.listen(port, '0.0.0.0', () => {
-  console.log('Listening on Port ' + port);
+app.listen(port, "0.0.0.0", () => {
+  console.log("Listening on Port " + port);
 });
 
 // ORIGINAL CORS POLICY
-// (WIP) setting sites that have access 
+// (WIP) setting sites that have access
 // let allowedOrigins = '*';
 // // ['https://nba-value-reference.herokuapp.com/', 'http://localhost:3000/', 'http://localhost:1234'];
 // app.use(cors({
