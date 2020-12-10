@@ -54,7 +54,9 @@ export class TeamView extends React.Component {
 
   getTeamData = (franchiseCode, year) => {
     axios
-      .get(`v0/teams/${franchiseCode}/${year}`)
+      .get(
+        `https://nba-value-reference.herokuapp.com/v0/teams/${franchiseCode}/${year}`
+      )
       .then(response => {
         this.setState({
           team: response.data
