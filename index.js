@@ -77,7 +77,7 @@ app.get("/v0/players/:playerID", cors(corsOptions), (req, res) => {
 });
 
 // GET list of franchises seasons by franchise code
-app.get(/"/v0/teams/:franchiseCode", cors(corsOptions), (req, res) => {
+app.get("/v0/teams/:franchiseCode", cors(corsOptions), (req, res) => {
   let yearSort = { year: -1 };
   FranchiseSeasons.find({
     franchise_code: req.params.franchiseCode
@@ -141,7 +141,7 @@ app.get("/v0/seasons/regular/:league/:year", cors(corsOptions), (req, res) => {
 });
 
 // GET playoff data by league and year
-app.get("//v0/seasons/playoffs/:league/:year", cors(corsOptions), (req, res) => {
+app.get("/v0/seasons/playoffs/:league/:year", cors(corsOptions), (req, res) => {
   let scoreSort = { score: -1 };
   Playoffs.find({
     league: req.params.league,
